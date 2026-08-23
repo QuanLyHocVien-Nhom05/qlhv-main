@@ -1,0 +1,36 @@
+# BIÊN BẢN HỌP NHÓM - TUẦN 1
+ # Môn học: [Công Nghệ Phần Mềm] 
+# Tên nhóm: Nhóm 05 (Quản lý Học viên)
+
+
+* **Hệ thống:** Quản lý Đào tạo Sau Đại học
+* **Phân hệ đảm nhận:** Quản lý Tuyển sinh SĐH
+* **Thời gian:** 20:00 - 23/08/2026
+* **Hình thức:** Họp trực tuyến qua Google Meet
+* **Thành viên tham dự:** Đầy đủ 8 thành viên Nhóm 05
+
+---
+
+## 1. MỤC TIÊU CỦA BUỔI HỌP
+1. Thống nhất vai trò và phân công nhân sự trong nhóm.
+2. Xác định phân hệ đảm nhận và chốt phạm vi nghiệp vụ.
+3. Thống nhất cấu trúc Repository trên GitHub và quy chuẩn làm việc.
+
+---
+
+## 2. KẾT QUẢ ĐẠT ĐƯỢC
+1. **Phân công Nhân sự:**
+   * **Product Owner / Team Lead:** Võ Sĩ Khánh (@VoSiKhanh)
+   * **Frontend Lead:** Nguyễn Kim Ngân (@ngandpm235452-eng)
+   * **Frontend Developers:** Nguyễn Thị Kim Ngọc
+   * **Backend Developers:** Lê Thị Ngọc Thảo, Ngô Vinh Phát, Lê Văn Quí
+   * **DevOps / Cloud Engineer:** Bùi Vũ Thảo Quyên
+   * **QA / Security / Data Specialist:** Đỗ Thị Mỹ An
+
+2. **Chốt Phân hệ Đảm nhận:**
+   * Chọn **Phân hệ Quản lý Tuyển sinh SĐH**.
+   * Phạm vi nghiệp vụ: Đăng ký dự thi/xét tuyển trực tuyến, Duyệt hồ sơ thí sinh, Quản lý danh sách phòng thi/hội đồng tuyển sinh, Tra cứu kết quả trúng tuyển.
+
+3. **Cấu trúc Repository:**
+   * Thống nhất tạo đủ 6 thư mục từ `01_Requirements` đến `06_Documentation`.
+   * Áp dụng quy trình làm việc API Contract-first.
