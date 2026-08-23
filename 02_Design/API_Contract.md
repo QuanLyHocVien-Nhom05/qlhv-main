@@ -22,6 +22,9 @@
     }
   ]
 }
+```
+* **Kết quả trả về (Response 201 Created):**
+```json
 {
   "thanhCong": true,
   "thongBao": "Nộp hồ sơ tuyển sinh thành công",
@@ -30,6 +33,17 @@
     "trangThai": "CHO_DUYET"
   }
 }
+```
+
+---
+
+## 2. Thẩm định & Phê duyệt (Cán bộ tuyển sinh)
+
+### GET `/api/v1/ho-so`
+* **Mô tả:** Lấy danh sách hồ sơ tuyển sinh theo bộ lọc (US02).
+* **Tham số truy vấn (Query Parameters):** `trangThai` (CHO_DUYET, DA_DUYET, TU_CHOI), `trang`, `soLuong`
+* **Kết quả trả về (Response 200 OK):**
+```json
 {
   "tongSo": 45,
   "trangHienTai": 1,
@@ -42,6 +56,16 @@
     }
   ]
 }
+```
+
+---
+
+## 3. Tra cứu Kết quả Tuyển sinh (Công khai)
+
+### GET `/api/v1/ket-qua/{soCCCD}`
+* **Mô tả:** Tra cứu điểm thi và kết quả trúng tuyển theo số CCCD hoặc Mã hồ sơ (US04).
+* **Kết quả trả về (Response 200 OK):**
+```json
 {
   "soCCCD": "012345678901",
   "hoTen": "Nguyen Kim Ngan",
@@ -54,3 +78,4 @@
   },
   "duongDanGiayBao": "[https://storage.example.com/certificates/TS2026-00102.pdf](https://storage.example.com/certificates/TS2026-00102.pdf)"
 }
+```
