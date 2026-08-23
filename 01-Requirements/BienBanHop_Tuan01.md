@@ -21,7 +21,7 @@
 | Thành viên | Vai trò đảm nhận | Nhiệm vụ Tuần 1 |
 | :--- | :--- | :--- |
 | Võ Sĩ Khánh | Product Owner / Team Lead | Quản trị Org,  rà soát tiến độ |
-| Nguyễn Kim Ngân | Frontend Developer / Team Lead, phân quyền | Dựng khung README, hỗ trợ thiết kế UI |
+| Nguyễn Kim Ngân | Frontend Developer / Team Lead, phân quyền, Cloud Engineer  | Dựng khung README, hỗ trợ thiết kế UI |
 | Nguyễn Thị Kim Ngọc | Frontend Developer | Tìm hiểu quy chế tuyển sinh, phác thảo UI |
 | Lê Thị Ngọc Thảo | Backend / Cloud Engineer | Thiết kế cấu trúc lưu trữ, hỗ trợ API |
 | Bùi Võ Thảo Quyên | Backend / Cloud Engineer | Phác thảo API Contract ban đầu |
