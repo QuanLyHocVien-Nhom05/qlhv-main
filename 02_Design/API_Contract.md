@@ -18,7 +18,7 @@
   "danhSachGiayTo": [
     {
       "loaiGiayTo": "BANG_DAI_HOC",
-      "duongDanFile": "[https://storage.example.com/files/bang-dai-hoc.pdf](https://storage.example.com/files/bang-dai-hoc.pdf)"
+      "duongDanFile": "https://storage.example.com/files/bang-dai-hoc.pdf"
     }
   ]
 }
@@ -76,6 +76,6 @@
     "monChuyenNganh": 7.0,
     "ngoaiNgu": "MienThi"
   },
-  "duongDanGiayBao": "[https://storage.example.com/certificates/TS2026-00102.pdf](https://storage.example.com/certificates/TS2026-00102.pdf)"
+  "duongDanGiayBao": "https://storage.example.com/certificates/TS2026-00102.pdf"
 }
 ```
