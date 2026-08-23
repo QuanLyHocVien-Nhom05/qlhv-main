@@ -5,6 +5,9 @@
 ### US01: Đăng ký hồ sơ dự tuyển trực tuyến
 * **As a (Vai trò):** Thí sinh dự tuyển Sau Đại học
 * **I want to (Muốn):** Đăng ký thông tin cá nhân, tải lên văn bằng, chứng chỉ ngoại ngữ và nộp hồ sơ trực tuyến.
+  * **US-01:** Là **Thí sinh**, tôi muốn **theo dõi trạng thái duyệt hồ sơ** (Đã nhận, Cần bổ sung, Đã duyệt) để **kịp thời bổ sung giấy tờ còn thiếu**.
+  * **US-02:** Là **Thí sinh**, tôi muốn **tra cứu số báo danh, phòng thi và lịch thi tuyển sinh SĐH** để **chuẩn bị đi thi đúng giờ**.
+  * **US-03:** Là **Thí sinh**, tôi muốn **tra cứu điểm thi và kết quả trúng tuyển bằng CCCD/Mã hồ sơ** để **biết mình có trúng tuyển hay không**.
 * **So that (Để):** Tiết kiệm thời gian và không cần nộp hồ sơ giấy trực tiếp tại trường ở giai đoạn khởi đầu.
 * **Acceptance Criteria (AC):**
   - Form đăng ký đầy đủ các trường: Thông tin cá nhân, Ngành đăng ký, Văn bằng đại học, Chứng chỉ ngoại ngữ.
