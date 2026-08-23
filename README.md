@@ -6,7 +6,7 @@
 ### 1. Thông tin Nhóm & Phân công Nhân sự
 | STT | Họ và Tên | MSSV | Vai trò | GitHub Username |
 | :---: | :--- | :---: | :--- | :--- |
-| 1 | Nguyễn Kim Ngân | DPM235452 | Frontend Developer / Team Lead | @ngandpm235452-eng |
+| 1 | Nguyễn Kim Ngân | DPM235452 | Frontend Developer,Cloud Engineer / Team Lead | @ngandpm235452-eng |
 | 2 | Nguyễn Thị Kim Ngọc | DPM235456 | Frontend Developer | @ngocdpm235456-code |
 | 3 | Lê Thị Ngọc Thảo | DPM235482 | Backend Developer / Cloud Engineer| @thaodpm235482 |
 | 4 | Bùi Võ Thảo Quyên | DPM235472 | Backend Developer / Cloud Engineer | @quyendpm235472 |
