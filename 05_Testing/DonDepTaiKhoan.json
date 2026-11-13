@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-10T16:54:17.215Z",
+  "removed": 6,
+  "retained": [
+    "admin",
+    "khanh"
+  ],
+  "method": "soft deletion with session revocation; academic records preserved"
+}

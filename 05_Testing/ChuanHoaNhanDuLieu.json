@@ -1,0 +1,15 @@
+{
+  "completedAt": "2026-11-10T17:12:16.674Z",
+  "changedFields": 68,
+  "summary": {
+    "danh_muc.DonVi.KyHieu": 1,
+    "danh_muc.Nganh.KyHieu": 3,
+    "hoc_thuat.ChuongTrinh.KyHieu": 1,
+    "hoc_thuat.PhienBanChuongTrinh.KhoaTuyenSinh": 1,
+    "hoc_thuat.HocPhan.KyHieu": 19,
+    "hoc_thuat.HocVien.MaSoHocVien": 3,
+    "hoc_thuat.LopHocPhan.KyHieu": 20,
+    "hoc_thuat.LopHocPhan.NamHoc": 20
+  },
+  "preserved": "Primary keys, foreign keys, accounts, registrations, grades and approved curriculum content"
+}

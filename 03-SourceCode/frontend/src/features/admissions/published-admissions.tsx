@@ -1,0 +1,12 @@
+'use client';
+import {useQuery} from '@tanstack/react-query';
+import {api} from '@/lib/api-client';
+type Announcement={MaDot:number;TenDot:string;SoVanBan:string;GhiChuNguon?:string|null;KieuKiemChung?:string|null;NgayKiemChung?:string|null;DongHoSo:string|null;NgayCongBo:string|null;NhapHocDuKien:string|null;NguonUrl:string;BanSaoUrl:string|null;MaChiTieu:number;MaNganh:string;TenNganh:string;SoLuong:number;DuKien:boolean;PhiDangKy:number|null;PhiXetTuyen:number|null};
+const money=(value:number|null)=>value==null?'Chưa xác minh':value.toLocaleString('vi-VN')+' đ';
+const date=(value:string|null)=>value?new Date(value).toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'}):'Chưa có ngày cụ thể';
+export function PublishedAdmissions(){
+ const query=useQuery({queryKey:['published-admissions'],queryFn:()=>api<Announcement[]>('/public/admission-announcements','')});
+ const groups=new Map<number,Announcement[]>();for(const row of query.data??[]){const rows=groups.get(row.MaDot)??[];rows.push(row);groups.set(row.MaDot,rows);}
+ if(query.error)return <p className="error" role="alert">{query.error.message}</p>;
+ return <section className="surface"><h2>Thông tin tuyển sinh đã công bố</h2>{query.isPending&&<p>Đang tải thông báo…</p>}{Array.from(groups.values()).map(rows=>{const d=rows[0];return <article key={d.MaDot}><h3>{d.TenDot}</h3><p>{d.SoVanBan} · Hạn hồ sơ: {date(d.DongHoSo)} · Công bố kết quả: {date(d.NgayCongBo)}</p><p>{d.GhiChuNguon}</p>{d.KieuKiemChung==='CHI_MUC_TIM_KIEM'&&<p>Đối chiếu chỉ mục tìm kiếm ngày {date(d.NgayKiemChung??null)}; chưa tải lại được PDF nguồn.</p>}<p>Nhập học dự kiến: {d.NhapHocDuKien??'Chưa công bố'}. Chỉ tiêu dưới đây là chỉ tiêu chung theo thông báo, chưa phân bổ riêng từng phương thức.</p><div className="table-scroll"><table><thead><tr><th>Mã ngành</th><th>Ngành</th><th>Chỉ tiêu</th><th>Ghi chú</th></tr></thead><tbody>{rows.map(r=><tr key={r.MaChiTieu}><td>{r.MaNganh}</td><td>{r.TenNganh}</td><td>{r.SoLuong}</td><td>{r.DuKien?'Dự kiến':'Theo thông báo'}</td></tr>)}</tbody></table></div><p>Phí đăng ký: {money(d.PhiDangKy)} · Phí xét tuyển: {money(d.PhiXetTuyen)}</p><div className="button-row"><a href={d.NguonUrl} target="_blank" rel="noopener noreferrer">Tài liệu nguồn</a>{d.BanSaoUrl&&<a href={d.BanSaoUrl} target="_blank" rel="noopener noreferrer">Mở thông báo đã lưu</a>}</div></article>;})}{!query.isPending&&groups.size===0&&<p>Chưa có thông tin công bố được nhập.</p>}</section>;
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "requirements-completion-2026-11-13",
+  "verifiedAt": "2026-11-12T18:47:21.194Z",
+  "acceptancePassed": true,
+  "acceptanceReport": "05_Testing/NghiemThu_Loi.json",
+  "checks": {
+    "acceptanceSteps": 6,
+    "frontendUnitTests": 3,
+    "backendUnitTests": 52,
+    "sqlApiChromeGroups": 30
+  },
+  "implemented": [
+    "School-managed review reasons with revisions and activation",
+    "Independent core and specialty papers, schedules, blind scores and appeal separation",
+    "Recovery of incomplete score aggregation",
+    "Automatic curriculum, cohort, classes and advisor handover with rollback on full classes",
+    "ERP/LMS payload, acknowledgement, retry and idempotent handover state",
+    "MoMo captureWallet/IPN and domestic bank selection through VNPAY",
+    "OCR field extraction and staff review",
+    "Approved configurable report templates with visual column editor",
+    "TLS 1.3 proxy configuration and parameterized load-test script"
+  ],
+  "pendingExternalAcceptance": [
+    "Real VNPAY and MoMo sandbox credentials and transactions",
+    "School SMS, PKI and ERP/LMS endpoints, accounts and provider acknowledgement",
+    "Labeled real documents to measure OCR accuracy, including scanned PDFs",
+    "Deployment domain and certificate; nginx not installed on this machine",
+    "Designated load-test environment; k6 not installed and 10000-user test not run",
+    "Official Ministry/school report samples and approval of report format"
+  ]
+}

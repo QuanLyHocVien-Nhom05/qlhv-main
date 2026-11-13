@@ -1,204 +1,63 @@
-# TÀI LIỆU QUY ƯỚC API (API CONTRACT) - PHÂN HỆ QUẢN LÝ TUYỂN SINH SAU ĐẠI HỌC
+# API tuyển sinh và bàn giao đào tạo
 
-## I. TỔNG QUAN
+Đặc tả mới: [đối chiếu chức năng tuyển sinh](../06_Documentation/07_DoiChieuDacTaTuyenSinh.md). Các API đào tạo bên dưới tiếp tục phục vụ học viên sau nhập học.
 
-### 1. Mục đích
-API Contract là tài liệu mô tả thỏa thuận giao tiếp giữa Frontend/Mobile và Backend, làm cơ sở thống nhất về endpoint, HTTP method, dữ liệu request, response, quyền truy cập và mã trạng thái HTTP[cite: 1]. API Contract được xây dựng dựa trên các User Stories đã bóc tách từ quy trình nghiệp vụ[cite: 1].
+| Tuyển sinh | API dưới tiền tố `/api` |
+|---|---|
+| Công khai | GET `/public/admission-options`; POST `/auth/register` `{HoTen,Email,SoGiayTo,MatKhau,XacNhanMatKhau,DongY:true}` |
+| Đăng nhập | POST `/auth/login` trả access token sau khi xác minh mật khẩu; các endpoint QR/OTP đã được gỡ |
+| Hồ sơ chính chủ | GET/POST `/my/admissions`; GET/PUT `/my/admissions/:id`; PUT và POST `:id/submit` dùng `Version` dạng `0x` + 16 ký tự hex |
+| Tài liệu | POST `/my/admissions/files` multipart `file`, `LoaiTaiLieu`; POST `/my/admissions/:id/documents` `{MaTaiLieu}`; GET `/admissions/files/:id` kiểm tra chủ/phạm vi |
+| Thanh toán | POST `/my/admissions/:id/pay` `{LoaiPhi:XET_TUYEN hoặc NHAP_HOC}`; GET `/integrations/vnpay/ipn` dành callback có chữ ký |
+| Thí sinh | POST `:id/appeal` `{LyDo}`, POST `:id/confirm-enrollment`; GET `:id/letter/invite` hoặc `:id/letter/result`; các đường dẫn này thuộc `/my/admissions` |
+| Bàn làm việc | GET `/admin/admissions/applications`, GET `/admin/admissions/applications/:id`; POST `:id/screen`, POST `:id/review` `{Version,KetQua,LyDo,HanBoSung?}`; POST `/admin/admissions/documents/:id/verify` `{DaDoiChieu}` |
+| Ca thi | GET `/admin/admissions/exams`, GET `/:id/roster` hoặc `/:id/blind`, POST `/:id/allocate`, POST `/:id/publish`, POST `/:id/attendance/:assignment` `{CoMat}` |
+| Điểm | POST `/admin/admissions/scores` `{MaPhach,scores:{CoSo,ChuyenNganh,NgoaiNgu,UuTien}}`; ngoại ngữ được backend tính lại từ quy tắc chứng chỉ; POST `/admin/admissions/scores/import` multipart Excel `MaPhach,CoSo,ChuyenNganh,NgoaiNgu,UuTien` tối đa 100 dòng, trả kết quả từng dòng đã lưu/lỗi |
+| Xét tuyển | POST `/admin/admissions/applications/:id/resolve-appeal` `{scores,LyDo}`; POST `/admin/admissions/batches/:id/rank`; POST `/:id/approve` `{CapDuyet,GhiChu}` |
+| Mẫu lý do bổ sung | GET `/admin/admissions/review-reasons` trả `{code,label}[]`; khi `KetQua=CAN_BO_SUNG`, gửi thêm `MaLyDo` từ danh sách cùng `LyDo` cụ thể và `HanBoSung` ISO có múi giờ |
+| Danh sách trình duyệt | GET `/admin/admissions/batches/:id/selection` trả `{batch,candidates,approvals}` cho Admin/Cán bộ/Lãnh đạo trong phạm vi cả đợt; danh sách có điểm đã giải mã, hạng, chỉ tiêu, điểm sàn, tiêu chí phụ và dự kiến trúng tuyển; không trả ciphertext hoặc mã phách |
+| Nhập học | POST `/admin/admissions/applications/:id/enroll` `{MaPhienBan,MaLopQuanLy?}`; đúng chương trình đã duyệt, đã xác nhận và hoàn tất phí |
+| Báo cáo/tích hợp | GET `/admin/admissions/reports?kind=applications hoặc accepted hoặc revenue&format=xlsx hoặc pdf hoặc docx&dot=ID`; GET `/admin/admissions/integrations`; POST `/admin/admissions/jobs/run`; POST `/admin/admissions/transfers/:id/sync` |
 
-### 2. Quy ước chung
-* **Base URL:** `/api`[cite: 1]
-* **Định dạng dữ liệu:** JSON, trừ các API upload file sử dụng `multipart/form-data`[cite: 1].
-* **Xác thực:** API yêu cầu xác thực và kiểm tra quyền theo vai trò[cite: 1].
-* **HTTP Status thường dùng:** 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 500 Internal Server Error[cite: 1].
-* Các dữ liệu đã phê duyệt/khóa phải hạn chế chỉnh sửa theo phân quyền[cite: 1].
-* Các thay đổi quan trọng sau khi khóa phải được ghi nhận nhật ký để bảo đảm khả năng truy vết[cite: 1].
+Cấu hình đợt/chỉ tiêu/quy tắc/phòng/ca/phân công và cấp duyệt dùng `/management/:resource` với metadata theo quyền. Các resource bổ sung: `admission-batches`, `admission-quotas`, `admission-certificates`, `admission-major-rules`, `admission-rooms`, `admission-exams`, `admission-examiners`, `admission-approval-rights`, `admission-outbox`, `admission-transfers`.
 
-### 3. Danh sách API Tổng thể
+Bổ sung ngày 13/11/2026:
 
-#### Tuyển sinh
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-01 | POST | `/api/admissions/applications` | Tạo hồ sơ tuyển sinh[cite: 1] |
-| API-02 | GET | `/api/admissions/applications/{id}` | Xem thông tin hồ sơ[cite: 1] |
-| API-03 | PUT | `/api/admissions/applications/{id}` | Cập nhật hồ sơ[cite: 1] |
-| API-04 | POST | `/api/admissions/applications/{id}/documents` | Tải tài liệu hồ sơ[cite: 1] |
-| API-05 | GET | `/api/admissions/applications/{id}/documents` | Xem danh sách tài liệu[cite: 1] |
-| API-06 | GET | `/api/admissions/applications/{id}/ocr-result` | Xem kết quả OCR/AI[cite: 1] |
-| API-07 | PUT | `/api/admissions/applications/{id}/manual-review` | Xử lý hồ sơ cần kiểm tra thủ công[cite: 1] |
-| API-08 | POST | `/api/admissions/evaluation-results/import` | Import kết quả xét tuyển[cite: 1] |
-| API-09 | POST | `/api/admissions/admitted-list/approve` | Phê duyệt danh sách trúng tuyển[cite: 1] |
-| API-10 | POST | `/api/admissions/admission-notices/generate` | Tạo giấy báo trúng tuyển/nhập học[cite: 1] |
-| API-11 | PUT | `/api/admissions/tuition-fees` | Cập nhật mức học phí[cite: 1] |
+- `/management/admission-reasons`: tạo mẫu `{MaLyDo,TenLyDo,NoiDungMau}`, action `edit`/`toggle` dùng `Version`. GET `/admin/admissions/review-reasons` trả các mẫu đang hoạt động với `{code,label,instructions}`.
+- Ca thi nhận `ThanhPhan=TONG_HOP|CO_SO|CHUYEN_NGANH` (mặc định tổng hợp). Bài độc lập chấm tại `/admin/admissions/scores` với `{MaPhach,scores:{Diem,UuTien?}}`; điểm ưu tiên chỉ nhập ở bài chuyên ngành. Excel nhận `MaPhach,Diem,UuTien`; giữ mẫu tổng hợp cũ. Cổng thí sinh và giấy báo trả nhiều lịch thi.
+- `/management/admission-enrollment-plans`: cấu hình `{MaChiTieu,MaPhienBan,MaLopQuanLy?,MaGVHD?,LopHocPhan:"[101,102]",TuDong}`; action `edit` kèm `Version`. `/admin/admissions/applications/:id/enroll` cho phép bỏ `MaPhienBan` để dùng kế hoạch. Hàng đợi tự bàn giao khi `TuDong=true`; GET `/my/training` bổ sung `advisors` của học viên chính chủ.
+- Thanh toán nhận thêm `Kenh=VNPAY|MOMO|NGAN_HANG`. Ngân hàng qua VNPAY dùng `vnp_BankCode=VNBANK`. POST `/integrations/momo/ipn` xác minh callback rồi trả 204; không dùng redirect của trình duyệt để xác nhận đã thu tiền.
+- `/management/admission-report-templates`: tạo `{KyHieu,Loai,TieuDe,SoVanBan,NguonMauUrl,CauHinhCot}`; `CauHinhCot` là chuỗi JSON `[{key,title}]`, chỉ nhận các cột báo cáo cho phép. Action `approve` kèm `Version` dành Lãnh đạo/Admin. `/admin/admissions/reports` nhận `template=MaMau` tùy chọn, chỉ dùng mẫu đã duyệt và đúng loại báo cáo.
 
-#### Quản lý học viên
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-12 | POST | `/api/students/admissionconfirmation` | Xác nhận nhập học[cite: 1] |
-| API-13 | GET | `/api/students/{id}` | Xem thông tin học viên[cite: 1] |
-| API-14 | POST | `/api/students/class-assignment` | Xếp lớp học viên[cite: 1] |
+Tiền tố `/api`. Swagger tại `/api/docs`. Các API riêng yêu cầu Bearer token; DTO từ chối trường không cho phép.
 
-#### Chương trình đào tạo
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-15 | POST | `/api/programs` | Tạo chương trình đào tạo[cite: 1] |
-| API-16 | GET | `/api/programs/{id}` | Xem chương trình[cite: 1] |
-| API-17 | PUT | `/api/programs/{id}` | Cập nhật chương trình[cite: 1] |
-| API-18 | POST | `/api/programs/{id}/versions` | Tạo phiên bản chương trình[cite: 1] |
+Phạm vi mở rộng 12/11/2026: 5 vai trò và các nghiệp vụ trong [hướng dẫn phân quyền](../06_Documentation/06_PhanQuyen_VaNangCap.md). Danh sách resource hiện tại được cung cấp bởi GET `/management/metadata` theo đúng quyền của tài khoản.
 
-#### Kế hoạch học tập & đăng ký học phần
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-19 | POST | `/api/study-plans` | Tạo kế hoạch học tập[cite: 1] |
-| API-20 | GET | `/api/study-plans/{id}` | Xem kế hoạch[cite: 1] |
-| API-21 | PUT | `/api/study-plans/{id}` | Cập nhật kế hoạch[cite: 1] |
-| API-22 | POST | `/api/study-plans/{id}/validate` | Kiểm tra kế hoạch[cite: 1] |
-| API-23 | GET | `/api/study-plans/{id}/export` | Xuất kế hoạch[cite: 1] |
-| API-24 | GET | `/api/course-registration/suggestions` | Đề xuất học phần[cite: 1] |
-| API-25 | POST | `/api/course-registration` | Đăng ký học phần[cite: 1] |
-| API-26 | GET | `/api/course-registration` | Xem học phần đã đăng ký[cite: 1] |
+API bổ sung: POST `/auth/logout`; GET `/public/documents`; POST `/public/subscribe` `{HoTen,Email,NoiDung,DongY:true}`; GET `/my/training` chỉ dành cho học viên chính chủ. Resource mới: `faculties`, `course-versions`, `program-versions`, `cohorts`, `topics`, `supervisors`, `defenses`, `committee`, `grad-rules`, `language-evidence`, `graduation`, `grad-history`, `documents`, `subscriptions`, `settings`, `audit`.
 
-#### Kế hoạch nghiên cứu
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-27 | POST | `/api/research-plans` | Tạo kế hoạch nghiên cứu[cite: 1] |
-| API-28 | PUT | `/api/research-plans/{id}` | Cập nhật kế hoạch[cite: 1] |
-| API-29 | POST | `/api/researchplans/{id}/evidence` | Thêm minh chứng[cite: 1] |
-| API-30 | PUT | `/api/researchplans/{id}/progress` | Cập nhật tiến độ[cite: 1] |
-| API-31 | POST | `/api/researchplans/{id}/approve` | Giảng viên xác nhận tiến độ[cite: 1] |
+Excel: GET `/management/:resource/export.xlsx`, GET `/management/:resource/import-template.xlsx`, POST `/management/:resource/import/preview` (multipart trường `file`), POST `/management/:resource/import` `{rows:[values]}`. Không phải resource nào cũng hỗ trợ nhập. API kiểm tra quyền riêng cho đọc, ghi, xuất và nhập; giảng viên bị giới hạn theo phân công.
 
-#### Thời khóa biểu
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-32 | POST | `/api/schedules/import` | Import thời khóa biểu[cite: 1] |
-| API-33 | POST | `/api/schedules/ai-suggestion` | Nhận đề xuất xếp lịch từ AI[cite: 1] |
-| API-34 | POST | `/api/schedules/{id}/approve` | Phê duyệt thời khóa biểu[cite: 1] |
-| API-35 | GET | `/api/schedules` | Xem thời khóa biểu[cite: 1] |
+| Nhóm | API |
+| --- | --- |
+| Đăng nhập | POST `/auth/login`, POST `/auth/change-password`, GET `/auth/me` |
+| Quên mật khẩu | POST `/auth/password-recovery/request` `{username,email}`, POST `/auth/password-recovery/reset` `{token,newPassword,confirmPassword}` |
+| Gửi liên kết qua email | POST `/auth/password-recovery/email` `{username,email}` — SMTP, USER hoạt động, 5 yêu cầu/IP/15 phút và thời gian chờ 60 giây/tài khoản |
+| Xác minh khôi phục (admin) | GET `/password-recovery/admin/requests`, POST `/password-recovery/admin/requests/:id/issue` `{Revision,username,note}`, POST `/password-recovery/admin/requests/:id/reject` `{Revision,note}` |
+| Tài khoản | GET/POST `/admin/accounts`, PATCH/DELETE `/admin/accounts/:id`, GET `/admin/accounts/options` |
+| Quản trị | GET `/management/metadata`, `/management/overview`, `/management/options/:key`, `/management/:resource`; POST `/management/:resource`, `/management/:resource/:id/actions/:action` |
+| Chương trình | GET/POST `/programs`, GET/PUT `/programs/:id`, POST `/programs/:id/versions`, POST `/programs/:id/versions/:version/approve` |
+| Tra cứu | GET `/public/programs`, `/public/programs/:id` — chỉ phiên bản đã duyệt |
+| Học tập cá nhân | GET `/my/studies`, `/my/studies/:id`, POST `/my/studies/:id/registrations` |
+| Báo cáo | GET `/reports/options`, `/reports/students`, `/reports/students.xlsx`, `/reports/programs.xlsx` |
 
-#### Học phí
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-36 | POST | `/api/tuition-fees` | Tạo đơn giá học phí[cite: 1] |
-| API-37 | PUT | `/api/tuition-fees/{id}` | Cập nhật đơn giá[cite: 1] |
-| API-38 | GET | `/api/students/{id}/tuition` | Xem học phí[cite: 1] |
-| API-39 | GET | `/api/students/{id}/tuition/debt` | Xem số tiền còn phải thanh toán[cite: 1] |
+Danh sách resource được công bố bởi `/management/metadata` theo vai trò; resource không tồn tại trả 404, resource không được phép trả 403. Học viên được gán từ tài khoản USER đang hoạt động vào phiên bản đã duyệt, có thể tham gia lớp quản lý cùng phiên bản.
 
-#### Thời hạn đào tạo
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-40 | GET | `/api/students/{id}/training-deadline` | Xem thời hạn đào tạo[cite: 1] |
-| API-41 | GET | `/api/trainingdeadlines/warnings` | Lấy danh sách cảnh báo[cite: 1] |
-| API-42 | POST | `/api/students/{id}/dismissaldecision` | Cập nhật quyết định buộc thôi học[cite: 1] |
+Báo cáo nhận `MaPhienBan` tùy chọn, `search`, `page`, `limit`. Excel xuất toàn bộ kết quả lọc tối đa 10.000 dòng, không chỉ trang đang xem. Tài khoản STUDENT không được xuất báo cáo toàn trường. File chứa các cột được chọn, không có CCCD, email hay mật khẩu.
 
-#### Quản lý điểm
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-43 | POST | `/api/grades` | Nhập điểm[cite: 1] |
-| API-44 | PUT | `/api/grades/{id}` | Cập nhật điểm[cite: 1] |
-| API-45 | POST | `/api/grades/{id}/confirm` | Xác nhận điểm[cite: 1] |
-| API-46 | GET | `/api/students/{id}/grades` | Xem kết quả học tập[cite: 1] |
-| API-47 | PUT | `/api/grades/{id}/adjust` | Điều chỉnh điểm đã khóa[cite: 1] |
+401: chưa đăng nhập/hết phiên; 403: thiếu quyền; 404: API/bản ghi không tồn tại; 400: đầu vào không hợp lệ; 409: xung đột revision hoặc quy tắc nghiệp vụ. Các thao tác ghi và xuất tệp có nhật ký.
 
-#### Theo dõi tiến độ
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-48 | GET | `/api/students/{id}/progress` | Xem tiến độ học tập[cite: 1] |
-| API-49 | GET | `/api/students/{id}/progress/courses` | Xem trạng thái từng học phần[cite: 1] |
-| API-50 | GET | `/api/researchstudents/{id}/progress` | Xem tiến độ nghiên cứu[cite: 1] |
+## Dữ liệu công khai từ nguồn trường
 
-#### Xét tốt nghiệp
-| ID | Method | Endpoint | Mô tả |
-| :--- | :--- | :--- | :--- |
-| API-51 | GET | `/api/graduation/{studentId}/eligibility` | Kiểm tra điều kiện tốt nghiệp[cite: 1] |
-| API-52 | GET | `/api/graduation/{studentId}/checklist` | Xem chi tiết điều kiện[cite: 1] |
-| API-53 | GET | `/api/graduation/export` | Xuất danh sách xét tốt nghiệp[cite: 1] |
-| API-54 | POST | `/api/graduation/{studentId}/decision` | Cập nhật quyết định công nhận tốt nghiệp[cite: 1] |
+GET `/public/admission-announcements` trả thông báo lịch sử và chỉ tiêu chung, độc lập các đợt đang mở. GET `/public/programs` có thể trả thông tin nguồn công khai với `MaPhienBan=null`, tín chỉ/thời gian tối đa chưa biết là null; các bản ghi này không dùng trực tiếp gán học viên. POST `/programs/:id/initial-version` nhận `SqlVersionDto` tạo bản nháp đầu tiên; yêu cầu Admin/Cán bộ, kiểm tra chương trình chưa có phiên bản, chống tạo trùng. Sau đó dùng quy trình duyệt hiện có.
 
-### 4. Nguyên tắc nghiệp vụ cần lưu ý
-* AI/OCR chỉ hỗ trợ nhận dạng, trích xuất, kiểm tra sơ bộ hoặc đề xuất; không tự động thay thế quyết định của cán bộ có thẩm quyền[cite: 1].
-* Hồ sơ có dấu hiệu bất thường hoặc kết quả AI không chắc chắn phải chuyển sang kiểm tra thủ công[cite: 1].
-* Dữ liệu đã được phê duyệt/khóa như thời khóa biểu, điểm hoặc hồ sơ chính thức phải hạn chế chỉnh sửa theo phân quyền[cite: 1].
-* Mọi điều chỉnh dữ liệu quan trọng sau khi khóa cần được ghi nhận nhật ký để bảo đảm khả năng truy vết[cite: 1].
-* Chương trình đào tạo phải được quản lý theo khóa/phiên bản để không làm thay đổi chương trình áp dụng cho học viên khóa trước[cite: 1].
-* Các quyết định hành chính như buộc thôi học hoặc công nhận tốt nghiệp phải do người/đơn vị có thẩm quyền quyết định; hệ thống chỉ hỗ trợ kiểm tra và cập nhật kết quả chính thức[cite: 1].
-
----
-
-## II. CHI TIẾT PAYLOAD (DỮ LIỆU GỬI/NHẬN) MỘT SỐ API QUAN TRỌNG
-
-### 1. Mẫu Hồ sơ Tuyển sinh (Thí sinh)
-
-* **Mô tả:** Thí sinh nộp hồ sơ đăng ký dự tuyển trực tuyến (US01).
-* **Endpoint:** `POST /api/v1/ho-so`
-* **Header yêu cầu:** `Content-Type: application/json`
-* **Dữ liệu gửi lên (Request Body):**
-```json
-{
-  "hoTen": "Nguyen Kim Ngan",
-  "soCCCD": "012345678901",
-  "email": "nguyenkimngan@gmail.com",
-  "soDienThoai": "0901234567",
-  "maNganhDangKy": "SDH_CNTT",
-  "danhSachGiayTo": [
-    {
-      "loaiGiayTo": "BANG_DAI_HOC",
-      "duongDanFile": "[https://storage.example.com/files/bang-dai-hoc.pdf](https://storage.example.com/files/bang-dai-hoc.pdf)"
-    }
-  ]
-}
-```
-* **Kết quả trả về (Response 201 Created):**
-```json
-{
-  "thanhCong": true,
-  "thongBao": "Nộp hồ sơ tuyển sinh thành công",
-  "duLieu": {
-    "maHoSo": "TS2026-00102",
-    "trangThai": "CHO_DUYET"
-  }
-}
-```
-
----
-
-### 2. Thẩm định & Phê duyệt (Cán bộ tuyển sinh)
-
-* **Mô tả:** Lấy danh sách hồ sơ tuyển sinh theo bộ lọc (US02).
-* **Endpoint:** `GET /api/v1/ho-so`
-* **Tham số truy vấn (Query Parameters):** `trangThai` (CHO_DUYET, DA_DUYET, TU_CHOI), `trang`, `soLuong`
-* **Kết quả trả về (Response 200 OK):**
-```json
-{
-  "tongSo": 45,
-  "trangHienTai": 1,
-  "duLieu": [
-    {
-      "maHoSo": "TS2026-00102",
-      "hoTen": "Nguyen Kim Ngan",
-      "ngayNop": "2026-08-23T20:30:00Z",
-      "trangThai": "CHO_DUYET"
-    }
-  ]
-}
-```
-
----
-
-### 3. Tra cứu Kết quả Tuyển sinh (Công khai)
-
-* **Mô tả:** Tra cứu điểm thi và kết quả trúng tuyển theo số CCCD hoặc Mã hồ sơ (US04).
-* **Endpoint:** `GET /api/v1/ket-qua/{soCCCD}`
-* **Kết quả trả về (Response 200 OK):**
-```json
-{
-  "soCCCD": "012345678901",
-  "hoTen": "Nguyen Kim Ngan",
-  "nganhXetTuyen": "Khoa học Máy tính",
-  "ketQua": "TRUNG_TUYEN",
-  "bangDiem": {
-    "monCoSo": 8.5,
-    "monChuyenNganh": 7.0,
-    "ngoaiNgu": "MienThi"
-  },
-  "duongDanGiayBao": "[https://storage.example.com/certificates/TS2026-00102.pdf](https://storage.example.com/certificates/TS2026-00102.pdf)"
-}
-```
+Bổ sung nguồn PGD AGU ngày 13/11/2026: GET `/public/documents` trả thêm `MaDinhDanhNoiBo`, `GhiChuNguon`, `NgayKiemChung`, `KieuKiemChung`; GET `/public/admission-announcements` trả thêm ghi chú/kiểu/ngày kiểm chứng của thông báo. `CHI_MUC_TIM_KIEM` nghĩa là đối chiếu chỉ mục, chưa tải lại được PDF nguồn. Thông tin lịch sử không tự trở thành đợt đang nhận hồ sơ.

@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "NguonChinh": "https://pgd.agu.edu.vn/",
+  "NguonTuyenSinh": "https://tuyensinh.agu.edu.vn/uploads/bdb5f7ff65ffef2436d2bb6fc8961b75.pdf",
+  "NguonKhung": "https://rmgo.agu.edu.vn/sites/default/files/Chuong%20trinh%20dao%20tao%20nganh%20Quan%20ly%20giao%20duc%20trinh%20do%20thac%20si.pdf",
+  "TaiLieu": [
+    {
+      "file": "thong-bao-1362-2026.pdf",
+      "sha256": "c62ec7836db320615098c86c9238425a0c1719e331d651588f0c1fee1bea5760",
+      "Nguon": "https://tuyensinh.agu.edu.vn/uploads/bdb5f7ff65ffef2436d2bb6fc8961b75.pdf"
+    },
+    {
+      "file": "chuong-trinh-quan-ly-giao-duc.pdf",
+      "sha256": "1487f22a06d3f4c3c77d3733b7d5cb0b4eea400e06d27cacc4b67e3d19395e29",
+      "Nguon": "https://rmgo.agu.edu.vn/sites/default/files/Chuong%20trinh%20dao%20tao%20nganh%20Quan%20ly%20giao%20duc%20trinh%20do%20thac%20si.pdf"
+    }
+  ],
+  "Nganh": [
+    {
+      "KyHieu": "8140114",
+      "TenNganh": "Quản lý giáo dục",
+      "SoLuong": 21,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8850101",
+      "TenNganh": "Quản lý tài nguyên và môi trường",
+      "SoLuong": 15,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8620105",
+      "TenNganh": "Chăn nuôi",
+      "SoLuong": 15,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8620110",
+      "TenNganh": "Khoa học cây trồng",
+      "SoLuong": 12,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8420201",
+      "TenNganh": "Công nghệ sinh học",
+      "SoLuong": 10,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8540101",
+      "TenNganh": "Công nghệ thực phẩm",
+      "SoLuong": 10,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8480201",
+      "TenNganh": "Công nghệ thông tin",
+      "SoLuong": 12,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8140110",
+      "TenNganh": "Lý luận và phương pháp dạy học",
+      "SoLuong": 1,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8440103",
+      "TenNganh": "Vật lý lý thuyết và Vật lý toán",
+      "SoLuong": 13,
+      "DuKien": false
+    },
+    {
+      "KyHieu": "8440301",
+      "TenNganh": "Kỹ thuật môi trường",
+      "SoLuong": 20,
+      "DuKien": true
+    },
+    {
+      "KyHieu": "8620301",
+      "TenNganh": "Nuôi trồng thủy sản",
+      "SoLuong": 15,
+      "DuKien": true
+    },
+    {
+      "KyHieu": "8229001",
+      "TenNganh": "Triết học",
+      "SoLuong": 15,
+      "DuKien": true
+    }
+  ],
+  "HocPhan": [
+    {
+      "KyHieu": "PHI702",
+      "TenHocPhan": "Triết học",
+      "SoTinChi": 4,
+      "HocKyDuKien": 1,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "ENG703",
+      "TenHocPhan": "Anh văn chuyên ngành",
+      "SoTinChi": 4,
+      "HocKyDuKien": 1,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU701",
+      "TenHocPhan": "Lý luận về quản lý và quản lý giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 1,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU702",
+      "TenHocPhan": "Phương pháp nghiên cứu khoa học quản lý giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 1,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU703",
+      "TenHocPhan": "Tâm lý học quản lý",
+      "SoTinChi": 3,
+      "HocKyDuKien": 1,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "EDU704",
+      "TenHocPhan": "Xã hội học giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 1,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "EDU705",
+      "TenHocPhan": "Quản lý nguồn lực trong giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU706",
+      "TenHocPhan": "Giáo dục so sánh",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU707",
+      "TenHocPhan": "Phát triển năng lực đối với cán bộ quản lý giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU708",
+      "TenHocPhan": "Quản lý việc phát triển chương trình giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "PED701",
+      "TenHocPhan": "Kinh tế học giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "PED702",
+      "TenHocPhan": "Giao tiếp trong quản lý giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 2,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "EDU709",
+      "TenHocPhan": "Giáo dục đại học thế giới và Việt Nam",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU710",
+      "TenHocPhan": "Quản lý nhà nước về giáo dục trong bối cảnh phát triển kinh tế thị trường và hội nhập quốc tế",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU711",
+      "TenHocPhan": "Quản lý chất lượng giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "EDU712",
+      "TenHocPhan": "Chiến lược phát triển giáo dục Việt Nam",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": true
+    },
+    {
+      "KyHieu": "PED705",
+      "TenHocPhan": "Lãnh đạo chuyển đổi trong giáo dục",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "PED704",
+      "TenHocPhan": "Giáo dục Việt Nam trong thời kì đổi mới và xu hướng phát triển",
+      "SoTinChi": 3,
+      "HocKyDuKien": 3,
+      "BatBuoc": false
+    },
+    {
+      "KyHieu": "EDU713",
+      "TenHocPhan": "Luận văn tốt nghiệp",
+      "SoTinChi": 15,
+      "HocKyDuKien": 4,
+      "BatBuoc": true
+    }
+  ],
+  "ChungChi": [
+    {
+      "TenChungChi": "IELTS",
+      "DiemToiThieu": 4.5,
+      "BacTuongDuong": 3
+    },
+    {
+      "TenChungChi": "IELTS",
+      "DiemToiThieu": 5.5,
+      "BacTuongDuong": 4
+    },
+    {
+      "TenChungChi": "TOEFL iBT",
+      "DiemToiThieu": 45,
+      "BacTuongDuong": 3
+    },
+    {
+      "TenChungChi": "TOEFL iBT",
+      "DiemToiThieu": 46,
+      "BacTuongDuong": 4
+    },
+    {
+      "TenChungChi": "TOEFL ITP",
+      "DiemToiThieu": 460,
+      "BacTuongDuong": 3
+    }
+  ],
+  "VanBan": [
+    {
+      "SoVanBan": "1362/TB-ĐHAG",
+      "TieuDe": "Tuyển sinh đào tạo trình độ thạc sĩ đợt 2 năm 2026",
+      "PhanLoai": "TUYEN_SINH",
+      "NgayBanHanh": "2026-08-26",
+      "DuongDan": "/tai-lieu/thong-bao-1362-2026.pdf",
+      "Nguon": "https://tuyensinh.agu.edu.vn/uploads/bdb5f7ff65ffef2436d2bb6fc8961b75.pdf"
+    },
+    {
+      "SoVanBan": "CTDT-8140114",
+      "TieuDe": "Chương trình đào tạo ngành Quản lý giáo dục trình độ thạc sĩ",
+      "PhanLoai": "HUONG_DAN",
+      "NgayBanHanh": null,
+      "DuongDan": "/tai-lieu/chuong-trinh-quan-ly-giao-duc.pdf",
+      "Nguon": "https://rmgo.agu.edu.vn/sites/default/files/Chuong%20trinh%20dao%20tao%20nganh%20Quan%20ly%20giao%20duc%20trinh%20do%20thac%20si.pdf"
+    },
+    {
+      "SoVanBan": "TS-2026-D1",
+      "TieuDe": "Tuyển sinh đào tạo trình độ thạc sĩ đợt 1 năm 2026 (dự kiến)",
+      "PhanLoai": "TUYEN_SINH",
+      "NgayBanHanh": null,
+      "DuongDan": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-thac-si-dot-1-nam-2026-du-kien",
+      "NgayCongBoTrenWeb": "2026-03-18"
+    },
+    {
+      "SoVanBan": "TS-TIENSI-2026",
+      "TieuDe": "Tuyển sinh đào tạo trình độ tiến sĩ năm 2026",
+      "PhanLoai": "TUYEN_SINH",
+      "NgayBanHanh": null,
+      "DuongDan": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "NgayCongBoTrenWeb": "2026-08-26"
+    },
+    {
+      "SoVanBan": "TTTS-2026",
+      "TieuDe": "Thông tin tuyển sinh trình độ thạc sĩ, tiến sĩ năm 2026",
+      "PhanLoai": "TUYEN_SINH",
+      "NgayBanHanh": null,
+      "DuongDan": "https://tuyensinh.agu.edu.vn/tin-tuc/quyet-dinh-ve-viec-ban-hanh-thong-tin-tuyen-sinh-trinh-do-thac-si-tien-si-nam-2026",
+      "NgayCongBoTrenWeb": "2026-06-11"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "core-seven-groups",
+  "checkedSourceFiles": 103,
+  "institutionReferences": 0,
+  "excluded": [
+    "node_modules",
+    "generated builds",
+    ".tools snapshots/private credentials",
+    ".env",
+    "historical SQL data"
+  ],
+  "checkedAt": "2026-11-10T16:26:16.652Z"
+}

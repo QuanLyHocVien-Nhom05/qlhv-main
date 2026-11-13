@@ -1,0 +1,13 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "plugins": [
+      "@nestjs/swagger"
+    ],
+    "assets": [
+      "modules/admissions/assets/*"
+    ]
+  }
+}

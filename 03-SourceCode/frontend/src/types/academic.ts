@@ -1,0 +1,11 @@
+export type Field = {key:string;label:string;type:'text'|'number'|'date'|'datetime'|'select'|'boolean'|'textarea';required?:boolean;max?:number;min?:number;options?:string[];reference?:string;integer?:boolean};
+export type Action = {key:string;label:string;fields:Field[]};
+export type Resource = {key:string;group:string;label:string;description:string;id:string;columns:string[];fields:Field[];canCreate:boolean;actions:Action[]};
+export type Row = Record<string,string|number|boolean|null>;
+export type PageResult = {data:Row[];total:number;page:number;limit:number};
+export type Option = {Id:number|string;Ten:string};
+export type Session = {accessToken:string;user:{id:number|string;name:string;roles:string[]}};
+export type CurriculumCourse = {MaHocPhan:number;SoTinChi:number;HocKyDuKien:number;BatBuoc:boolean;TienQuyet:number[];TenHocPhan?:string;KyHieu?:string};
+export type CurriculumInput = {KhoaTuyenSinh:string;TinChiToiThieu:number;DiemDatHocPhan:number;DiemTrungBinhToiThieu:number;ThoiGianToiDaThang:number;HocPhan:CurriculumCourse[]};
+export type CurriculumVersion = CurriculumInput & {MaPhienBan:number;SoPhienBan:number;TrangThai:'NHAP'|'DA_DUYET';Revision:string;NgayPheDuyet?:string};
+export type TrainingProgram = {MaChuongTrinh:number;KyHieu:string;TenChuongTrinh:string;MaNganh:number;TenNganh:string;TrinhDo:string;SoPhienBan?:number;SoDaDuyet?:number;PhienBan?:CurriculumVersion[]};

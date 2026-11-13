@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "checkedOn": "2026-11-13",
+  "site": "https://pgd.agu.edu.vn/",
+  "verification": "CHI_MUC_TIM_KIEM",
+  "directAccess": "HTTP 403; chưa tải lại được PDF gốc",
+  "documents": [
+    {
+      "code": "1103/TB-ĐHAG",
+      "internalCode": false,
+      "title": "Tuyển sinh đào tạo trình độ thạc sĩ năm 2024",
+      "category": "TUYEN_SINH",
+      "issuedOn": "2024-08-07",
+      "url": "https://pgd.agu.edu.vn/storage/844bb3d7f10387d705c2dfb6d17d6b03.pdf",
+      "note": "Thông báo lịch sử năm 2024: 6 ngành, tổng chỉ tiêu chung 175. Không dùng chỉ tiêu này cho năm 2026. Chưa tải lại được bản PDF gốc."
+    },
+    {
+      "code": "325/2014/QĐ-ĐHAG",
+      "internalCode": false,
+      "title": "Quy chế đào tạo trình độ thạc sĩ năm 2014",
+      "category": "QUY_DINH",
+      "issuedOn": "2014-10-01",
+      "url": "https://pgd.agu.edu.vn/storage/0bac13d8c861e0ce03d497f46fe86d9a.pdf",
+      "note": "Tài liệu lịch sử ban hành năm 2014. Chưa đối chiếu văn bản thay thế và không tự áp dụng cho khóa mới."
+    },
+    {
+      "code": "PGD-TS-2021",
+      "internalCode": true,
+      "title": "Quy định tuyển sinh trình độ thạc sĩ và tiến sĩ năm 2021",
+      "category": "QUY_DINH",
+      "issuedOn": "2021-04-26",
+      "url": "https://pgd.agu.edu.vn/storage/5c9ee43aac99e73db6a2cd5924cd6442.pdf",
+      "note": "Mã quản lý nội bộ. Chỉ mục hiển thị số 898 ở trang quyết định và 838 ở phần kèm theo; chưa xác minh số văn bản từ PDF gốc. Không tự áp dụng quy tắc cho đợt hiện hành."
+    },
+    {
+      "code": "PGD-QC-TS-DHQG",
+      "internalCode": true,
+      "title": "Quy chế tuyển sinh trình độ thạc sĩ và tiến sĩ của ĐHQG-HCM",
+      "category": "QUY_DINH",
+      "issuedOn": null,
+      "url": "https://pgd.agu.edu.vn/storage/9b3d39ca97dd46b8fcc966141c0f361e.pdf",
+      "note": "Tài liệu được PGD AGU công khai. Chưa xác minh số, ngày ban hành và tình trạng thay thế; chỉ lưu liên kết để tra cứu."
+    },
+    {
+      "code": "QT116-QLKH&ĐTSDH-QLCPBTN",
+      "internalCode": false,
+      "title": "Quy trình quản lý và cấp phát văn bằng, chứng chỉ sau đại học",
+      "category": "HUONG_DAN",
+      "issuedOn": "2020-12-17",
+      "url": "https://pgd.agu.edu.vn/storage/2f06ba9a9535552fd56b39a5a95c673d.pdf",
+      "note": "Quy trình QT116, lần soát xét 00, ngày 17/12/2020. Chưa xác minh bản sửa đổi mới hơn; lưu để tra cứu, không tạo hồ sơ hoặc văn bằng cá nhân."
+    }
+  ],
+  "announcement": {
+    "code": "TS_AGU_2024_CHUNG",
+    "title": "Tuyển sinh thạc sĩ năm 2024 — chỉ tiêu chung cả năm",
+    "documentCode": "1103/TB-ĐHAG",
+    "issuedOn": "2024-08-07",
+    "url": "https://pgd.agu.edu.vn/storage/844bb3d7f10387d705c2dfb6d17d6b03.pdf",
+    "expectedEnrollment": "Tháng 12/2024",
+    "note": "Năm 2024 có hai đợt: hạn hồ sơ 06/9 và 25/10; công bố kết quả dự kiến tháng 10 và tháng 12. Tổng 175 là chỉ tiêu chung cả năm, không nhân đôi theo hai đợt. Nguồn không nêu một hạn chung hoặc giờ đóng cổng nên các mốc vận hành để trống.",
+    "quotas": [
+      {"majorCode": "8140114", "majorName": "Quản lý giáo dục", "quantity": 44},
+      {"majorCode": "8850101", "majorName": "Quản lý tài nguyên và môi trường", "quantity": 26},
+      {"majorCode": "8620105", "majorName": "Chăn nuôi", "quantity": 20},
+      {"majorCode": "8620110", "majorName": "Khoa học cây trồng", "quantity": 30},
+      {"majorCode": "8420201", "majorName": "Công nghệ sinh học", "quantity": 26},
+      {"majorCode": "8540101", "majorName": "Công nghệ thực phẩm", "quantity": 29}
+    ]
+  }
+}

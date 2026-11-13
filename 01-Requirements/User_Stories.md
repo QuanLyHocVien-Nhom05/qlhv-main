@@ -1,70 +1,30 @@
-# DANH SÁCH USER STORIES - PHÂN HỆ QUẢN LÝ TUYỂN SINH SAU ĐẠI HỌC
+# Yêu cầu đồ án — Quản lý tuyển sinh sau đại học
 
----
+Nguồn yêu cầu: [đặc tả Word được cung cấp](DacTaTuyenSinh_Goc.md). Trạng thái và giới hạn triển khai: [bảng đối chiếu](../06_Documentation/07_DoiChieuDacTaTuyenSinh.md). Phần đào tạo được giữ làm đích bàn giao sau nhập học.
 
-## 1. Nhóm chức năng dành cho Thí sinh
+| Mã | Vai trò | Nhu cầu và điều kiện chấp nhận |
+|---|---|---|
+| TS01 | Admin/Cán bộ | Lập đợt với các mốc mở/đóng, thẩm định, bổ sung, thi, công bố, phúc khảo, nhập học; kiểm tra thứ tự thời gian |
+| TS02 | Cán bộ | Cấu hình chỉ tiêu theo ngành, thạc sĩ/tiến sĩ, thi/xét/tuyển thẳng; khai lệ phí, công thức và tiêu chí phụ trước mở đợt |
+| TS03 | Cán bộ | Cấu hình IELTS/TOEFL/VSTEP và điểm quy đổi; ngành đúng/gần/không phù hợp và các môn bổ sung |
+| TS04 | Thí sinh | Tạo tài khoản với CCCD/hộ chiếu/email; chỉ được tự cấp vai trò thí sinh |
+| TS05 | Thí sinh | Khai bằng cấp, GPA, xếp loại, việc làm, ưu tiên, ngoại ngữ và đề cương tiến sĩ; chặn thông tin sai định dạng |
+| TS06 | Thí sinh | Tải PDF/JPG/PNG tối đa 10 MB/tệp; đủ 6 loại tài liệu và đề cương nếu dự tuyển tiến sĩ; chỉ chủ hoặc cán bộ đúng phạm vi đọc được |
+| TS07 | Thí sinh | Nộp/sửa trong hạn và theo phiên bản hồ sơ; khóa sửa sau nộp, mở bổ sung có hạn theo yêu cầu cán bộ |
+| TS08 | Thí sinh | Thanh toán lệ phí, nhận biên lai; callback xác thực số tiền/chữ ký, không ghi nhận giao dịch giả hoặc trùng |
+| TS09 | Cán bộ | Sơ tuyển theo thời hạn chứng chỉ, GPA, xếp loại, ngành và tài liệu; OCR gợi ý đối chiếu và cờ cảnh báo |
+| TS10 | Cán bộ | Thẩm định hợp lệ/từ chối/yêu cầu bổ sung có lý do, lịch sử người thực hiện/thời gian/IP; chỉ hồ sơ đúng phạm vi |
+| TS11 | Hệ thống | Xếp hàng thông báo email/SMS, không ghi đã gửi khi thiếu cấu hình hoặc chưa được dịch vụ chấp nhận |
+| TS12 | Giáo vụ | Khai phòng và ca, phân công coi/chấm/chủ tịch/thư ký; phân phòng không vượt sức chứa, chặn trùng phòng/cán bộ |
+| TS13 | Thí sinh/Coi thi | Tra cứu SBD, phòng/ca và giấy báo PDF/QR; cán bộ điểm danh theo phân công |
+| TS14 | Người chấm | Chấm theo mã phách; nhập trực tiếp hoặc Excel; lưu điểm mã hóa, chỉnh sửa qua phúc khảo |
+| TS15 | Thí sinh/Lãnh đạo | Công bố điểm tạm, nhận phúc khảo trong hạn; người xử lý không phải người chấm ban đầu |
+| TS16 | Cán bộ | Tính điểm có quy đổi ngoại ngữ, xếp hạng theo chỉ tiêu/điểm sàn/tiêu chí phụ; dừng để xử lý khi vẫn hòa ranh giới |
+| TS17 | Lãnh đạo | Duyệt Khoa → Phòng đào tạo → BGH, đúng quyền và ba người khác nhau; chỉ công bố sau cấp cuối |
+| TS18 | Thí sinh | Xem kết quả, tải giấy báo, xác nhận nhập học và hoàn tất khoản phí trong hạn |
+| TS19 | Cán bộ | Bàn giao sang CTĐT đã duyệt đúng ngành/trình độ, sinh MSHV, chuyển vai trò học viên và thu hồi phiên cũ |
+| TS20 | Admin | Chuẩn bị đồng bộ ERP/LMS, chữ ký số và quản lý trạng thái tích hợp; không coi adapter là kết nối đã nghiệm thu |
+| TS21 | Admin | Quản lý 6 vai trò, cấp/thu hồi quyền, khóa/xóa mềm; đăng nhập bằng mật khẩu; QR/OTP được loại theo phạm vi đồ án |
+| TS22 | Quản lý | Xuất danh sách hồ sơ, trúng tuyển, doanh thu lệ phí theo phạm vi dưới Excel/PDF/Word |
 
-### US-01: Đăng ký và nộp hồ sơ trực tuyến
-* **Vai trò (As a):** Thí sinh dự tuyển Sau Đại học
-* **Mong muốn (I want to):** Đăng ký thông tin cá nhân, tải lên văn bằng, chứng chỉ và nộp hồ sơ trực tuyến.
-* **Mục đích (So that):** Tiết kiệm thời gian và không cần nộp hồ sơ giấy trực tiếp tại trường.
-* **Tiêu chí chấp nhận (AC):**
-  * Form đăng ký đầy đủ các trường: Thông tin cá nhân, Ngành đăng ký, Văn bằng ĐH, Ngoại ngữ.
-  * Cho phép upload định dạng PDF/JPG (dung lượng tối đa 5MB/file).
-  * Tự động phát sinh Mã hồ sơ và gửi email xác nhận nộp thành công.
-
-### US-02: Theo dõi trạng thái hồ sơ
-* **Vai trò (As a):** Thí sinh dự tuyển
-* **Mong muốn (I want to):** Theo dõi trạng thái duyệt hồ sơ (Đã nhận, Cần bổ sung, Đã duyệt).
-* **Mục đích (So that):** Kịp thời bổ sung giấy tờ còn thiếu theo yêu cầu của Giáo vụ.
-
-### US-03: Tra cứu lịch thi
-* **Vai trò (As a):** Thí sinh dự tuyển
-* **Mong muốn (I want to):** Tra cứu số báo danh, phòng thi và lịch thi tuyển sinh.
-* **Mục đích (So that):** Chuẩn bị đi thi đúng giờ và đúng địa điểm.
-
-### US-04: Tra cứu kết quả trúng tuyển
-* **Vai trò (As a):** Thí sinh dự tuyển
-* **Mong muốn (I want to):** Nhập Mã hồ sơ hoặc số CCCD để tra cứu điểm thi và kết quả.
-* **Mục đích (So that):** Biết kết quả kịp thời và nhận hướng dẫn làm thủ tục nhập học.
-* **Tiêu chí chấp nhận (AC):**
-  * Giao diện tra cứu công khai, yêu cầu nhập chính xác CCCD/Mã hồ sơ để bảo mật.
-  * Hiển thị chi tiết điểm thi từng môn và trạng thái Trúng tuyển/Không trúng tuyển.
-  * Cho phép tải Giấy báo trúng tuyển điện tử (file PDF có mã QR).
-
----
-
-## 2. Nhóm chức năng dành cho Cán bộ / Giáo vụ
-
-### US-05: Tạo đợt tuyển sinh mới
-* **Vai trò (As a):** Giáo vụ
-* **Mong muốn (I want to):** Tạo đợt tuyển sinh mới (chỉ tiêu, ngành, thời hạn nhận hồ sơ).
-* **Mục đích (So that):** Mở cổng đăng ký trực tuyến cho thí sinh đúng kế hoạch.
-
-### US-06: Xem danh sách hồ sơ cần duyệt
-* **Vai trò (As a):** Cán bộ Tuyển sinh
-* **Mong muốn (I want to):** Xem danh sách hồ sơ thí sinh đã nộp.
-* **Mục đích (So that):** Kiểm tra điều kiện văn bằng và chứng chỉ đầu vào.
-
-### US-07: Duyệt và thẩm định hồ sơ
-* **Vai trò (As a):** Cán bộ Tuyển sinh
-* **Mong muốn (I want to):** Đối soát giấy tờ, phê duyệt hoặc gửi yêu cầu bổ sung.
-* **Mục đích (So that):** Lập danh sách thí sinh đủ điều kiện dự thi chính thức.
-* **Tiêu chí chấp nhận (AC):**
-  * Có bộ lọc hồ sơ theo trạng thái: Chờ duyệt, Đã duyệt, Cần bổ sung, Từ chối.
-  * Cho phép xem file đính kèm trực tiếp trên giao diện duyệt.
-  * Tự động gửi thông báo Email cho thí sinh kèm lý do nếu từ chối hoặc cần bổ sung.
-
-### US-08: Quản lý phòng thi & Hội đồng
-* **Vai trò (As a):** Cán bộ Quản lý Tuyển sinh
-* **Mong muốn (I want to):** Xếp thí sinh vào phòng thi và phân công Hội đồng chấm thi.
-* **Mục đích (So that):** Tổ chức kỳ thi minh bạch, đúng quy chế.
-* **Tiêu chí chấp nhận (AC):**
-  * Tự động chia phòng thi theo SBD và số lượng thí sinh/phòng tối đa.
-  * Cho phép gán thành viên Hội đồng vào từng phòng thi/môn thi.
-  * Xuất danh sách phòng thi và thẻ dự thi ra file định dạng PDF/Excel.
-
-### US-09: Xuất danh sách trúng tuyển
-* **Vai trò (As a):** Giáo vụ
-* **Mong muốn (I want to):** Xuất danh sách thí sinh trúng tuyển.
-* **Mục đích (So that):** Chuyển thông tin sang Phân hệ Quản lý Học viên để làm thủ tục.
+Yêu cầu phi chức năng: AES-256 cho dữ liệu nhạy cảm; HTTPS/TLS 1.3; ít nhất 10.000 người dùng đồng thời; báo cáo phù hợp mẫu Bộ GDĐT. Đây là các yêu cầu cần đo/nghiệm thu riêng, không tự coi đạt từ kiểm thử chức năng. Hiện chưa có tài khoản dịch vụ; triển khai chuẩn bị tích hợp và kiểm thử nội bộ theo lựa chọn người dùng.
