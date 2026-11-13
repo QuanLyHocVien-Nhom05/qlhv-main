@@ -1,0 +1,28 @@
+# Deployment template only. Replace host/certificates, then validate nginx -t.
+# Local dev remains HTTP. Bind backend and frontend to loopback.
+server {
+    listen 443 ssl;
+    server_name admissions.example.edu;
+    ssl_certificate /etc/ssl/admissions/fullchain.pem;
+    ssl_certificate_key /etc/ssl/admissions/privkey.pem;
+    ssl_protocols TLSv1.3;
+    client_max_body_size 12m;
+    add_header Strict-Transport-Security "max-age=31536000" always;
+    location /api/ {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto https;
+    }
+}
+server {
+    listen 80;
+    server_name admissions.example.edu;
+    return 301 https://$host$request_uri;
+}

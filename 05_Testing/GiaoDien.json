@@ -1,0 +1,11 @@
+{
+  "scope": "visual-refresh",
+  "passed": true,
+  "checks": 17,
+  "runtimeErrors": [],
+  "viewports": [
+    "1440x1000",
+    "390x844"
+  ],
+  "checkedAt": "2026-11-10T16:25:13.055Z"
+}

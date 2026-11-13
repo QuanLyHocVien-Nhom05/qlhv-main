@@ -1,0 +1,20 @@
+{
+  "completedAt": "2026-11-12T19:19:30.709Z",
+  "mode": "APPEND_ONLY",
+  "documentsAdded": 5,
+  "documentsSkipped": 0,
+  "announcementsAdded": 1,
+  "quotasAdded": 6,
+  "quotasSkipped": 0,
+  "annualQuota": 175,
+  "verification": "CHI_MUC_TIM_KIEM",
+  "sourceFileHash": "394a1dbd84f7828effe5af446650208ea73ea1cea3203582684bad86f30090d4",
+  "directAccess": "HTTP 403; chưa tải lại được PDF gốc",
+  "sourceUrls": [
+    "https://pgd.agu.edu.vn/storage/844bb3d7f10387d705c2dfb6d17d6b03.pdf",
+    "https://pgd.agu.edu.vn/storage/0bac13d8c861e0ce03d497f46fe86d9a.pdf",
+    "https://pgd.agu.edu.vn/storage/5c9ee43aac99e73db6a2cd5924cd6442.pdf",
+    "https://pgd.agu.edu.vn/storage/9b3d39ca97dd46b8fcc966141c0f361e.pdf",
+    "https://pgd.agu.edu.vn/storage/2f06ba9a9535552fd56b39a5a95c673d.pdf"
+  ]
+}

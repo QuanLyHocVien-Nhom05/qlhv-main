@@ -1,0 +1,7 @@
+import {describe,it,expect} from 'vitest';
+import {canReadResource,canWriteResource,sessionRole} from '../src/shared/security/roles';
+describe('Training authority boundaries',()=>{
+ it('maps five stored roles and does not grant an unknown role a student identity',()=>{expect(['ADMIN','LANH_DAO','CAN_BO','GIANG_VIEN','USER'].map(sessionRole)).toEqual(['ACADEMIC_ADMIN','LEADER','OFFICER','LECTURER','STUDENT']);expect(sessionRole('owner')).toBeUndefined();});
+ it('separates preparation from approval and system administration',()=>{expect(canWriteResource(['OFFICER'],'topics',null)).toBe(true);for(const key of ['topics','defenses']){expect(canWriteResource(['OFFICER'],key,'approve')).toBe(false);expect(canWriteResource(['LEADER'],key,'approve')).toBe(true);}expect(canWriteResource(['OFFICER'],'settings','edit')).toBe(false);expect(canWriteResource(['LEADER'],'topics','edit')).toBe(false);expect(canReadResource(['LEADER'],'audit')).toBe(false);});
+ it('does not expose student records or administrative writes to lecturers and students',()=>{expect(canReadResource(['LECTURER'],'students')).toBe(false);expect(canWriteResource(['LECTURER'],'registrations','grade')).toBe(true);expect(canWriteResource(['LECTURER'],'registrations','adjust')).toBe(false);expect(canWriteResource(['LECTURER'],'topics','approve')).toBe(false);expect(canReadResource(['STUDENT'],'topics')).toBe(false);expect(canWriteResource(['STUDENT'],'topics',null)).toBe(false);});
+});

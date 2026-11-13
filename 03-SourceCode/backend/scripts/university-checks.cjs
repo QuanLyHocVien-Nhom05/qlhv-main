@@ -1,0 +1,22 @@
+const assert=require('node:assert/strict');
+module.exports=async({pool,call,browser,base,token,ok})=>{
+ const {replaceData,dataset}=require('./import-university.cjs'),data=dataset();
+ const original=(await pool.request().query("SELECT (SELECT COUNT(*) FROM hoc_thuat.HocVien) AS Students,(SELECT COUNT(*) FROM hoc_thuat.KhungHocPhan) AS Courses,(SELECT COUNT(*) FROM he_thong.TaiKhoanDangNhap) AS Accounts;SELECT name,is_disabled FROM sys.triggers ORDER BY name")).recordsets;
+ const broken=JSON.parse(JSON.stringify(data));broken.HocPhan[1].KyHieu=broken.HocPhan[0].KyHieu;
+ await assert.rejects(()=>replaceData(pool,broken,'http://localhost:3100'),/duplicate|UNIQUE/i);
+ assert.deepEqual((await pool.request().query("SELECT (SELECT COUNT(*) FROM hoc_thuat.HocVien) AS Students,(SELECT COUNT(*) FROM hoc_thuat.KhungHocPhan) AS Courses,(SELECT COUNT(*) FROM he_thong.TaiKhoanDangNhap) AS Accounts;SELECT name,is_disabled FROM sys.triggers ORDER BY name")).recordsets,original);
+ const result=await replaceData(pool,data,'http://localhost:3100');assert.equal(result.credentialsPreserved,true);assert.ok(result.preservedAccounts.includes('demo.test.admin'));
+ const programs=await call('/public/programs?limit=100',undefined,200,'');assert.equal(programs.total,12);assert.equal(programs.data.filter(p=>p.TenChuongTrinh.includes('dự kiến')).length,3);
+ const program=programs.data.find(p=>p.KyHieu==='THS_8140114'),detail=await call('/public/programs/'+program.MaChuongTrinh,undefined,200,'');assert.equal(detail.HocPhan.length,19);assert.equal(detail.TinChiToiThieu,62);assert.equal(detail.MaPhienBan,null);assert.equal(detail.ThoiGianToiDaThang,null);
+ const archive=await call('/public/admission-announcements',undefined,200,'');assert.equal(archive.length,12);assert.equal(archive.reduce((n,q)=>n+q.SoLuong,0),159);assert.ok(archive.every(r=>r.PhuongThuc==='CHUNG'));
+ assert.equal((await call('/public/admission-options',undefined,200,'')).length,0);
+ const documents=await call('/public/documents',undefined,200,'');assert.equal(documents.length,5);
+ await call('/management/metadata',undefined,200,token);
+ const dot=archive[0].MaDot;await pool.request().query('UPDATE tuyen_sinh.DotTuyen SET TrangThai=\'NHAP\' WHERE MaDot='+Number(dot));await call(`/management/admission-batches/${dot}/actions/open`,{values:{}},409,token);await pool.request().query('UPDATE tuyen_sinh.DotTuyen SET TrangThai=\'DA_DONG\' WHERE MaDot='+Number(dot));
+ const stats=(await pool.request().query('SELECT (SELECT COUNT(*) FROM hoc_thuat.PhienBanChuongTrinh) AS Versions,(SELECT COUNT(*) FROM hoc_thuat.HocVien) AS Students,(SELECT COUNT(*) FROM tuyen_sinh.HoSo) AS Applications,(SELECT COUNT(*) FROM tuyen_sinh.GiaoDich) AS Payments,(SELECT COUNT(*) FROM sys.triggers WHERE is_disabled=1) AS Disabled')).recordset[0];assert.deepEqual(stats,{Versions:0,Students:0,Applications:0,Payments:0,Disabled:0});
+ const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://localhost:3100/tuyen-sinh');await page.getByRole('heading',{name:'Thông tin tuyển sinh đã công bố'}).waitFor();await require('@playwright/test').expect(page.getByRole('cell',{name:'8480201',exact:true})).toBeVisible();
+ await page.goto('http://localhost:3100/chuong-trinh/'+program.MaChuongTrinh);await require('@playwright/test').expect(page.getByRole('cell',{name:'PHI702',exact:true})).toBeVisible();await require('@playwright/test').expect(page.locator('main')).toContainText('Chưa xác định');assert.deepEqual(errors,[]);await page.close();
+ const course=(await call('/management/options/courses'))[0],initial={KhoaTuyenSinh:'TEST_INITIAL',TinChiToiThieu:3,DiemDatHocPhan:5,DiemTrungBinhToiThieu:5,ThoiGianToiDaThang:36,HocPhan:[{MaHocPhan:Number(course.Id),SoTinChi:3,HocKyDuKien:1,BatBuoc:true,TienQuyet:[]}]};
+ const initialized=await call('/programs/'+program.MaChuongTrinh+'/initial-version',initial,201,token);assert.equal(initialized.PhienBan.length,1);assert.equal(initialized.PhienBan[0].TrangThai,'NHAP');await call('/programs/'+program.MaChuongTrinh+'/initial-version',initial,409,token);
+ ok('University import rolls back failed cleanup with triggers restored, preserves admin credentials, exposes 12 authentic programs/quotas and 19 courses, blocks incomplete historical batches and creates no fictitious personal or payment records');
+};

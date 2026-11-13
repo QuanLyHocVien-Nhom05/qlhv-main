@@ -1,0 +1,40 @@
+{
+  "completedAt": "2026-11-11T17:58:59.242Z",
+  "backup": "D:\\SQL\\MSSQL17.MSSQLSERVER\\MSSQL\\Backup\\QuanLyChuongTrinhDaoTao_truoc_mo_rong_1794419938306.bak",
+  "backupVerified": true,
+  "preservedAccountsStudentsGradesAndCurricula": true,
+  "tables": 26,
+  "localReadOnlyApiChecks": [
+    "units",
+    "majors",
+    "courses",
+    "classes",
+    "registrations",
+    "staff",
+    "students",
+    "supervisors",
+    "program-versions",
+    "faculties",
+    "course-versions",
+    "cohorts",
+    "topics",
+    "defenses",
+    "committee",
+    "grad-rules",
+    "language-evidence",
+    "graduation",
+    "grad-history",
+    "documents",
+    "subscriptions",
+    "settings",
+    "audit"
+  ],
+  "activeAccounts": [
+    "admin",
+    "khanh"
+  ],
+  "constraintsValid": true,
+  "adminMenuGroups": 13,
+  "accountRoleChoices": 5,
+  "localVisualCheck": "Locally signed QA session; actual SQL/API; no account or business writes"
+}

@@ -1,0 +1,50 @@
+{
+  "completedAt": "2026-11-12T16:12:56.083Z",
+  "backup": "D:\\SQL\\MSSQL17.MSSQLSERVER\\MSSQL\\Backup\\QuanLyChuongTrinhDaoTao_truoc_don_cot_cu_1794499974571.bak",
+  "backupVerified": true,
+  "tablesPreserved": 45,
+  "removedColumns": [
+    {
+      "TableName": "danh_muc.Nguoi",
+      "ColumnName": "DiaChi"
+    },
+    {
+      "TableName": "nhan_su.CanBo",
+      "ColumnName": "HocHam"
+    },
+    {
+      "TableName": "nhan_su.CanBo",
+      "ColumnName": "LaCanBoCoHuu"
+    },
+    {
+      "TableName": "nhan_su.CanBo",
+      "ColumnName": "SoDeTaiToiDa"
+    },
+    {
+      "TableName": "he_thong.TaiKhoanDangNhap",
+      "ColumnName": "TotpCounter"
+    },
+    {
+      "TableName": "he_thong.TaiKhoanDangNhap",
+      "ColumnName": "TotpDraft"
+    },
+    {
+      "TableName": "he_thong.TaiKhoanDangNhap",
+      "ColumnName": "TotpDraftUntil"
+    },
+    {
+      "TableName": "he_thong.TaiKhoanDangNhap",
+      "ColumnName": "TotpSecret"
+    },
+    {
+      "TableName": "hoc_thuat.PhienBanChuongTrinh",
+      "ColumnName": "SoCongBoToiThieu"
+    }
+  ],
+  "allRetainedRowsAndCredentialsPreserved": true,
+  "safety": {
+    "UnsafeForeignKeys": 0,
+    "UnsafeChecks": 0,
+    "DisabledTriggers": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "completedAt": "2026-11-11T21:41:33.923Z",
+  "backup": "D:\\SQL\\MSSQL17.MSSQLSERVER\\MSSQL\\Backup\\QuanLyChuongTrinhDaoTao_truoc_nhap_cong_khai_1794433292146.bak",
+  "backupVerified": true,
+  "preservedAccounts": [
+    "admin",
+    "khanh"
+  ],
+  "credentialsPreserved": true,
+  "majors": 12,
+  "programs": 12,
+  "courses": 19,
+  "announcements": 1,
+  "quotas": 12,
+  "totalQuota": 159,
+  "proposedMajors": 3,
+  "documents": 5,
+  "sources": [
+    {
+      "file": "thong-bao-1362-2026.pdf",
+      "sha256": "c62ec7836db320615098c86c9238425a0c1719e331d651588f0c1fee1bea5760",
+      "Nguon": "https://tuyensinh.agu.edu.vn/uploads/bdb5f7ff65ffef2436d2bb6fc8961b75.pdf"
+    },
+    {
+      "file": "chuong-trinh-quan-ly-giao-duc.pdf",
+      "sha256": "1487f22a06d3f4c3c77d3733b7d5cb0b4eea400e06d27cacc4b67e3d19395e29",
+      "Nguon": "https://rmgo.agu.edu.vn/sites/default/files/Chuong%20trinh%20dao%20tao%20nganh%20Quan%20ly%20giao%20duc%20trinh%20do%20thac%20si.pdf"
+    }
+  ]
+}
