@@ -18,6 +18,7 @@ Nguồn yêu cầu: [đặc tả đã điều chỉnh cho đồ án (mục VII: 
 | TS12 | Giáo vụ | Khai phòng và ca, phân công coi/chấm/chủ tịch/thư ký; phân phòng không vượt sức chứa, chặn trùng phòng/cán bộ |
 | TS13 | Thí sinh/Coi thi | Tra cứu SBD, phòng/ca và giấy báo PDF/QR; cán bộ điểm danh theo phân công |
 | TS14 | Người chấm | Chấm theo mã phách; nhập trực tiếp hoặc Excel; lưu điểm mã hóa, chỉnh sửa qua phúc khảo |
+| TS14a | Cán bộ phụ trách đợt/Admin | Công bố điểm tạm khi đủ điểm; cán bộ phải phụ trách toàn bộ cây đơn vị của các chỉ tiêu trong đợt; chặn ngoài phạm vi, công bố lặp và đợt đã khóa; lưu nhật ký; không tự cấp quyền duyệt trúng tuyển |
 | TS15 | Thí sinh/Người xử lý | Nhận phúc khảo trong hạn sau công bố điểm tạm; chấm lại ngoài hệ thống, cập nhật điểm/nhận xét và lưu điểm trước/sau; người xử lý khác người chấm ban đầu |
 | TS16 | Cán bộ | Tính điểm có quy đổi ngoại ngữ, xếp hạng theo chỉ tiêu/điểm sàn/tiêu chí phụ; dừng để xử lý khi vẫn hòa ranh giới |
 | TS17 | Người được giao quyền duyệt | Admin cấp quyền cho cán bộ phụ trách hoặc quản trị viên; phê duyệt một cấp rồi công bố, lưu người/thời gian/ghi chú; chặn khi chưa hết hạn hoặc còn phúc khảo, thiếu điểm, hòa ranh giới chưa xử lý, vượt chỉ tiêu; khóa kết quả sau công bố và không duyệt lặp |

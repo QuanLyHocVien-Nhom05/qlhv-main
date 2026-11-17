@@ -1,0 +1,16 @@
+{
+  "completedAt": "2026-11-17T09:19:35.599Z",
+  "passed": true,
+  "isolatedDatabase": true,
+  "officerActionVisible": true,
+  "otherRolesDenied": true,
+  "outsideUnitDenied": true,
+  "mixedUnitDenied": true,
+  "adminSupported": true,
+  "missingScoresBlocked": true,
+  "draftAndLockedBlocked": true,
+  "closedBatchAllowed": true,
+  "concurrentPublicationOnce": true,
+  "singleAudit": true,
+  "finalApprovalStillRequiresSeparateGrant": true
+}

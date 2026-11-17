@@ -3,5 +3,11 @@ import {canReadResource,canWriteResource,sessionRole} from '../src/shared/securi
 describe('Training authority boundaries',()=>{
  it('maps five stored roles and does not grant an unknown role a student identity',()=>{expect(['ADMIN','LANH_DAO','CAN_BO','GIANG_VIEN','USER'].map(sessionRole)).toEqual(['ACADEMIC_ADMIN','LEADER','OFFICER','LECTURER','STUDENT']);expect(sessionRole('owner')).toBeUndefined();});
  it('separates recruitment preparation from report approval and system administration',()=>{expect(canWriteResource(['OFFICER'],'admission-batches','schedule')).toBe(true);expect(canWriteResource(['OFFICER'],'admission-report-templates','approve')).toBe(false);expect(canWriteResource(['LEADER'],'admission-report-templates','approve')).toBe(true);expect(canWriteResource(['OFFICER'],'admission-approval-rights',null)).toBe(false);expect(canWriteResource(['LEADER'],'admission-batches','open')).toBe(false);expect(canReadResource(['LEADER'],'audit')).toBe(false);});
+ it('allows officers and admins to publish temporary scores without granting approval administration',()=>{
+  for(const role of ['OFFICER','ACADEMIC_ADMIN'])expect(canWriteResource([role],'admission-batches','publish-scores')).toBe(true);
+  for(const role of ['LEADER','LECTURER','APPLICANT','STUDENT'])expect(canWriteResource([role],'admission-batches','publish-scores')).toBe(false);
+  expect(canWriteResource(['OFFICER'],'admission-approval-rights',null)).toBe(false);
+  expect(canWriteResource(['OFFICER'],'admission-approval-rights','delete')).toBe(false);
+ });
  it('does not expose student records or academic grading writes to lecturers and students',()=>{expect(canReadResource(['LECTURER'],'students')).toBe(false);expect(canWriteResource(['LECTURER'],'registrations','grade')).toBe(false);expect(canWriteResource(['LECTURER'],'registrations','adjust')).toBe(false);expect(canWriteResource(['LECTURER'],'topics','approve')).toBe(false);expect(canReadResource(['STUDENT'],'topics')).toBe(false);expect(canWriteResource(['STUDENT'],'topics',null)).toBe(false);});
 });

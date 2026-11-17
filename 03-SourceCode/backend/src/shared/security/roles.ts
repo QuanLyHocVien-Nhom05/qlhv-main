@@ -18,7 +18,7 @@ export function canWriteResource(roles:string[],key:string,action:string|null){
  if(key==='admission-report-templates')return action==='approve'?roles.includes('LEADER'):roles.includes('OFFICER');
  if(key==='admission-approval-rights')return false;
  if(roles.includes('LEADER'))return false;
- if(key.startsWith('admission-'))return roles.includes('OFFICER')&&!['publish-scores','delete','retry'].includes(action??'')&&key!=='admission-outbox';
+ if(key.startsWith('admission-'))return roles.includes('OFFICER')&&!['delete','retry'].includes(action??'')&&key!=='admission-outbox';
  if(roles.includes('OFFICER'))return !['audit','settings','staff'].includes(key)&&!['approve','confirm','adjust','delete'].includes(action??'');
  return false;
 }

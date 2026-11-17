@@ -1,3 +1,4 @@
+import {addScorePublication} from './score-publication';
 import {addExamOrganization} from './exam-organization.resources';
 import {addAdmissionExtensions} from './admission-extensions';
 import {Resource,text,ref,num,datetime,choice} from '../../management/domain/resource';
@@ -19,5 +20,6 @@ export function addAdmissionResources(resources:Resource[],lookups:Record<string
  addAdmissionExtensions(resources);
  addAdmissionSchedule(resources);
  addExamOrganization(resources,lookups);
+ addScorePublication(resources);
  Object.assign(lookups,{'admission-report-templates':"SELECT MaMau AS Id,TieuDe AS Ten FROM tuyen_sinh.MauBaoCao WHERE TrangThai='DA_DUYET'",'admission-batches':'SELECT MaDot AS Id,TenDot AS Ten FROM tuyen_sinh.DotTuyen','admission-quotas':"SELECT c.MaChiTieu AS Id,CONCAT(d.TenDot,N' · ',n.TenNganh,N' · ',c.TrinhDo,N' · ',c.PhuongThuc) AS Ten FROM tuyen_sinh.ChiTieu c JOIN tuyen_sinh.DotTuyen d ON d.MaDot=c.MaDot JOIN danh_muc.Nganh n ON n.MaNganh=c.MaNganh",'admission-rooms':'SELECT MaPhong AS Id,TenPhong AS Ten FROM tuyen_sinh.PhongThi','admission-exams':'SELECT MaCa AS Id,TenCa AS Ten FROM tuyen_sinh.CaThi','admission-approvers':"SELECT t.MaNguoi AS Id,CONCAT(n.HoTen,N' · ',t.TenDangNhap) AS Ten FROM he_thong.TaiKhoanDangNhap t JOIN danh_muc.Nguoi n ON n.MaNguoi=t.MaNguoi WHERE t.VaiTro IN('ADMIN','CAN_BO') AND t.DangHoatDong=1 AND t.DaXoa=0"});
 }
