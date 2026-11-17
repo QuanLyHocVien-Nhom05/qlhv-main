@@ -1,44 +1,44 @@
 {
   "passed": true,
-  "finishedAt": "2026-11-17T09:19:25.115Z",
+  "finishedAt": "2026-11-17T21:42:01.015Z",
   "scope": "Local API read workload only; not browser, upload/OCR, concurrent login or production capacity certification",
   "virtualUsers": 50,
   "distinctAuthenticatedApplicants": 50,
   "peakInFlightRequests": 50,
   "configuredDurationSeconds": 30,
-  "elapsedSeconds": 31.57,
+  "elapsedSeconds": 30.39,
   "thinkTimeMs": 100,
   "loginSetupExcluded": true,
-  "requests": 1177,
+  "requests": 3671,
   "failedRequests": 0,
   "statuses": {
-    "200": 1177
+    "200": 3671
   },
-  "requestsPerSecond": 37.29,
+  "requestsPerSecond": 120.79,
   "latency": {
-    "p50Ms": 1040.87,
-    "p95Ms": 2303.89,
-    "p99Ms": 2499.47,
-    "maxMs": 2617.04
+    "p50Ms": 289.66,
+    "p95Ms": 533.41,
+    "p99Ms": 581.83,
+    "maxMs": 641.27
   },
   "perScenario": {
     "public-options": {
-      "requests": 400,
-      "p50Ms": 602.31,
-      "p95Ms": 770.06,
-      "maxMs": 1002.47
+      "requests": 1237,
+      "p50Ms": 146.27,
+      "p95Ms": 184.39,
+      "maxMs": 250.29
     },
     "own-application-list": {
-      "requests": 398,
-      "p50Ms": 1053.59,
-      "p95Ms": 1342.74,
-      "maxMs": 1644.82
+      "requests": 1225,
+      "p50Ms": 290.51,
+      "p95Ms": 333.52,
+      "maxMs": 392.46
     },
     "own-application-detail": {
-      "requests": 379,
-      "p50Ms": 2011.91,
-      "p95Ms": 2469.86,
-      "maxMs": 2617.04
+      "requests": 1209,
+      "p50Ms": 486.83,
+      "p95Ms": 564.42,
+      "maxMs": 641.27
     }
   },
   "businessDataUnchanged": true,

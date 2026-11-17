@@ -1,0 +1,61 @@
+ 01-Requirements/DacTaTuyenSinh_Goc.md              |    2 [32m+[m[31m-[m
+ 01-Requirements/DanhMucTepDuAn.json                | 1825 [32m++++++++++++++++++++[m
+ 01-Requirements/NguCanhDuAn.md                     |  104 [32m++[m
+ 01-Requirements/PhienDangNhapVaDangXuat.md         |   27 [32m+[m
+ 01-Requirements/User_Stories.md                    |    1 [32m+[m
+ .../backend/data/report-candidate-do-quoc-an.json  |   27 [32m+[m
+ 03-SourceCode/backend/package.json                 |    1 [32m+[m
+ 03-SourceCode/backend/scripts/core.integration.cjs |    1 [32m+[m
+ .../backend/scripts/prepare-admission-evidence.cjs |   85 [32m+[m
+ 03-SourceCode/backend/scripts/session-checks.cjs   |   46 [32m+[m
+ .../backend/scripts/single-approval-checks.cjs     |    2 [32m+[m[31m-[m
+ .../backend/scripts/test-session-browser.cjs       |   20 [32m+[m
+ 03-SourceCode/frontend/src/app/layout.tsx          |    1 [32m+[m
+ 03-SourceCode/frontend/src/app/session.css         |    6 [32m+[m
+ .../src/components/public/public-shell.tsx         |    4 [32m+[m[31m-[m
+ .../src/features/academic/academic-workspace.tsx   |    5 [32m+[m[31m-[m
+ .../src/features/auth/session-provider.tsx         |   78 [32m+[m[31m-[m
+ .../frontend/src/features/public/user-account.tsx  |    2 [32m+[m[31m-[m
+ 03-SourceCode/frontend/src/lib/api-client.ts       |    2 [32m+[m[31m-[m
+ 05_Testing/Frontend/bao-cao-tuyen-sinh.png         |  Bin [31m94007[m -> [32m95200[m bytes
+ 05_Testing/Frontend/dang-xuat-can-bo.png           |  Bin [31m0[m -> [32m10877[m bytes
+ 05_Testing/Frontend/dang-xuat-thi-sinh-mobile.png  |  Bin [31m0[m -> [32m197078[m bytes
+ .../Frontend/danh-sach-trinh-duyet-mobile.png      |  Bin [31m96685[m -> [32m96559[m bytes
+ .../Frontend/hoi-dong-to-chuc-thi-mobile.png       |  Bin [31m112235[m -> [32m116268[m bytes
+ 05_Testing/Frontend/phe-duyet-mot-cap-mobile.png   |  Bin [31m97781[m -> [32m99742[m bytes
+ 05_Testing/Frontend/qr-mo-phong-mobile.png         |  Bin [31m291546[m -> [32m291386[m bytes
+ 05_Testing/Frontend/so-yeu-ly-lich-agu-mobile.png  |  Bin [31m322275[m -> [32m321982[m bytes
+ 05_Testing/HoSo_BuiMinhKhang.zip                   |  Bin [31m0[m -> [32m115253[m bytes
+ .../HoSo_BuiMinhKhang/01_BangTotNghiepDaiHoc.pdf   |  Bin [31m0[m -> [32m15066[m bytes
+ 05_Testing/HoSo_BuiMinhKhang/02_BangDiem.pdf       |  Bin [31m0[m -> [32m15833[m bytes
+ .../HoSo_BuiMinhKhang/03_ChungChiNgoaiNgu.pdf      |  Bin [31m0[m -> [32m15361[m bytes
+ 05_Testing/HoSo_BuiMinhKhang/04_LyLichKhoaHoc.pdf  |  Bin [31m0[m -> [32m16000[m bytes
+ .../HoSo_BuiMinhKhang/05_ThongTinSucKhoe.pdf       |  Bin [31m0[m -> [32m16065[m bytes
+ 05_Testing/HoSo_BuiMinhKhang/06_DongYCoQuan.pdf    |  Bin [31m0[m -> [32m16278[m bytes
+ 05_Testing/HoSo_BuiMinhKhang/07_SoYeuLyLich.pdf    |  Bin [31m0[m -> [32m18846[m bytes
+ 05_Testing/HoSo_BuiMinhKhang/HUONG_DAN.md          |   27 [32m+[m
+ 05_Testing/HoSo_BuiMinhKhang/SHA256.json           |   58 [32m+[m
+ 05_Testing/HoSo_BuiMinhKhang/ThongTinHoSo.json     |   19 [32m+[m
+ 05_Testing/HoSo_DoQuocAn.zip                       |  Bin [31m0[m -> [32m119056[m bytes
+ .../HoSo_DoQuocAn/01_BangTotNghiepDaiHoc.pdf       |  Bin [31m0[m -> [32m15151[m bytes
+ 05_Testing/HoSo_DoQuocAn/02_BangDiem.pdf           |  Bin [31m0[m -> [32m16232[m bytes
+ 05_Testing/HoSo_DoQuocAn/03_ChungChiNgoaiNgu.pdf   |  Bin [31m0[m -> [32m15603[m bytes
+ 05_Testing/HoSo_DoQuocAn/04_LyLichKhoaHoc.pdf      |  Bin [31m0[m -> [32m15920[m bytes
+ 05_Testing/HoSo_DoQuocAn/05_ThongTinSucKhoe.pdf    |  Bin [31m0[m -> [32m16183[m bytes
+ 05_Testing/HoSo_DoQuocAn/06_DongYCoQuan.pdf        |  Bin [31m0[m -> [32m16252[m bytes
+ 05_Testing/HoSo_DoQuocAn/07_SoYeuLyLich.pdf        |  Bin [31m0[m -> [32m18724[m bytes
+ 05_Testing/HoSo_DoQuocAn/HUONG_DAN.md              |   27 [32m+[m
+ 05_Testing/HoSo_DoQuocAn/KiemTraChuaDangKy.json    |   15 [32m+[m
+ 05_Testing/HoSo_DoQuocAn/SHA256.json               |   58 [32m+[m
+ 05_Testing/HoSo_DoQuocAn/THONG_TIN_DANG_KY.md      |  106 [32m++[m
+ 05_Testing/HoSo_DoQuocAn/ThongTinHoSo.json         |  127 [32m++[m
+ 05_Testing/KiemThuDuLieuAGU20261117.json           |    2 [32m+[m[31m-[m
+ 05_Testing/KiemThuTaiLieu_DoQuocAn.json            |   15 [32m+[m
+ 05_Testing/KiemTraHoSo_DoQuocAn.json               |   15 [32m+[m
+ 05_Testing/NghiemThu_Loi.json                      |   14 [32m+[m[31m-[m
+ 05_Testing/PhanQuyenCongBoDiem.json                |    2 [32m+[m[31m-[m
+ 05_Testing/PhienDangNhapVaDangXuat.json            |   17 [32m+[m
+ 05_Testing/Tai_50_NguoiDung.json                   |   42 [32m+[m[31m-[m
+ AGENTS.md                                          |    4 [32m+[m[31m-[m
+ scripts/snapshot-project.cjs                       |    2 [32m+[m[31m-[m
+ 60 files changed, 2736 insertions(+), 53 deletions(-)

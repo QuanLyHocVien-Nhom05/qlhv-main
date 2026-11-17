@@ -1,6 +1,6 @@
 // Receive repository-relative file names from git ls-files, one per line.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'..'),destination='06_Documentation/26_DanhMucTepDuAn.json';
+const root=path.resolve(__dirname,'..'),destination='01-Requirements/DanhMucTepDuAn.json';
 const names=[...new Set(fs.readFileSync(0,'utf8').split(/\r?\n/).filter(Boolean))].sort();
 const files=[],missing=[],excluded=[];
 for(const original of names){

@@ -1,0 +1,58 @@
+[
+  {
+    "file": "01_BangTotNghiepDaiHoc.pdf",
+    "type": "BANG_DAI_HOC",
+    "label": "Bằng tốt nghiệp đại học",
+    "bytes": 15066,
+    "pages": 1,
+    "sha256": "e94c2e6baeae40a82ff8ff6b8788c9edebc1984df7e99ac6527823ffaccb2653"
+  },
+  {
+    "file": "02_BangDiem.pdf",
+    "type": "BANG_DIEM",
+    "label": "Bảng điểm toàn khóa",
+    "bytes": 15833,
+    "pages": 1,
+    "sha256": "9d8d38f3b879382b5dc19ec27831f27a433406f86d6b2ae31bf07af390cfff04"
+  },
+  {
+    "file": "03_ChungChiNgoaiNgu.pdf",
+    "type": "CHUNG_CHI_NGOAI_NGU",
+    "label": "Chứng chỉ ngoại ngữ",
+    "bytes": 15361,
+    "pages": 1,
+    "sha256": "20b4888381349643c0b8c600763bc9da9067668fe9860ee749e47014f483e880"
+  },
+  {
+    "file": "04_LyLichKhoaHoc.pdf",
+    "type": "LY_LICH_KHOA_HOC",
+    "label": "Lý lịch khoa học",
+    "bytes": 16000,
+    "pages": 1,
+    "sha256": "b03a60e7b2f4b17a05b66bdc7ca512c323b13f4bafa5aeeace69092a6d61a2a8"
+  },
+  {
+    "file": "05_ThongTinSucKhoe.pdf",
+    "type": "GIAY_KHAM_SUC_KHOE",
+    "label": "Giấy khám sức khỏe",
+    "bytes": 16065,
+    "pages": 1,
+    "sha256": "0020d902281691e6be4607c2e871ecc1d59105d5e86052f4cc680c746d436bc5"
+  },
+  {
+    "file": "06_DongYCoQuan.pdf",
+    "type": "DONG_Y_CO_QUAN",
+    "label": "Văn bản đồng ý của cơ quan",
+    "bytes": 16278,
+    "pages": 1,
+    "sha256": "7ee21ea7ea83d02b18166d2fbb36bae029e9bdaa52299f6e0ed069f5800020f8"
+  },
+  {
+    "file": "07_SoYeuLyLich.pdf",
+    "type": "SO_YEU_LY_LICH",
+    "label": "Sơ yếu lý lịch có ảnh, chữ ký và xác nhận",
+    "bytes": 18846,
+    "pages": 2,
+    "sha256": "9610a4f62a8b7361204805198cb0c2fce8a333501ca1103a310824f787df6564"
+  }
+]
