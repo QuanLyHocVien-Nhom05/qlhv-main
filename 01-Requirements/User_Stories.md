@@ -26,6 +26,7 @@ Nguồn yêu cầu: [đặc tả đã điều chỉnh cho đồ án (mục VII: 
 | TS19 | Cán bộ | Bàn giao nội bộ sau xác nhận và hoàn tất phí: đủ CTĐT đã duyệt đúng ngành/trình độ, lớp quản lý và người hướng dẫn hợp lệ; sinh mã học viên, xếp lớp theo kế hoạch, chuyển quyền/thu hồi phiên cũ; rollback khi lỗi và không tạo trùng |
 | TS20 | Admin | Quản lý kế hoạch bàn giao nội bộ, chế độ mô phỏng và nhật ký; không yêu cầu ERP/LMS, tài khoản LMS riêng hoặc chữ ký số PKI để nghiệm thu mục VIII |
 | TS21 | Admin | Quản lý 6 vai trò, cấp/thu hồi quyền, khóa/xóa mềm; đăng nhập bằng mật khẩu; QR/OTP được loại theo phạm vi đồ án |
+| TS21a | Mọi vai trò | Có nút đăng xuất tại giao diện công khai và không gian làm việc, dùng được trên điện thoại; tải lại trang trong cùng tab giữ phiên còn hiệu lực sau khi backend xác minh; không lưu mật khẩu; đăng xuất xóa phiên trình duyệt và thu hồi token; phiên hết hạn/đã thu hồi không được khôi phục |
 | TS22 | Quản lý | Xuất danh sách hồ sơ, trúng tuyển, doanh thu lệ phí theo phạm vi dưới Excel/PDF/Word và mẫu đồ án được duyệt; loại trừ tiền mô phỏng, báo rõ giới hạn xuất; không tuyên bố mẫu chuẩn Bộ GDĐT |
 
 Yêu cầu phi chức năng theo mục IX điều chỉnh ngày 17/11/2026: AES-256-GCM cho dữ liệu tuyển sinh nhạy cảm, băm mật khẩu có salt, kiểm tra phân quyền ở backend và lưu nhật ký; đăng nhập bằng mật khẩu, không bắt buộc 2FA/OTP. Cho phép HTTP tại localhost; yêu cầu HTTPS khi triển khai truy cập qua mạng, không bắt buộc chứng nhận riêng TLS 1.3 trong nghiệm thu đồ án.

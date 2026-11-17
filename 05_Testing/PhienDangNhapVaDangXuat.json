@@ -1,0 +1,17 @@
+{
+  "completedAt": "2026-11-17T21:42:33.196Z",
+  "passed": true,
+  "isolatedDatabase": true,
+  "rolesVerified": 6,
+  "reloadPersists": true,
+  "logoutClearsAndRevokes": true,
+  "desktopAndMobile": true,
+  "revokedSessionsRejected": true,
+  "passwordAndRoleChangesRejected": true,
+  "temporaryFailurePreservesToken": true,
+  "retryRecovers": true,
+  "oldRequestCannotLogOutNewSession": true,
+  "tamperedTokenRejected": true,
+  "automaticExpiry": true,
+  "storage": "sessionStorage; token only; validated by /auth/me"
+}

@@ -1,8 +1,8 @@
 # Ngữ cảnh đồ án
 
-Khi tiếp tục làm việc, đọc [ngữ cảnh dự án](06_Documentation/00_NguCanhDuAn.md) và yêu cầu liên quan trước khi sửa. Đây là bản ghi trạng thái, không thay thế chỉ dẫn mới của người dùng hoặc việc kiểm tra mã nguồn thực tế.
+Khi tiếp tục làm việc, đọc [ngữ cảnh dự án](01-Requirements/NguCanhDuAn.md) và yêu cầu liên quan trước khi sửa. Đây là bản ghi trạng thái, không thay thế chỉ dẫn mới của người dùng hoặc việc kiểm tra mã nguồn thực tế.
 
-- Danh mục tệp và SHA-256: `06_Documentation/26_DanhMucTepDuAn.json`; tìm nội dung bằng `rg`.
+- Danh mục tệp và SHA-256: `01-Requirements/DanhMucTepDuAn.json`; tìm nội dung bằng `rg`.
 - Giữ dữ liệu, tài khoản và khóa hiện có. Không dùng `data:replace` để bổ sung dữ liệu vào database đang sử dụng.
 - Không biến đợt AGU lịch sử thành đợt đang mở hay tự gộp mã ngành khác nhau giữa các nguồn.
 - Không đưa `.env`, khóa, kho minh chứng riêng, backup SQL, dependencies hoặc build lên Git.

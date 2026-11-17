@@ -1,0 +1,127 @@
+{
+  "folderName": "HoSo_DoQuocAn",
+  "account": {
+    "HoTen": "Đỗ Quốc An",
+    "Email": "doquocan@student.agu.edu.vn",
+    "SoGiayTo": "089200063042",
+    "MatKhau": "12345678",
+    "XacNhanMatKhau": "12345678",
+    "DongY": true
+  },
+  "selection": {
+    "batchCode": "TS_CNTT_2026_04",
+    "majorCode": "8480201",
+    "degree": "THAC_SI",
+    "method": "XET_TUYEN"
+  },
+  "profile": {
+    "HoTen": "Đỗ Quốc An",
+    "NgaySinh": "1999-10-12",
+    "SoGiayTo": "089200063042",
+    "DienThoai": "0907450234",
+    "TruongCapBang": "Trường Đại học An Giang",
+    "NganhTotNghiep": "Công nghệ thông tin",
+    "XepLoai": "GIOI",
+    "Gpa": 8.4,
+    "ThangGpa": 10,
+    "NoiCongTac": "Công ty Công nghệ An Giang",
+    "DoiTuongUuTien": "",
+    "TenChungChi": "IELTS",
+    "DiemNgoaiNgu": 6.5,
+    "NgayCapChungChi": "2026-06-15",
+    "TenDeCuong": "",
+    "SoYeuLyLich": {
+      "PhienBan": "AGU_2026",
+      "GioiTinh": "NAM",
+      "NoiSinh": "An Giang",
+      "QueQuan": "An Giang",
+      "DanToc": "Kinh",
+      "TonGiao": "Không",
+      "HoKhauThuongTru": "62 Trần Hưng Đạo, phường Long Xuyên, tỉnh An Giang",
+      "DiaChiLienHe": "62 Trần Hưng Đạo, phường Long Xuyên, tỉnh An Giang",
+      "TrinhDoVanHoa": "12/12",
+      "TrinhDoNgoaiNgu": "IELTS 6.5",
+      "TrinhDoTinHoc": "Tin học văn phòng và lập trình",
+      "HinhThucDaoTao": "Chính quy",
+      "NamTotNghiep": 2021,
+      "NgheNghiep": "Kỹ sư công nghệ thông tin",
+      "ChucVu": "Nhân viên phát triển phần mềm",
+      "DiaChiCoQuan": "Long Xuyên, An Giang",
+      "NgayBatDauCongTac": "2021-09-01",
+      "SoNamCongTac": 5,
+      "NgayVaoDoan": "2016-03-26",
+      "NoiVaoDoan": "Trường THPT Long Xuyên",
+      "NgayVaoDang": "",
+      "NoiVaoDang": "",
+      "KhenThuong": "Không",
+      "KyLuat": "Không",
+      "GhiChuGiaDinh": "Chưa kết hôn, chưa có con.",
+      "QuaTrinhHoatDong": [
+        {
+          "TuThang": "2017-09",
+          "DenThang": "2021-08",
+          "CongViec": "Học đại học ngành Công nghệ thông tin",
+          "DonViCongTac": "Trường Đại học An Giang",
+          "ChucVu": "Sinh viên"
+        },
+        {
+          "TuThang": "2021-09",
+          "DenThang": "",
+          "CongViec": "Phát triển phần mềm",
+          "DonViCongTac": "Công ty Công nghệ An Giang",
+          "ChucVu": "Nhân viên"
+        }
+      ],
+      "GiaDinh": [
+        {
+          "QuanHe": "CHA",
+          "HoTen": "Đỗ Văn Phúc",
+          "NamSinh": 1970,
+          "Tuoi": 56,
+          "NgheNghiep": "Nông nghiệp",
+          "NoiLamViec": "Tại địa phương",
+          "NoiOHienNay": "62 Trần Hưng Đạo, phường Long Xuyên, tỉnh An Giang"
+        },
+        {
+          "QuanHe": "ME",
+          "HoTen": "Lê Thị Hồng",
+          "NamSinh": 1973,
+          "Tuoi": 53,
+          "NgheNghiep": "Buôn bán",
+          "NoiLamViec": "Tại địa phương",
+          "NoiOHienNay": "62 Trần Hưng Đạo, phường Long Xuyên, tỉnh An Giang"
+        }
+      ],
+      "GiaDinhDaKhaiBao": true,
+      "CamDoan": true
+    }
+  },
+  "transcript": [
+    [
+      "Lập trình căn bản",
+      3,
+      8
+    ],
+    [
+      "Cơ sở dữ liệu",
+      3,
+      8
+    ],
+    [
+      "Mạng máy tính",
+      3,
+      8
+    ],
+    [
+      "Công nghệ phần mềm",
+      3,
+      9
+    ],
+    [
+      "Phân tích và thiết kế hệ thống",
+      3,
+      9
+    ]
+  ],
+  "purpose": "PHỤC VỤ ĐỒ ÁN — KHÔNG PHẢI MINH CHỨNG THẬT"
+}

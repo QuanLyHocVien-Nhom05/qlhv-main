@@ -1,0 +1,1825 @@
+{
+  "recordedAt": "2026-11-17T21:47:56.332Z",
+  "purpose": "Project inventory for continuity and GitHub preparation; no private configuration contents",
+  "fileCount": 363,
+  "totalBytes": 39588912,
+  "missingTrackedFiles": [],
+  "excludedPaths": [],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 200,
+      "sha256": "98a7071e60e7b968e1797dea1e429bcf46e61bad178e1d64ef88b65e33bc2002"
+    },
+    {
+      "path": "01-Requirements/DacTaTuyenSinh_Goc.md",
+      "bytes": 20950,
+      "sha256": "0635984f0ed555bf9f789387ac668022e4f4dc9bda61888d2f6eb9c53fb98a49"
+    },
+    {
+      "path": "01-Requirements/NguCanhDuAn.md",
+      "bytes": 11200,
+      "sha256": "852f5a6adc41c1b72eacfe24234d0f3ab8c5be2ec8ea6a9611d18a7c0d64f876"
+    },
+    {
+      "path": "01-Requirements/PhanQuyenCongBoDiem.md",
+      "bytes": 3002,
+      "sha256": "0cb0207f01111614ef2824bf0f54f6d7b6397fd28e08582470c5295ac06640b7"
+    },
+    {
+      "path": "01-Requirements/PhienDangNhapVaDangXuat.md",
+      "bytes": 3623,
+      "sha256": "4a999a58045eb89595639263f19db38f58205a10e09af84c99015456241eeb13"
+    },
+    {
+      "path": "01-Requirements/User_Stories.md",
+      "bytes": 6572,
+      "sha256": "2f17a255080617fb163882404b49dcfa9df669e48cb663d6ab39776ed7084415"
+    },
+    {
+      "path": "01-Requirements/Đactahethong.md",
+      "bytes": 3892,
+      "sha256": "a76c41bcbda20b322d07f52ade4ad496dbd31fb233b7ed733739de937618de65"
+    },
+    {
+      "path": "02_Design/API_Contract.md",
+      "bytes": 12781,
+      "sha256": "c1416892b30d50fa6ad6954aec6c524dab04f27c056f00d33e2f85c2e1f1c906"
+    },
+    {
+      "path": "02_Design/KienTruc.md",
+      "bytes": 2252,
+      "sha256": "3835cf685881074b3cee54585fe606bf71cb9ad1ef70259357b05d9be1196f7a"
+    },
+    {
+      "path": "03-SourceCode/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "03-SourceCode/README.md",
+      "bytes": 982,
+      "sha256": "1ecaeea3e053c9359d829d0fbb08fe0a76aada2db3f587ffc3378d47c8f0988b"
+    },
+    {
+      "path": "03-SourceCode/backend/.env.example",
+      "bytes": 1993,
+      "sha256": "928cf3c95f3659c97ba3c2f4049c9c5d13e54c309d1e5d517c9a7d2826dc3019"
+    },
+    {
+      "path": "03-SourceCode/backend/data/admissions-workflow.json",
+      "bytes": 2071,
+      "sha256": "bdbe0dfcde3e1c509bc60da7660084b36eb663f3dfd38071b4dc6b167c489ecc"
+    },
+    {
+      "path": "03-SourceCode/backend/data/agu-2026-biography-source.json",
+      "bytes": 2579,
+      "sha256": "1ce6d186c01ae56e11f28dc4827fceb98c60154cba59bc62860829288a4ba497"
+    },
+    {
+      "path": "03-SourceCode/backend/data/agu-public-20261117.json",
+      "bytes": 19865,
+      "sha256": "902f72eceebf5bc5199f6b73aa20aa7b423690335c6b36252a746229d1cf468b"
+    },
+    {
+      "path": "03-SourceCode/backend/data/agu-supplement.json",
+      "bytes": 3892,
+      "sha256": "cacb962a48954044ed889c8ec30868c5a553b393fb0572858c0a0bbcbddbbcb4"
+    },
+    {
+      "path": "03-SourceCode/backend/data/report-candidate-do-quoc-an.json",
+      "bytes": 2700,
+      "sha256": "9931ad657c9a3276ec151bc298df47da0f4ce521152f36e274d8702fc157c9df"
+    },
+    {
+      "path": "03-SourceCode/backend/data/university-data.json",
+      "bytes": 8223,
+      "sha256": "dc18f393a44ba3992dadbcf5cbbd813f77b0d965faa3ded5312cb689e282034c"
+    },
+    {
+      "path": "03-SourceCode/backend/nest-cli.json",
+      "bytes": 224,
+      "sha256": "354eb12c37ed53c18777c67ec059f6568f1a98bf785805397f1f708d031538a3"
+    },
+    {
+      "path": "03-SourceCode/backend/package.json",
+      "bytes": 2568,
+      "sha256": "32c3654ecf2f98ca2d456ff1bd53ac8a84ff6aa534bf86ed19f049492798f8e9"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/acceptance.cjs",
+      "bytes": 1658,
+      "sha256": "c7e11dfbe0f09bfb7a106cd0d31b0bd95abaa619f8f71f0fe9de5a197b8b4208"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/admission-scope-checks.cjs",
+      "bytes": 5125,
+      "sha256": "8f1f5cdf6b4876c312a24950c894c044b2e407168f1459b0e9a6ac0f7c8bf706"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/admissions-checks.cjs",
+      "bytes": 18474,
+      "sha256": "b1997582f866bae6f1705c69f8dd6035df94d856b833857b5d79eb810b0dd007"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/admissions-completion-checks.cjs",
+      "bytes": 17128,
+      "sha256": "38c584a913e4af8bee9813c225f7da2e5ab405a79549168387c377b0d3d6084c"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/admissions.integration.cjs",
+      "bytes": 5245,
+      "sha256": "5df926d2e77eebc5e684103280508569a279ddc975a9aa939d41dffa805af259"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/agu-biography-checks.cjs",
+      "bytes": 8370,
+      "sha256": "1102b51a23df8a9bc1c4ce8865bef23815a8bfba7f01b3de329f85abe44e0c95"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/agu-biography-fixture.cjs",
+      "bytes": 928,
+      "sha256": "bf335a68c07b2ef102a1261eea4b06afd801d930dc054f488fc6af027aa016c5"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/agu-public-checks.cjs",
+      "bytes": 3259,
+      "sha256": "7c3264375538ac7b81dee523c54dd2cba8bb2995fe506b1b46d4c0203c49ef80"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/agu-supplement-checks.cjs",
+      "bytes": 3897,
+      "sha256": "41625a89a78f39daddfd936ede3ac61f5ef64fcd250e740648a3d671a9d1fcd5"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/append-agu-public.cjs",
+      "bytes": 12147,
+      "sha256": "488bfe0a1e378c7ba177331b0acb3ee94d3b031cb839dbad19ad178ca7a97673"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/augment-agu.cjs",
+      "bytes": 8008,
+      "sha256": "2c57ba77e49bad47cb78ea07d701a4e494005f0a734ac22fe2db9e256e63be70"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/browser-checks.cjs",
+      "bytes": 164,
+      "sha256": "1a469d62664bd2c34f8e0fa7e78534b5d6f3b37e15de761cad330693cead1e3e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/check-ocr.cjs",
+      "bytes": 4121,
+      "sha256": "a2557975284e39b574b60c7240909fad625940bcb74c568fbb0664fa642ff01e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/check-smtp.cjs",
+      "bytes": 550,
+      "sha256": "b8254e56900e09f05bd1106fba1c6503383268e0f90b35d3bcfa239a9156e016"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/clean-legacy-labels.cjs",
+      "bytes": 4589,
+      "sha256": "03a95cfc2fae96a95642792c9448ca6d10bc373d287cff097e71fed5ecc59a0c"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/compact-checks.cjs",
+      "bytes": 659,
+      "sha256": "7b3d0d96c735b1d85361558080acfb2a5eb311a17a567f0d95b1dc6c41ed516a"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/compact-database.cjs",
+      "bytes": 4026,
+      "sha256": "6723c3da3b6f3a0809522de202484b170558b9e0ac6c1b3e64a301014363b39e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/core-database.cjs",
+      "bytes": 889,
+      "sha256": "e247b84e2d4cc66223904c2746dde7082710eaf0f4a039f9673d9fffa11159a6"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/core.integration.cjs",
+      "bytes": 16087,
+      "sha256": "5aed717e0ed53638f0c9d67939fd18f64b9471f66a8362e41e7ef2923c799d64"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/create-admissions-workflow.cjs",
+      "bytes": 24377,
+      "sha256": "2688d93d5a6a3c5ac347c564337089703fd853c5bfae79d4c7d82c49b08a33d7"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/demo-payment-checks.cjs",
+      "bytes": 9658,
+      "sha256": "9fa6096482808cd66db1d3931ea77ad0605a6f8877bb6e5f7335b968b2301e86"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/exam-council-fixture.cjs",
+      "bytes": 2019,
+      "sha256": "efd3302205f9c6529347bd25233048d2f3ccb03c9070192d28f1ab0680a74640"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/exam-organization-checks.cjs",
+      "bytes": 7242,
+      "sha256": "2c52e3ed616cfd5c4ea016cfc8d2258d15e0c1cebf5d96abe99b67de04a3a650"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/frontend-test-server.cjs",
+      "bytes": 2293,
+      "sha256": "9be77d0094da3a2469d5232ff270992290aa0e024a920c1c80a4dc4efb088ec8"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/handover-accounts-checks.cjs",
+      "bytes": 1760,
+      "sha256": "2ae77eb86bf84a5ef9b576b8859cc4136bd6b67f0d9ce1172e300b42f05ca014"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/import-university.cjs",
+      "bytes": 10603,
+      "sha256": "9395974b8583abb9f249c74d7ac9a4a4545d2e0ce2c952a87c1b5a3557f34be7"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/load-checks.cjs",
+      "bytes": 8438,
+      "sha256": "e67e474b247e514e6cb14e0203c189f7d707193b2fa9a46233b2ef62b862074b"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/load-test.cjs",
+      "bytes": 3557,
+      "sha256": "37bdfaac06029e6d0fad5d3b7b1299af4747d57b74b79c4f983aaba45cb38824"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/prepare-admission-evidence.cjs",
+      "bytes": 17018,
+      "sha256": "b69237f87f8c410ddb34b5ee80cde3b2fda35e6180db477aed0bb5dc5a90df44"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/recovery-checks.cjs",
+      "bytes": 6556,
+      "sha256": "07499b33c6eab665c61815b99efc1d70d7aa3cb177be5bbb9e7fdf50aceeff3e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/schema-cleanup-checks.cjs",
+      "bytes": 2229,
+      "sha256": "c8fd5f6df7def542be145c256b2ceb4566483ca8baa6beaa8c22af62641d9fe0"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/score-publication-checks.cjs",
+      "bytes": 6528,
+      "sha256": "55bb74d1d31f36047f226a04e92e3b981c78e1a9b47ceaf0147955ab168ebcdf"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/session-checks.cjs",
+      "bytes": 8216,
+      "sha256": "8f0d0e044282f72e12f006968f0385253274bf734b18bd272a1763964ec56cac"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/setup-local.cjs",
+      "bytes": 745,
+      "sha256": "1eaf43908ce7ffec2ced99ac095385b2e9fb7b0eeb101399d2db54e04c214d4e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/setup-ocr.cjs",
+      "bytes": 1746,
+      "sha256": "36beedb129b401b483a35b003b750919706af6aaa9f0e32e5d37b1864a716a1e"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/single-approval-checks.cjs",
+      "bytes": 6662,
+      "sha256": "3fb9af86af22433bea0f09c513931ee7b11a8758e379c55afa7e48933269df1f"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/smtp-test-server.cjs",
+      "bytes": 1494,
+      "sha256": "043005386f2928da03c72ddc31dabb8402e897a7562daa08b22704d856b67a5a"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/test-agu-public.cjs",
+      "bytes": 1811,
+      "sha256": "00a89021bf865d56ffbff6abc06898a182156aa6ca34551b8385a97043103469"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/test-score-publication.cjs",
+      "bytes": 3462,
+      "sha256": "eeea22c7a90a67d1d02d4aa3eda8f523988ecc49f3d4aeebf0146c49619df347"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/test-session-browser.cjs",
+      "bytes": 3804,
+      "sha256": "1d4ea69f34bbcfc50f317d6d4803c5775ceee745ef640bf90a3b0ea3f20c75ed"
+    },
+    {
+      "path": "03-SourceCode/backend/scripts/university-checks.cjs",
+      "bytes": 4410,
+      "sha256": "451431adc2a464282161a8ee6da0129ecc7a0f53a8849eb6cb8c8e40b61daf51"
+    },
+    {
+      "path": "03-SourceCode/backend/src/app.module.ts",
+      "bytes": 1721,
+      "sha256": "db7117bdff3362d52a4ceabcb3f157fa493e69350004660f6872df5a25888ef7"
+    },
+    {
+      "path": "03-SourceCode/backend/src/main.ts",
+      "bytes": 1816,
+      "sha256": "87843717f33a4b0b73c8e0ca6c3eb6b57a9e129986e0385c6ba3ba26d729e91b"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/accounts.module.ts",
+      "bytes": 597,
+      "sha256": "a3b377a66f69a41420009ced1bdcaae6daa01b4f745f377e99b6967ebf49c6d3"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/application/accounts.service.ts",
+      "bytes": 1981,
+      "sha256": "37380ccf8ae5e7ad44dad918a5c9c5057eda82bcf39d7e3cdd07b1f9f909e61a"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/domain/account.ts",
+      "bytes": 866,
+      "sha256": "88c59b088c842271921bba93643c77e388a87ef0f8d0077c4bef95e51bd788c8"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/infrastructure/sql-accounts.repository.ts",
+      "bytes": 9003,
+      "sha256": "21b60967213ef3661c59e373887da048132b3bed8bba202ef4e238f35358c6b4"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/presentation/accounts.controller.ts",
+      "bytes": 1364,
+      "sha256": "5790e0b12f324c06aab25416064a646af8910bf63b7752028d12de828f08bc4f"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/accounts/presentation/accounts.dto.ts",
+      "bytes": 2238,
+      "sha256": "c51079c0946a596eb39fae93593a85fc1e6aaa9f807e985954693833960ae9f1"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/admissions.module.ts",
+      "bytes": 1397,
+      "sha256": "181b31be9f807d4cc168c985824d213f1fd9ce25145bf7f6c55588291b84a4a8"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/application/admissions.service.ts",
+      "bytes": 48827,
+      "sha256": "a6ddfecdc2934e1e03b5ed879e65e5840eb675d85a93df2ad878c3fc2e199b01"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/application/exam-organization.service.ts",
+      "bytes": 9845,
+      "sha256": "bc2ea01ed029f4f2eac153eea7bb816c0d7e9478a34f25ca6935a7c15eb92c84"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/application/exam.service.ts",
+      "bytes": 6146,
+      "sha256": "b43df94f6491a388502cfae9ac4f990dea122efb407e7db498c13e3600760bc4"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/assets/BeVietnamPro-Regular.ttf",
+      "bytes": 132948,
+      "sha256": "cd1ef6e9d7db28ad5cdb88a65ccbe693870e60d340b791f349d248342b4fe4c3"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/assets/OFL.txt",
+      "bytes": 4397,
+      "sha256": "6b7f8f73609a25ea78c891e34cf37b06f8a676b7ea986e941e43b009110f2a85"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/domain/admission.ts",
+      "bytes": 6016,
+      "sha256": "a0693a80357bcfd1343a72ed45c8ecbd43eb512b383809f04bb3485ca59fa575"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/domain/agu-biography.ts",
+      "bytes": 8713,
+      "sha256": "b927ea690d8bf65bbe9fa9e18e56a6e43c2b0b3216e0a7cfd4dbaa4876e74b64"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/domain/ocr.ts",
+      "bytes": 2240,
+      "sha256": "c57dd5e61728dbfe91c419c76f7014b42c7a8bc3a921ddd5f2c5039464dbb4b7"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/domain/payment-mode.ts",
+      "bytes": 257,
+      "sha256": "813e6803478d5266f3c8e7487c868b85367a78482c1150a36c03ed40a66f29c7"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/domain/report.ts",
+      "bytes": 917,
+      "sha256": "55cbdd896c2c1ddc6d5e36bb2225ffaa79deceaea98b3cf917b32b158392a0d4"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-documents.service.ts",
+      "bytes": 12306,
+      "sha256": "572be5385c9671bf5439bb572a7594a093fe4d27b0d94c90d48125ef38d1022c"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-extensions.ts",
+      "bytes": 7713,
+      "sha256": "7ef6fa5386fcd97dbc7493aaf00be2365e596262db4a3a7fe90067a4e6f5c3ad"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-files.service.ts",
+      "bytes": 2747,
+      "sha256": "394cc04bb094b34d0f59e5dde58afff9e972250342e449ac744dd651c142a51e"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-jobs.service.ts",
+      "bytes": 6482,
+      "sha256": "edc3ed020ae1e630b82810846f88890cf791a5b321827a7b49f0451ab0815e93"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-resources.ts",
+      "bytes": 13119,
+      "sha256": "0e1407989569eb91c5b27932caaa7a18a4d248b4b9a78a6778cb07ba2638e382"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/admission-schedule.ts",
+      "bytes": 3311,
+      "sha256": "b6d7fd537f865f16ae4f23d55096bf1721f88e01df2a631a970050582cc90157"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/demo-payment.gateway.ts",
+      "bytes": 8257,
+      "sha256": "2f7e6470700c73d40d4959c479007e318d931bb3694c6970955443ad7e3514d4"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/exam-allocation.sql.ts",
+      "bytes": 3457,
+      "sha256": "c7e191a4b626591344212e5a06c9f4564c373709b8cdccb3ffdb4e6d5dc04420"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/exam-organization.resources.ts",
+      "bytes": 6827,
+      "sha256": "661a86633e32dbf470fa61aff3d06edee7eeb78bc2084b30449246547914e514"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/external.adapters.ts",
+      "bytes": 3826,
+      "sha256": "7070ee0e22c9072016b386559dac9f0f81747dc9e3a02e5a0a5f5eb31e1edbe8"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/local-ocr.ts",
+      "bytes": 3564,
+      "sha256": "861fe45c6d95ab3df7df5236bce7e1678df0334c16204ac2438a8112ccf8c69c"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/momo.gateway.ts",
+      "bytes": 6687,
+      "sha256": "1bb8c03d2cf3bdfe6f225b81904b84385d3909535024af0a7a66e9e0ac3126e1"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/payment.gateway.ts",
+      "bytes": 7225,
+      "sha256": "888ad6255cb4d8a31d7c0f887eaec6d08c2b8988f4bd3f6c6b647f25f7cee920"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/score-publication.ts",
+      "bytes": 1619,
+      "sha256": "efad57741d254d16744756b2834afbfa09af3ee17c40bc7671c3f92747a90033"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/infrastructure/single-approval.sql.ts",
+      "bytes": 3041,
+      "sha256": "7e5b8d2c6bf7fa0cb8dd819df9dc29958503c41c765aae1d20619c0010b8cd6f"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/admissions/presentation/admissions.controller.ts",
+      "bytes": 16869,
+      "sha256": "00882e246580dfbdea867fe0fd0528ccadae7411034b6113662b3d630a3df6f3"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/auth/auth.module.ts",
+      "bytes": 5746,
+      "sha256": "4a6cc46b84a3b815b2e2f5f4bfb6d765dd205ea6d4a8e7f63673c4768fc2f2b3"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/auth/local-account.service.ts",
+      "bytes": 4733,
+      "sha256": "2fe4e8be0a6880adba27cd048fed1f50828fbfbe45dd2848ba44a6af543ed1f0"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/auth/password.ts",
+      "bytes": 870,
+      "sha256": "33020602cecaf30a9e47dad62e26eb4391e8a0dc37dbb69b2f32726113b26274"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/application/management.service.ts",
+      "bytes": 2389,
+      "sha256": "b7c2425f358ebe882da61ced20f64965a5e2e11dbad140b978f1f3f543dcebb9"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/domain/resource.ts",
+      "bytes": 3672,
+      "sha256": "3f30510d29e5f3c7e2c34d56c944bd31ab8aebc540b00f22bb093dd4cc3345bf"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/infrastructure/major-hierarchy.ts",
+      "bytes": 1823,
+      "sha256": "05381c7709ed8697efa27cb3aa5f9842b599631653cf7687a894fc76963e8f52"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/infrastructure/resources.ts",
+      "bytes": 5705,
+      "sha256": "c3034bcf3ec84378e1e586d6f40c72278fa8885a2d1cbe23adcb2bed89433173"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/infrastructure/sql-management.repository.ts",
+      "bytes": 6059,
+      "sha256": "16c935882342b0a32f5fc960a75eeec04d38dc1788c5f7035a8dc1c74820c2dc"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/infrastructure/training-resources.ts",
+      "bytes": 11279,
+      "sha256": "56af35a7dc33bc7e4edae7fbf6b5b189c3e5f09fdb5671bc0b0b5c06b3aa877c"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/management.module.ts",
+      "bytes": 872,
+      "sha256": "5ed2f1abfeef3d65feae9bc3054be53edb6a0e8f93d7b03195682b660c89af06"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/presentation/management.controller.ts",
+      "bytes": 2989,
+      "sha256": "828104de2883d9bc0445a41ad34f05f1bdf2ad4d7b0b870c3485e86bf9c4b1df"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/management/presentation/transfer.controller.ts",
+      "bytes": 5465,
+      "sha256": "0d5e5bc82ccfff44f14e708ce41448020767ce7f833ac2b0562b606ae3abfaa2"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/password-recovery/email-recovery.service.ts",
+      "bytes": 1961,
+      "sha256": "5fb776f48310e8953164b7a2b909dd7d871623f693fd609ef15f4aae80ea4c98"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/password-recovery/infrastructure/recovery-mailer.ts",
+      "bytes": 2949,
+      "sha256": "0ad54988e7b1fc78e2d49084af6cc5fe3d646931936768565843ff706015fe22"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/password-recovery/infrastructure/sql-recovery.repository.ts",
+      "bytes": 8627,
+      "sha256": "f0a51f827238e44569cbcb0fd32831d56265683ca827abc9aa906d692b30ef0a"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/password-recovery/recovery.module.ts",
+      "bytes": 3768,
+      "sha256": "915cfcc5d730ffa08a910084ab5f98888a9feb9ef8f32ea396ac477c495e6aca"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/password-recovery/recovery.service.ts",
+      "bytes": 1681,
+      "sha256": "0ab66b9c8c0fda126ce514778ad64787bd03cce5c1dc042c44e0711a5894f9d3"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/application/sql-program.service.ts",
+      "bytes": 2092,
+      "sha256": "eff482bfe82a460f4d8a6c0e6108bcb5f1038d9418981559423d143884b790ff"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/domain/program.ts",
+      "bytes": 4846,
+      "sha256": "9e23140f3208e0e67813e12b22a216b0cc96b62edf5a6ef09236c4a8a244000d"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/domain/training-program.ts",
+      "bytes": 557,
+      "sha256": "ed22357249cf09a99df5502657514c9c6c6cd1b7009fbdf0f9c25766bdf6b1eb"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/infrastructure/sql-program.repository.ts",
+      "bytes": 7902,
+      "sha256": "378e69608c545878897531d449a4cfb44b7b5a5157aa79eb016102ee1001f932"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/presentation/sql-program.controller.ts",
+      "bytes": 2077,
+      "sha256": "90ef7b1c5239d2ae5a9c419c46db552b598b81949bcd0c20f6dfd2837edaa1b4"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/presentation/sql-program.dto.ts",
+      "bytes": 1674,
+      "sha256": "6cf8aa5b907e3f75e7ccad4ab1087f428753e0956b4e331e82ac7cdc01ae367e"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/programs/programs.module.ts",
+      "bytes": 666,
+      "sha256": "a0265f5b12f0458daf275a7f94742ffb3ebd7261b4ecf36960f1b743007b037d"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/public/public.module.ts",
+      "bytes": 3330,
+      "sha256": "d60fe5995f56394bc5e6096ae7764fa9b819115787146764c4d45687a2808149"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/studies/application/studies.service.ts",
+      "bytes": 516,
+      "sha256": "872af209b3edd0ea7f99f90d033acedf96c26522a4871ce793e97d53a831366d"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/studies/infrastructure/sql-studies.repository.ts",
+      "bytes": 1944,
+      "sha256": "4479bf5cfc62b7092fc71e46b00d39509a9be95f9afb265a5279b407901d3203"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/studies/presentation/studies.controller.ts",
+      "bytes": 716,
+      "sha256": "f4fc5cd2a47256c2c96506376679364d90ff37b749066ac0af2d75f419d0b290"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/studies/studies.module.ts",
+      "bytes": 587,
+      "sha256": "fc3f52555fe2da93fb061baaa411430527a94bb30d243a790e58fb910b9d87d7"
+    },
+    {
+      "path": "03-SourceCode/backend/src/modules/training-portal/training-portal.module.ts",
+      "bytes": 1501,
+      "sha256": "4ecb68d15e29f2688adda2af351bf264e14d543b92312f2d4d6006cc5d72ad26"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/application/spreadsheet.port.ts",
+      "bytes": 353,
+      "sha256": "0eff52f82e7066876bc052653ac968b52dad1317ae953b8036614163c7dca856"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/http/business-error.filter.ts",
+      "bytes": 712,
+      "sha256": "4c97a03e25d25a81a7f362aef1c100cf0fa7cf8c1237f885be49fb3dfac79357"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/http/display-label.interceptor.ts",
+      "bytes": 72,
+      "sha256": "34411834416838e11ba89d35ac1901fb63647d95735b4ffd8371d605641624d2"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/http/sql-error.filter.ts",
+      "bytes": 1374,
+      "sha256": "c014b05f418b5e2ed6b23663ef697f3615c2af7f6390f51b9320c616c750f42f"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/infrastructure/sql-server.service.ts",
+      "bytes": 2366,
+      "sha256": "82425ead58a783598363b34a8460a6a916cbb2360a3d8d1c6a8617c9ce3ea06e"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/infrastructure/sql-timeout.ts",
+      "bytes": 284,
+      "sha256": "02f1e12e284819357611abf636b0ba3aedd6eb2575b68e0d3e40be855ce62519"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/infrastructure/xlsx-writer.module.ts",
+      "bytes": 1516,
+      "sha256": "197e4237ffe87bdcb06e11edb8942800fae88b7bd3ca30227fbe6437876c3dc5"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/security/access.guard.ts",
+      "bytes": 3701,
+      "sha256": "ad4cecf49ff69be9f159082d7848d85abfffed5e656dac9ba0130f8fea3ff24c"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/security/application-scope.ts",
+      "bytes": 753,
+      "sha256": "826bcd93908fc0afa9f92ee2808febf6c460dbe31a275ac0664f3f1fd812d06c"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/security/data-protection.ts",
+      "bytes": 1675,
+      "sha256": "6be6ff4a6a43214ad1ee89459c22346d2c06abda432f86cf3aa676ef3ec036ff"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/security/roles.ts",
+      "bytes": 1661,
+      "sha256": "eb0bd1b135506116f8ff1d4493ac0ef20a1bbeaae71bca28ffb282128af71571"
+    },
+    {
+      "path": "03-SourceCode/backend/src/shared/security/transport-policy.ts",
+      "bytes": 2541,
+      "sha256": "138fc3b5dcd01760af27fc69ee851fd6f3a18944f6402d1b0d0dd297b6146b17"
+    },
+    {
+      "path": "03-SourceCode/backend/test/access.guard.spec.ts",
+      "bytes": 2360,
+      "sha256": "ebbd9e0f5aa851a12348e472f2591d97bf960c0da21d04ec41fa9b0462b1ed7b"
+    },
+    {
+      "path": "03-SourceCode/backend/test/accounts.spec.ts",
+      "bytes": 1506,
+      "sha256": "7960f8a4ffa18a034848dde909e54c1af16c4ccec9c35e5d3f1cd750fdb9ae27"
+    },
+    {
+      "path": "03-SourceCode/backend/test/admissions-completion.spec.ts",
+      "bytes": 6136,
+      "sha256": "bf459ee855f95b3e8de25ef7151c6e480fa2dcb1fd80c5ed16f455107a399b97"
+    },
+    {
+      "path": "03-SourceCode/backend/test/admissions-scope.spec.ts",
+      "bytes": 3180,
+      "sha256": "0edd9f05ec9425784f9b3dcf909f3b3e97fe5760a92451f34e25c22d11cee8f7"
+    },
+    {
+      "path": "03-SourceCode/backend/test/admissions.spec.ts",
+      "bytes": 5285,
+      "sha256": "8e81c97d00e51911f7b02ab3acb0b7e2d09d3a78b1173d197759cde368903386"
+    },
+    {
+      "path": "03-SourceCode/backend/test/agu-biography.spec.ts",
+      "bytes": 5029,
+      "sha256": "b7166092807bd0881111d5701a53551fa33f9381052eeb71cf1478f66c5f6bbd"
+    },
+    {
+      "path": "03-SourceCode/backend/test/demo-payment.spec.ts",
+      "bytes": 3799,
+      "sha256": "7a79e3cbe77768a1c59365a75736c87262b0a93c1be27c616ae5d06824fd08e1"
+    },
+    {
+      "path": "03-SourceCode/backend/test/email-recovery.spec.ts",
+      "bytes": 2698,
+      "sha256": "3e0c2ce2b8339e7b1bfc020f4e6e9caa543937d8d634755f0a9a4872459f9839"
+    },
+    {
+      "path": "03-SourceCode/backend/test/exam-organization.spec.ts",
+      "bytes": 738,
+      "sha256": "5216ae3def0e57417a8d673b5c98eb630acd3a3a5ff9ea57571f363676477bde"
+    },
+    {
+      "path": "03-SourceCode/backend/test/management.spec.ts",
+      "bytes": 2225,
+      "sha256": "87c74babc9b8f11c884b41f4e43731ae178964b11e5f03cafb16f092e99d23b6"
+    },
+    {
+      "path": "03-SourceCode/backend/test/ocr-workflow.spec.ts",
+      "bytes": 3412,
+      "sha256": "cca28be961047a37e3b0a9f044c5ed62498c5207395cb8604bd295eba0d03f25"
+    },
+    {
+      "path": "03-SourceCode/backend/test/password.spec.ts",
+      "bytes": 1895,
+      "sha256": "f55bb891ea626c2dc1cd206a978030788b5a3f4500ae1638f157c03cf6d32012"
+    },
+    {
+      "path": "03-SourceCode/backend/test/program.spec.ts",
+      "bytes": 2629,
+      "sha256": "540e925893fa2995f305a4ed90cf12873a7693bd0769120748be06f4885bddc7"
+    },
+    {
+      "path": "03-SourceCode/backend/test/recovery.spec.ts",
+      "bytes": 1398,
+      "sha256": "dff4be184e5dbdfe48b6396bd26bbf64af35c7b52dd7df786008dee155a25ff3"
+    },
+    {
+      "path": "03-SourceCode/backend/test/role-policy.spec.ts",
+      "bytes": 2103,
+      "sha256": "f6be76e2a9a1c5cd04a23fcdf719df66d70fb76d90daece41786313d364b9a76"
+    },
+    {
+      "path": "03-SourceCode/backend/test/single-approval.spec.ts",
+      "bytes": 2023,
+      "sha256": "ea290f79ede8b4a533be86026dd62f2595515f7ed7bc24b3bbda1d645a7913c5"
+    },
+    {
+      "path": "03-SourceCode/backend/test/sql-timeout.spec.ts",
+      "bytes": 562,
+      "sha256": "bcc6031fb81388688013d3f5762dacf3fafe02f8aa475225fa9d5560cce98ff7"
+    },
+    {
+      "path": "03-SourceCode/backend/test/studies.spec.ts",
+      "bytes": 1264,
+      "sha256": "b7aa6820a70618988e970ee2d1ee319d7a9c3d139733a94d8cc704bf627e249d"
+    },
+    {
+      "path": "03-SourceCode/backend/test/transport-policy.spec.ts",
+      "bytes": 2734,
+      "sha256": "63a453ed7abd4b76a483c59153dfd2406e43e52e803019b859e51aaa5e70ade4"
+    },
+    {
+      "path": "03-SourceCode/backend/tsconfig.json",
+      "bytes": 324,
+      "sha256": "bfa1fb941656aee05d9eab713020532c449a93554c4bd66962f161e689cfca21"
+    },
+    {
+      "path": "03-SourceCode/frontend/.env.example",
+      "bytes": 46,
+      "sha256": "6bbf21030ba96be8ca4a9550da06227e34db49d45679dfabc58f91cdd7bcfef9"
+    },
+    {
+      "path": "03-SourceCode/frontend/AGENTS.md",
+      "bytes": 679,
+      "sha256": "063098f6cb31bb44c6f8fbea25b3876de7ee1e5f7d00a50dbab506f6415eb7f0"
+    },
+    {
+      "path": "03-SourceCode/frontend/next-env.d.ts",
+      "bytes": 296,
+      "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+    },
+    {
+      "path": "03-SourceCode/frontend/next.config.ts",
+      "bytes": 269,
+      "sha256": "a29006fa7bdf79770b078f50672a83faeb1caef62128fa438420b941a07a6237"
+    },
+    {
+      "path": "03-SourceCode/frontend/package.json",
+      "bytes": 695,
+      "sha256": "409480ab5d471ef6cf437cb66fac9a1fe4ed9b7f27bbe03f16a08ab7fca5648b"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/bien-nhan-ho-so-ncs-agu-2026.doc",
+      "bytes": 47616,
+      "sha256": "cfbf8057884422495e171e48fef7768f49ddf309b2631ebaf1be57792a4c0f1a"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/chuong-trinh-quan-ly-giao-duc.pdf",
+      "bytes": 129667,
+      "sha256": "1487f22a06d3f4c3c77d3733b7d5cb0b4eea400e06d27cacc4b67e3d19395e29"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/giay-dong-y-huong-dan-ncs-agu-2026.doc",
+      "bytes": 29696,
+      "sha256": "add2119f728eda7672abeb95b27c3bdc0b47015f9dfcec11d7c199712bed1434"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/giay-gioi-thieu-co-quan-ncs-agu-2026.doc",
+      "bytes": 32256,
+      "sha256": "0c080a19478f60a34cfe677f8a5d5ddb9d0c346c3b40f50cc729ce1c9ba33b2a"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/ho-so-du-tuyen-thac-si-agu-2026.doc",
+      "bytes": 2710016,
+      "sha256": "ea23be5f0257dc38ba7f48ac1dd21e4cc585cfd0861a6ba29d7ecfe5ed1027fd"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/ly-lich-khoa-hoc-ncs-agu-2026.doc",
+      "bytes": 49664,
+      "sha256": "65fc78c3f89b382c978283300304c96b9e6ae87eb60a67a285ad5ad6024338e3"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/ly-lich-khoa-hoc-nguoi-huong-dan-agu-2026.doc",
+      "bytes": 30720,
+      "sha256": "ae0202a70dc3df9a76a0ae0d89af5309db258f93783aeb0af60caa8ca3ffdc60"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/mau-dan-anh-ncs-agu-2026.doc",
+      "bytes": 26624,
+      "sha256": "06b8dc81d955766aa402bdde3b2c8198391e35ce809014e0a4e90c84ac3f0460"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/phieu-dang-ky-xet-tuyen-ncs-agu-2026.doc",
+      "bytes": 33280,
+      "sha256": "6cb8dda43976b653fe12e41715c88217429f235e98ba620bb61b9d4339818b53"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/quyet-dinh-mo-nganh-vat-ly-agu-2026-trang-1.jpg",
+      "bytes": 137589,
+      "sha256": "f2ea5f33d39e1cb2b6199802d421b6e02943d48698a5862f22c8e3f4acca4d55"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/quyet-dinh-mo-nganh-vat-ly-agu-2026-trang-2.jpg",
+      "bytes": 51786,
+      "sha256": "22b10472a3f15732a9997ac90b08be2eeb321a23855035f5c488ea7076e25cc8"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/thong-bao-1362-2026.pdf",
+      "bytes": 820002,
+      "sha256": "c62ec7836db320615098c86c9238425a0c1719e331d651588f0c1fee1bea5760"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/thong-bao-thac-si-dot-1-agu-2026.pdf",
+      "bytes": 241712,
+      "sha256": "4a3d69236371eed8ffff2493c9968a2afde675cf5f1f3bb02087719b6c0f34c3"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/thong-bao-tien-si-agu-2026.pdf",
+      "bytes": 822443,
+      "sha256": "f139be145d88603da9f2c19ea2852c1b1cedbb31d351b2787dc2be4adc68f53e"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/thong-tin-tuyen-sinh-agu-2026.pdf",
+      "bytes": 27105873,
+      "sha256": "df263f03574eebda2414e147c9b1b347cb8d1b407d13bb9a1976fe747e755269"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/thu-gioi-thieu-ncs-agu-2026.doc",
+      "bytes": 29696,
+      "sha256": "32dbb0c56bd58a859de2fa1eec271b9ccc94c1cae782f06773885912f4a46785"
+    },
+    {
+      "path": "03-SourceCode/frontend/public/tai-lieu/yeu-cau-bai-luan-ncs-agu-2026.docx",
+      "bytes": 13973,
+      "sha256": "0f670aabaad0f669d323e1004da060db3182bdf6e579c274ae1953d2b0fa316c"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/academic.css",
+      "bytes": 20584,
+      "sha256": "e4fc971aec85dfe52dd5e75bee413fcb8284dcd2f9bf2e91d67b4f8b2d604bb9"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/accounts.css",
+      "bytes": 2448,
+      "sha256": "3663f13bfeb20fa679bb121f74c68608ac8a12c821a7a33686b34ee5b5a2d22c"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/chuong-trinh/[id]/page.tsx",
+      "bytes": 212,
+      "sha256": "80e0c36ab0c2edf05658a47cc9cd0ac7ccebe9fec25dcc726ceabadb196aa9e9"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/chuong-trinh/page.tsx",
+      "bytes": 142,
+      "sha256": "9ba7df01ce06e9082fb821623debc0b8e07a194d5e5e34b118b50c9a8d3ddcc6"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/dang-ky/page.tsx",
+      "bytes": 147,
+      "sha256": "e94db22bcbebfb56e0cc5894c0e8dacea65dc210dba3dcaf942b0ee71400d43e"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/dang-nhap/page.tsx",
+      "bytes": 109,
+      "sha256": "ff5959fe1a40784a87a0848d242e2cc4fd8a6d1c97af75772202e7b27aaa2e12"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/dat-lai-mat-khau/page.tsx",
+      "bytes": 136,
+      "sha256": "e2b0127a7dadaa92bc641d487bd38cb9f0ed4194998f3516a0a8021290cc36d0"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/error.tsx",
+      "bytes": 204,
+      "sha256": "c7f67f3b35906cb67680d646730259874e9607212fd77d4ef1ec153031da589b"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/BeVietnamPro-Bold.ttf",
+      "bytes": 140300,
+      "sha256": "7f738fe5c43c8872807b20e2d30d42163618de8a4daf7f48a939adac32c16847"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/BeVietnamPro-Italic.ttf",
+      "bytes": 137244,
+      "sha256": "a33ebb3f68e0e260a7d3874d64259ad309971a2daf969e7ce5f444d70bce535f"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/BeVietnamPro-Medium.ttf",
+      "bytes": 135980,
+      "sha256": "b60832bfa0fcd015158112c64d7e3fdad3b0c6287d1823f85a3103636e845268"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/BeVietnamPro-Regular.ttf",
+      "bytes": 132948,
+      "sha256": "cd1ef6e9d7db28ad5cdb88a65ccbe693870e60d340b791f349d248342b4fe4c3"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/BeVietnamPro-SemiBold.ttf",
+      "bytes": 136736,
+      "sha256": "bd8e27eb02720b9d91e59e4f10a90878643219f25ce6a8d9a4f06a8a88d3bb71"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/fonts/OFL.txt",
+      "bytes": 4397,
+      "sha256": "6b7f8f73609a25ea78c891e34cf37b06f8a676b7ea986e941e43b009110f2a85"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/hoc-tap/page.tsx",
+      "bytes": 112,
+      "sha256": "74fc814308096f561bf4fb886ae05454d44b7053c8cdfe3b7f5b9914d4dc6fa7"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/layout.tsx",
+      "bytes": 1213,
+      "sha256": "59ad57f74d4f07ef73548cd44a9b6adbdc2c02cb483c9f3dd0687aedaf94c1d2"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/loading.tsx",
+      "bytes": 119,
+      "sha256": "8a52029cf828f6b723d05a8dd060fc82c7abf944e9dcbfebeb65401e09a24664"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/nguoi-huong-dan/page.tsx",
+      "bytes": 116,
+      "sha256": "90359e1aaffef535be6a6b7c50fe5d4ef273311295258293f5255bbb0eb91625"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/page.tsx",
+      "bytes": 118,
+      "sha256": "31d4a7ff209d48ebf9cabdc5522c67e62b876579049651b7dadc769d3dab4512"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/public.css",
+      "bytes": 22870,
+      "sha256": "7793ca82eef39842655cb18b04e8006ebbcd242c62766ee39a09842c5655f7b5"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/quan-tri/page.tsx",
+      "bytes": 137,
+      "sha256": "e8ffdffc6c4fdb83df033934fcba5604690b352b443ba0f2c7e5f058800b9fbd"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/quen-mat-khau/page.tsx",
+      "bytes": 130,
+      "sha256": "70a531b24d29acc5a84af83bbde56f3187fd75599a6ef20e3a8999a14c02a30e"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/session.css",
+      "bytes": 670,
+      "sha256": "b4868a086639e8344646910bfb488cfc2f555e8a92903e94e109e75046ba43a2"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/studies.css",
+      "bytes": 7413,
+      "sha256": "c5c68f992693babb26fa328584e3c30d3314d747a113bb4f120a1b40f5f11396"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/tai-khoan/page.tsx",
+      "bytes": 117,
+      "sha256": "200df85b28f21b6f18322fb49653bbd44a660eaf98e36ac6fa9f2ef917ed2131"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/thong-tin/page.tsx",
+      "bytes": 124,
+      "sha256": "73ecc077ca29040d6bd3e620e84287cca22deeac5d09798e974cdc33069181a0"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/tuyen-sinh/page.tsx",
+      "bytes": 143,
+      "sha256": "1162349b3239a836a9d8a52fb6cb2628d1bfb29a810e85d1e4c8763819b35eda"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/visual-refresh.css",
+      "bytes": 45237,
+      "sha256": "9d2e3e1bfe7e43b999564cfbe9895863aedf2c2e33f5fb90985d2ebb1c1c7c9b"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/app/xac-thuc-giay-bao/page.tsx",
+      "bytes": 141,
+      "sha256": "605fc9568bd5d307ceb1aaef0511c5ccc9600c0a009365b978ed8861bd4f9275"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/components/academic/form-controls.tsx",
+      "bytes": 8694,
+      "sha256": "2aca08f444e2f2087a42935b459a1816d28719145b026e38dc4c0192ff5a2ae2"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/components/providers.tsx",
+      "bytes": 512,
+      "sha256": "c96ad15b06359cfc4d8f92e0b60d6801c2a6851a2fb7027c0456c5d67f34c190"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/components/public/public-shell.tsx",
+      "bytes": 2973,
+      "sha256": "d1c9b00cce97fba4fc9c4dd0b0a4c76412d1b5d60daa051c6a157a00a649afb9"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/academic/academic-workspace.tsx",
+      "bytes": 14874,
+      "sha256": "be2aea57ddac81976533f97d71a6842ba9a31fc724690eeba4f8de73a93f5350"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/academic/overview.tsx",
+      "bytes": 4215,
+      "sha256": "592e5e37662a78882cf702a8ffb0f416ede214842d94167a76a63b6ef1a358de"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/academic/resource-transfer.tsx",
+      "bytes": 3543,
+      "sha256": "7a62af895c2c26089754079dc247ff2caf98a7cd5dea7f819c9a50c5293a4f3b"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/accounts/account-management.tsx",
+      "bytes": 14967,
+      "sha256": "679b0b922e63a83465e48480b0415b952da68b41ac41e072aa292678bd3ab6bb"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/admission-config-fields.tsx",
+      "bytes": 3050,
+      "sha256": "6a0066adba57fcab7d30a22f7fe598f4ff370817232e131a5d179904e52f55a5"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/admission-desk.tsx",
+      "bytes": 25521,
+      "sha256": "a0cc039d91f01a979f7637efe5f9f01464a02f33f2af3c93ef2504ad14598f20"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/admission-download.ts",
+      "bytes": 494,
+      "sha256": "a48324d12c6f05440e410e1dd155511f2f5d824861a7521cb8ee2ff3273275dc"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/agu-biography.tsx",
+      "bytes": 11687,
+      "sha256": "31aea25fe572c3a728b8d2d2639316097b013988d74131c6c4c58eb24f72b0ea"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/candidate-admissions.tsx",
+      "bytes": 21023,
+      "sha256": "0cb4f17693cf540d8801f9394c8d6a46ebb2b057b613b414bc70fc80c0f488da"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/demo-payment.tsx",
+      "bytes": 3946,
+      "sha256": "8d2798afbf8737a150912f4db7a112e4c68afe51a026a6a1a6ea0bae890ba9df"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/exam-organization.tsx",
+      "bytes": 8489,
+      "sha256": "9ce905551b5c2cfc62b15fa5fb67bfe18a7707a9baa53a2eb285c6dacf5d13c9"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/admissions/published-admissions.tsx",
+      "bytes": 2601,
+      "sha256": "f024204c3455703442de6a413e1471469c33bf6898cc96180382e86bfe488537"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/auth/auth-entry.tsx",
+      "bytes": 3713,
+      "sha256": "4cbe47f2e6bf3fcb6060918cd63f9d64e5ed0df6cf43ebf433ae49a959f24148"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/auth/change-password-dialog.tsx",
+      "bytes": 3307,
+      "sha256": "1b3804452249ea7eba8bd24922caaa427f59f8a5d82f81b2416d395e84a2f733"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/auth/password-recovery.tsx",
+      "bytes": 8188,
+      "sha256": "73f06e00d0a5f009cf526d9e6d997a212536a7ee9e900c0fd9a8b1bc70a72700"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/auth/session-provider.tsx",
+      "bytes": 6046,
+      "sha256": "42d4409d873868486465503d0337e66b1b0c9495251a712f198f6de3ea13c666"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/programs/components/program-catalog.tsx",
+      "bytes": 3454,
+      "sha256": "22723eeb57a99f9c6c32428cfa241f3327d47983963de1cbe6e4cca68b62f6f5"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/programs/components/training-programs.tsx",
+      "bytes": 16865,
+      "sha256": "9e54681e4bc36277a80db6a55326865985c65c312d245ec445faa281984e6a14"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/programs/lib/curriculum.ts",
+      "bytes": 3222,
+      "sha256": "30a123974dad8d42cdffd223e7e3865daa151f9307f8f1ae2701fb1fee5e674e"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/public/public-home.tsx",
+      "bytes": 3491,
+      "sha256": "c140e59f336c8fa572c1b1b4b7e775a65f8efaecaf2e04cc7572fad0b2995ac6"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/public/public-programs.tsx",
+      "bytes": 7146,
+      "sha256": "09808e5e9039131adcbd4b8aedb332655b84124e93198d977faabf1a8dae2bd8"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/public/training-portal.tsx",
+      "bytes": 2955,
+      "sha256": "f8967b14c4f76bb653f9137f6b9ce1551950e03ee6bd1ce4e5e60dbc5cb49cd0"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/public/user-account.tsx",
+      "bytes": 1800,
+      "sha256": "d4cfcb48f1dabbd4412c9280dde97860936f91f01df7845bedee284433de81a1"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/features/studies/my-studies.tsx",
+      "bytes": 3849,
+      "sha256": "dd1793753ef89b9a3e643b4e1d3789f52381e9a3093c9e93695e6c3f400c53dc"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/lib/api-client.ts",
+      "bytes": 864,
+      "sha256": "6945e972ddd126e77550d5b76b2f7d3a02e8cca16543d39ab169631102f9ac9c"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/lib/permissions.ts",
+      "bytes": 524,
+      "sha256": "75ad1f4b45e45de8677ad77f264587fed0c41d8307fca9b325da447d398fb56f"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/lib/program-display.ts",
+      "bytes": 537,
+      "sha256": "415388a0d9f7d1dea61bb3e947eef89a4ca25297e027b65651b84e17d7e30a42"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/types/academic.ts",
+      "bytes": 1410,
+      "sha256": "6ac41bee9a44ff08726e43d9566909eefa3fe8dcfad6a8346dee4156cec95bf4"
+    },
+    {
+      "path": "03-SourceCode/frontend/src/types/public.ts",
+      "bytes": 544,
+      "sha256": "5d668289c28f3d9cdf68064e0f8eaa3f1f6478a23dcc86e30673b6243f95ee90"
+    },
+    {
+      "path": "03-SourceCode/frontend/test/curriculum.test.cjs",
+      "bytes": 1447,
+      "sha256": "bc686938f950404bc05a34a4089da45b71493ee2e3e2f29bec31d0c2a45761c3"
+    },
+    {
+      "path": "03-SourceCode/frontend/tsconfig.json",
+      "bytes": 769,
+      "sha256": "216e05a86bedde81ad66f1ee78e3ac41bb97c39d531e8bb9953053f20a2de286"
+    },
+    {
+      "path": "03-SourceCode/package-lock.json",
+      "bytes": 290712,
+      "sha256": "ccbf80a3fa5744d539f9554e3f63b3bd005149cedc86af8199068611362c354b"
+    },
+    {
+      "path": "03-SourceCode/package.json",
+      "bytes": 677,
+      "sha256": "d16d2c80289e83f31fe2b9951558a94baab9ff739e019aae04df16422f0578c2"
+    },
+    {
+      "path": "04_Infrastructure/.gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "04_Infrastructure/README.md",
+      "bytes": 202,
+      "sha256": "8bcfdfe66c53ed153a71c88ed44acf3b6db7d5be3adfb6d6e429a9efd2b0ebf3"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/00_TaoCoSoDuLieu.sql",
+      "bytes": 306,
+      "sha256": "a94edde63470c018d598a28be7acfbe124aced67a0a35db08e644d5d6de89f3f"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/01_CauTruc.sql",
+      "bytes": 6278,
+      "sha256": "3c33f8f6d71bf40b51ebbcff3037f71a5153865d9163bf826640d63c9cd4762f"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/02_KhungChuongTrinh.sql",
+      "bytes": 13869,
+      "sha256": "db233b3064b722a7f94ab8c989b031eb8c5807ab06b1643751599ff65042ad65"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/03_TaiKhoan.sql",
+      "bytes": 2765,
+      "sha256": "7c09cdbb979873319cb05f2bd17cce587250ae312fc692a945144d8799c21548"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/04_TuongThichDuLieu.sql",
+      "bytes": 1098,
+      "sha256": "b92180a16a63d064905d27e53cceb0796d82e489f79ddab00414a2fc963c716b"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/05_DuLieuKhoiTao.sql",
+      "bytes": 625,
+      "sha256": "9cfb31eabe1a54cc866d616a89be53ac2679c1c1c5078a5bf64a5fedbb2ab2c6"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/06_KhoiPhucMatKhau.sql",
+      "bytes": 2449,
+      "sha256": "548c6fe4f726f37c2fa884c14fc4e49814653151164e494ab5bbd4f3306441e8"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/07_TinhGonDuLieuCu.sql",
+      "bytes": 3687,
+      "sha256": "41b79af9aaff28e49e66225164c8077340d163f7ce732063316ee072233fb4f3"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/08_NangCapDaoTao.sql",
+      "bytes": 8941,
+      "sha256": "9373b7d5a44ca245733d4908f9a22a501618ab7a52a705d18d738354f8ee12d5"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/09_TuyenSinhTheoDacTa.sql",
+      "bytes": 10879,
+      "sha256": "d2edf70d4e3e7cf7419b5c58c6d447d03d3f15fd162e3e9cd6ec59850da5420b"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/10_DuLieuCongKhai.sql",
+      "bytes": 3061,
+      "sha256": "9f3ec255f5da11e88e6408f761c9b3ca8798fadeb8e9649550388d0c71b0e316"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/11_DonDepThuocTinhCu.sql",
+      "bytes": 3959,
+      "sha256": "5923335e7656bab62aee2cadc0ee3237fa8369f9009fac17ef5e2cbbb397854e"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/12_HoanThienTuyenSinh.sql",
+      "bytes": 5765,
+      "sha256": "517ed6d5fba6fcc56ec9d407e58e0c46a9cec97e7cd3911305582371ec65463e"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/13_NguonDuLieuAGU.sql",
+      "bytes": 697,
+      "sha256": "a36b4af04c4714a073d0ad97041c819ebf3783599a2e6924f54942a14f206068"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/14_PhamViVaLichTuyenSinh.sql",
+      "bytes": 1164,
+      "sha256": "aac622d1c78cc7d9d5fbacffb9b99cc318c63ef446ce0191c7b5537cbf48089c"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/15_ThanhToanMoPhong.sql",
+      "bytes": 1714,
+      "sha256": "771e937a3753b0ed59892a2e11847e7beb4969a4bbe19e17108f3e90e9523dbd"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/16_SoYeuLyLichAGU.sql",
+      "bytes": 722,
+      "sha256": "3672d0865637474e341ccbdf14bdadafd515d165a287aca8f03cf8d48ec0799d"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/17_ToChucThiVaHoiDong.sql",
+      "bytes": 1896,
+      "sha256": "c5b7544cbb883da360d7db97c328f761d03b7a74e4080243cbf0b8de65cdc0cd"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/18_PheDuyetMotCap.sql",
+      "bytes": 926,
+      "sha256": "74cf781ee5f2ba9491d6029aba214fe8d4e0d4a001fe19c92a4f336082e7d760"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/ChayKiemThu.ps1",
+      "bytes": 2541,
+      "sha256": "2075dde3f573cbcbe0c770ca1686a6f16cb9379fb36f9903fe1f611512f529fa"
+    },
+    {
+      "path": "04_Infrastructure/SQLServer/README.md",
+      "bytes": 3679,
+      "sha256": "1157f8ae8d7ce1253d5f6d510d5b68dae822117c93232a094aeb04fb4d75e0ef"
+    },
+    {
+      "path": "04_Infrastructure/nginx/qlhv.conf",
+      "bytes": 1375,
+      "sha256": "e9858cbc0e9bba2972730bb14c33085fd97d2ec0e0415989ed1213902abf2073"
+    },
+    {
+      "path": "04_Infrastructure/nginx/tuyen-sinh.conf.example",
+      "bytes": 986,
+      "sha256": "06e7368cb85f2ee45026f1d4d3e27145975c80820aef15a55ab3f2ea27ca0224"
+    },
+    {
+      "path": "05_Testing/BoSungAGUCongKhai20261117.json",
+      "bytes": 1680,
+      "sha256": "713a6b08800a2f39665cf43e9de0884b54cd8601f40cea46afc64f03acc634b0"
+    },
+    {
+      "path": "05_Testing/BoSungDuLieuAGU.json",
+      "bytes": 803,
+      "sha256": "b5170a97ca2519b5c757e4ad0e905aac7665ed59c4b06573dd3862fa98c105c8"
+    },
+    {
+      "path": "05_Testing/BoSungTheoRequirements.json",
+      "bytes": 1475,
+      "sha256": "e3cf5c4081c3a442c68e0f811e09101b4f031fa50e9825bfd8b3d02b2299f690"
+    },
+    {
+      "path": "05_Testing/ChuanHoaNhanDuLieu.json",
+      "bytes": 511,
+      "sha256": "753a74cc11c6bcdd10698efe9bd85b9ccc558a1d167d34ff41cb22f5defb7292"
+    },
+    {
+      "path": "05_Testing/DonDepTaiKhoan.json",
+      "bytes": 188,
+      "sha256": "7be6d6ebf8578217f3108937ccb0c3043ec7acb3d14e05599260e21346a912c9"
+    },
+    {
+      "path": "05_Testing/DonDepThuocTinhCu.json",
+      "bytes": 1199,
+      "sha256": "c6426504953d57636266be6349f3608492fe2f6c9d3f69620e4c2954bca8ff59"
+    },
+    {
+      "path": "05_Testing/Frontend/bao-cao-dao-tao.png",
+      "bytes": 106160,
+      "sha256": "553f50f7c615718f70ae6cc7a3c0fd1ba39333f1ae1ca832a6d135a6cad52f5a"
+    },
+    {
+      "path": "05_Testing/Frontend/bao-cao-tuyen-sinh.png",
+      "bytes": 95200,
+      "sha256": "133649e121dcf08cebf1abf2db51a20301141cb4cd74a9a9687db030cd6a5654"
+    },
+    {
+      "path": "05_Testing/Frontend/bo-sung-van-ban-agu-mobile.png",
+      "bytes": 269150,
+      "sha256": "b6f1d2949d80f3eaeeadae27b15f57f3b6ba6b2403892e3ea61d1ad284c2cb8b"
+    },
+    {
+      "path": "05_Testing/Frontend/chuong-trinh-du-lieu-truong.png",
+      "bytes": 186423,
+      "sha256": "e11acac8e4266d41a68ec1e57acba6bb90ed32461ea2f20a1225cbe8a52f9f8c"
+    },
+    {
+      "path": "05_Testing/Frontend/chuong-trinh-ten-gon.png",
+      "bytes": 84094,
+      "sha256": "603be5ca18a8a9e49db8c7587ef608ae36330f32e45b242e7956faa2d7e6b532"
+    },
+    {
+      "path": "05_Testing/Frontend/dang-xuat-can-bo.png",
+      "bytes": 10877,
+      "sha256": "f7b5f949d3fdd4510df9c02b183ca01f03d2cc2b4cb7c3bc52c350a1f95cba5e"
+    },
+    {
+      "path": "05_Testing/Frontend/dang-xuat-thi-sinh-mobile.png",
+      "bytes": 197078,
+      "sha256": "8e354c5e5ec09231bffc3440072922f615aa62765c07c570849a8d5a99c7b762"
+    },
+    {
+      "path": "05_Testing/Frontend/danh-sach-trinh-duyet-mobile.png",
+      "bytes": 96559,
+      "sha256": "3bbb377ef2d31ff54d2845050559fc23cc2ff2fb4e4fbb18900375de22cfff9b"
+    },
+    {
+      "path": "05_Testing/Frontend/hoi-dong-to-chuc-thi-mobile.png",
+      "bytes": 116268,
+      "sha256": "1927576ec0120f33f69888fe07185986e3d8242698a261ad94ebe58ac79b3b1e"
+    },
+    {
+      "path": "05_Testing/Frontend/localhost-loi.png",
+      "bytes": 82088,
+      "sha256": "04eefbec0a7a3fedffbbc43cd55bbde31a20381dd98da2881960b89ea90bfe4e"
+    },
+    {
+      "path": "05_Testing/Frontend/phan-he-de-tai.png",
+      "bytes": 93104,
+      "sha256": "97c62db8125a3db28512532be8fc1f404e4df6d7e386ec2220c9812ffd3a0a9d"
+    },
+    {
+      "path": "05_Testing/Frontend/phan-quyen-5-vai-tro.png",
+      "bytes": 144669,
+      "sha256": "13b8d6265b52074779431808a35df265ba50981e824fd1c4a0255c9cb53eb439"
+    },
+    {
+      "path": "05_Testing/Frontend/phe-duyet-mot-cap-mobile.png",
+      "bytes": 99742,
+      "sha256": "4257aac42be424b71b5af9d9c6715e2a70615b7d4ce1427bd51a09680a7aed10"
+    },
+    {
+      "path": "05_Testing/Frontend/qr-mo-phong-mobile.png",
+      "bytes": 291386,
+      "sha256": "cf19bf96ce6a1db4b98db4facb0064f71dc3a22e6388640298f038b7f0855d26"
+    },
+    {
+      "path": "05_Testing/Frontend/quan-tri-mobile.png",
+      "bytes": 57125,
+      "sha256": "736611d8d9577e498cf96668c75d92da55c01fca45887de8078a23ebc219dc4d"
+    },
+    {
+      "path": "05_Testing/Frontend/quen-mat-khau-mobile.png",
+      "bytes": 52902,
+      "sha256": "e9d256dbd4c87d8424441ad1523bb1d5c1f5adebeb06bab54fdf40e0b08240d7"
+    },
+    {
+      "path": "05_Testing/Frontend/quen-mat-khau.png",
+      "bytes": 71324,
+      "sha256": "9549f69d0a9ccc8e3d25ed2ff7f3d17f3418e11039a6f92dd0423971b7e84d3b"
+    },
+    {
+      "path": "05_Testing/Frontend/so-yeu-ly-lich-agu-mobile.png",
+      "bytes": 321982,
+      "sha256": "e861b913fb0b2d1f87f1550f1d698d93569314b26b47a839484ea0a3ce14f89e"
+    },
+    {
+      "path": "05_Testing/Frontend/tuyen-sinh-du-lieu-truong.png",
+      "bytes": 151325,
+      "sha256": "a321204547b36282e610e4364fadd735318d79e2338f38da4a566aa1afa13ebb"
+    },
+    {
+      "path": "05_Testing/Frontend/tuyen-sinh-mobile.png",
+      "bytes": 54240,
+      "sha256": "bf3836dff3589c7f9bbf0a5dad9f0d74f9112c996d6d4dd997d2d73a93df730b"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/chuong-trinh-cong-khai-mobile.png",
+      "bytes": 50687,
+      "sha256": "020129053a5ab8993728b44c61f59314a36fc83a25073a1a7dd65b1119aecb22"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/chuong-trinh-quan-tri-mobile.png",
+      "bytes": 55694,
+      "sha256": "cd96d0927830346f4e7aea0c3e0292357db4ca410befc4c3a8088885a6700807"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/dang-nhap-desktop.png",
+      "bytes": 106932,
+      "sha256": "7e1d0807e9608d069a138098bfafb4bc93e7a3c8c430c5f55523fa2af2d322d8"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/dang-nhap-mobile.png",
+      "bytes": 57507,
+      "sha256": "8d7f76f24f9be76976d0e8986cdbd3f0382387e75b52ad0d56c5852356f39199"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/danh-muc-desktop.png",
+      "bytes": 76467,
+      "sha256": "ce35cfc4f63f606da1a2f962fae42be8f692511aa0e8f4c53614d000418f6729"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/menu-cong-khai-mobile.png",
+      "bytes": 157125,
+      "sha256": "fb678526de6fd510370f9167c6e34f484a3fe572aa0514e7dd02359dc42d6d16"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/menu-quan-tri-mobile.png",
+      "bytes": 124657,
+      "sha256": "8daa331da1a6ef053d508f0ba958332bc6e6cd05ecdc5fa2329ac5b43770e7f5"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/tai-khoan-mobile.png",
+      "bytes": 102881,
+      "sha256": "0a00e4aa042c0021b1d0a5eea6d607d403b6746862a8bf197c3fd2931034196b"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/tong-quan-desktop.png",
+      "bytes": 192386,
+      "sha256": "5383717e9e7b405cb8033f42120a673a7ad11fc144ffc607e2ba7985d8b43ad5"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/tong-quan-mobile.png",
+      "bytes": 113685,
+      "sha256": "22e626fc79c0b773a42264fb08e5dd65beb0ddf5d5231ebcc9bcff47ee6deec5"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/trang-chu-desktop.png",
+      "bytes": 213106,
+      "sha256": "b5e582d31b2b82c3549e975c80f2a787f09f215776b035820672a6b8ce0483a8"
+    },
+    {
+      "path": "05_Testing/Frontend/visual-refresh/trang-chu-mobile.png",
+      "bytes": 157218,
+      "sha256": "97e495b6e3bc858ce1d5f6f6c8ba30b74842ef8cb979353b3c10e8e3a4f5d624"
+    },
+    {
+      "path": "05_Testing/GiaoDien.json",
+      "bytes": 185,
+      "sha256": "1ca6b572dedc25c28b898c269ea5e9e5ef73028e44a1d74e8f8166187451549f"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang.zip",
+      "bytes": 115253,
+      "sha256": "24321199efd773f5c942b5a1e783d26d6afa5fb49174d38cdfd95bd9fd7198cf"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/01_BangTotNghiepDaiHoc.pdf",
+      "bytes": 15066,
+      "sha256": "e94c2e6baeae40a82ff8ff6b8788c9edebc1984df7e99ac6527823ffaccb2653"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/02_BangDiem.pdf",
+      "bytes": 15833,
+      "sha256": "9d8d38f3b879382b5dc19ec27831f27a433406f86d6b2ae31bf07af390cfff04"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/03_ChungChiNgoaiNgu.pdf",
+      "bytes": 15361,
+      "sha256": "20b4888381349643c0b8c600763bc9da9067668fe9860ee749e47014f483e880"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/04_LyLichKhoaHoc.pdf",
+      "bytes": 16000,
+      "sha256": "b03a60e7b2f4b17a05b66bdc7ca512c323b13f4bafa5aeeace69092a6d61a2a8"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/05_ThongTinSucKhoe.pdf",
+      "bytes": 16065,
+      "sha256": "0020d902281691e6be4607c2e871ecc1d59105d5e86052f4cc680c746d436bc5"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/06_DongYCoQuan.pdf",
+      "bytes": 16278,
+      "sha256": "7ee21ea7ea83d02b18166d2fbb36bae029e9bdaa52299f6e0ed069f5800020f8"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/07_SoYeuLyLich.pdf",
+      "bytes": 18846,
+      "sha256": "9610a4f62a8b7361204805198cb0c2fce8a333501ca1103a310824f787df6564"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/HUONG_DAN.md",
+      "bytes": 1763,
+      "sha256": "7b9f81ff5c18b84a296fcf1ac3be59d8d1807d03258fa595abc93a04918f251a"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/SHA256.json",
+      "bytes": 1698,
+      "sha256": "4befdd6e2d1607cb60b6ead75d7ec46a7037f162054ff734e7bc7ecc183b2941"
+    },
+    {
+      "path": "05_Testing/HoSo_BuiMinhKhang/ThongTinHoSo.json",
+      "bytes": 629,
+      "sha256": "d51745175ea1b2ac8ef8565081b051df5b3475dabf515ecdd94dcf8d38a8a688"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn.zip",
+      "bytes": 119056,
+      "sha256": "023b8547ea3ffd100860744cd347f69914f389601e93f85a7e810330c793feb0"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/01_BangTotNghiepDaiHoc.pdf",
+      "bytes": 15151,
+      "sha256": "ef92c90cc99690abbf0cf3e335edca791eba35f1a30a6814e688faf438481cd3"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/02_BangDiem.pdf",
+      "bytes": 16232,
+      "sha256": "31da059acb0ec1430ed8403025de182d381664f0f3a4693846ea5d91e894cc5d"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/03_ChungChiNgoaiNgu.pdf",
+      "bytes": 15603,
+      "sha256": "685a7329810de9a3b3e8f0bdad9aff42b41233d09904406ec1b5c36dc397f714"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/04_LyLichKhoaHoc.pdf",
+      "bytes": 15920,
+      "sha256": "bce477b3514e7ab152bd4423e2a73ef9f4623278d94b4c48321924f83e90df7f"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/05_ThongTinSucKhoe.pdf",
+      "bytes": 16183,
+      "sha256": "163885c8f022d626fd712af39b70b9e283fc839a792142ba13af2d8fc191ca04"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/06_DongYCoQuan.pdf",
+      "bytes": 16252,
+      "sha256": "f5163c436d3aad91d0e1e3559c4a0795fb17657ba24ae94608fb891001d1aa02"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/07_SoYeuLyLich.pdf",
+      "bytes": 18724,
+      "sha256": "e61a0a1d7a646a25910b2df4b06d300e9046c5f79730e526482183506f0eca9a"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/HUONG_DAN.md",
+      "bytes": 1890,
+      "sha256": "e3edf40f162b2bb7bd877a6fa4f66978238edd2a052d4f7a3fb75efa43300f4f"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/KiemTraChuaDangKy.json",
+      "bytes": 393,
+      "sha256": "357eb334855b88c64ca922d3c715b45404aa676b88b0cf490047bcfa1087b4a5"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/SHA256.json",
+      "bytes": 1698,
+      "sha256": "195f5fb066de860ce1254461f48464c769f3537c9c49055466c0faa9570ddd2f"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/THONG_TIN_DANG_KY.md",
+      "bytes": 4268,
+      "sha256": "eb945b00b6dd06393ec554bb53cccbd2ab58ed6b221bf4d039d6cba9f7729f11"
+    },
+    {
+      "path": "05_Testing/HoSo_DoQuocAn/ThongTinHoSo.json",
+      "bytes": 3576,
+      "sha256": "f5be43c4bb2cc13fa06cc012528ec0a31f2246db30ded5bef922b6be8c3e57d3"
+    },
+    {
+      "path": "05_Testing/KhoiTaoDuLieuTuyenSinh.json",
+      "bytes": 4419,
+      "sha256": "997310311d0c252c0b2b2c99e9455fafd2ea08720a843fc42ad9a8ceb225dc6d"
+    },
+    {
+      "path": "05_Testing/KiemThuDuLieuAGU20261117.json",
+      "bytes": 336,
+      "sha256": "2d47aed7ed7f560392640083e1ade455fdef65a8e2efe491d08297e07221ec22"
+    },
+    {
+      "path": "05_Testing/KiemThuKhoiTaoTuyenSinh.json",
+      "bytes": 4397,
+      "sha256": "560bb3cdbdcadedfbe193a65ed8dffe654871ccdb097ace813bc3232627b49ac"
+    },
+    {
+      "path": "05_Testing/KiemThuTaiLieu_DoQuocAn.json",
+      "bytes": 354,
+      "sha256": "1e50da91cf4757e985a7e9ccf4c537bbd1a2760ee9f3807b082fe8ac14fc5e2c"
+    },
+    {
+      "path": "05_Testing/KiemTraHoSo_DoQuocAn.json",
+      "bytes": 393,
+      "sha256": "357eb334855b88c64ca922d3c715b45404aa676b88b0cf490047bcfa1087b4a5"
+    },
+    {
+      "path": "05_Testing/NangCapPhanQuyen.json",
+      "bytes": 925,
+      "sha256": "134e4d954294f6db42523a9418dac06f1a77b46d7bb4774d8ddd7b7603f94519"
+    },
+    {
+      "path": "05_Testing/NangCapTuyenSinh.json",
+      "bytes": 264,
+      "sha256": "6b209cba07d6364eef78d5839258c02f8f735b4eec52dcfab150771e4b755d6a"
+    },
+    {
+      "path": "05_Testing/NghiemThu_Loi.json",
+      "bytes": 721,
+      "sha256": "4d4437c89f414ac0c80786e6792f215ab0b30019188bdcf5c6643a3bda1c8f43"
+    },
+    {
+      "path": "05_Testing/NhapDuLieuCongKhai.json",
+      "bytes": 981,
+      "sha256": "99c85db89dcc6de6f4686fde120004d30ab0b6a1ac89b51dea0fb1769416a2f6"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/BANG_DAI_HOC.pdf",
+      "bytes": 79379,
+      "sha256": "80c7bb29ac2cae6b322120d301d9a8cccf337a517497c6999322b83bdd2e94b8"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/BANG_DAI_HOC.png",
+      "bytes": 113262,
+      "sha256": "3ec948473f0ee096f3e646d4f18e4053e993b4b84fd10cdae43c1a4d416e256d"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/BANG_DIEM.pdf",
+      "bytes": 66051,
+      "sha256": "a002e49af5e59f5cbe27ab8a042c44cd33efef30131c6a242f4670087193ac12"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/BANG_DIEM.png",
+      "bytes": 94168,
+      "sha256": "ad98a0e10321a8d606dd163047947f23be9b9373591932fc7f8a64e32483c6fa"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/CHUNG_CHI_NGOAI_NGU.pdf",
+      "bytes": 69355,
+      "sha256": "7904805f9ae1b3d4a3d64b71e85c8ceca2609096764d2e5217240e65a47f62c4"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/CHUNG_CHI_NGOAI_NGU.png",
+      "bytes": 99328,
+      "sha256": "43cea77025bf4a6fce73e5a0ca1e37a3cbb359b5d2df0260a730d2302a614b59"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/expected.json",
+      "bytes": 694,
+      "sha256": "3f5811cf6d907601503e1ec62649b7e7d0bd1b2dbd1c512dff751d3924bdf59f"
+    },
+    {
+      "path": "05_Testing/OCR_Mau/ket-qua.json",
+      "bytes": 3061,
+      "sha256": "3c47365e8360c91f785017b77c3d41bec270423f47014b9e566c771c9b008c91"
+    },
+    {
+      "path": "05_Testing/PhamViNguon.json",
+      "bytes": 284,
+      "sha256": "70cafc43c2e71226fe0d60f9d8fafafceccac1b41dd436bb35790649ec77b7fc"
+    },
+    {
+      "path": "05_Testing/PhanQuyenCongBoDiem.json",
+      "bytes": 442,
+      "sha256": "d8f350fc731aee86fe3a37325f663cf4a5eef5db8853984f07f1072e26cfbbf6"
+    },
+    {
+      "path": "05_Testing/PhienDangNhapVaDangXuat.json",
+      "bytes": 518,
+      "sha256": "9be7fb6eca01bb2ad98d81563f8798ccd3d4d453effb63ac0f0cce4feeaeea42"
+    },
+    {
+      "path": "05_Testing/README.md",
+      "bytes": 1172,
+      "sha256": "b24b85a16044fe0fb984ad4e68b87b1c43e8edb6ff65de71296c24fce8415596"
+    },
+    {
+      "path": "05_Testing/Tai_50_NguoiDung.json",
+      "bytes": 1355,
+      "sha256": "c0f4f55fc25ecb755699347d710b6e20be6e9f665c52e886c52d1abba65c3104"
+    },
+    {
+      "path": "05_Testing/TinhGonSQL.json",
+      "bytes": 3028,
+      "sha256": "90920d29db42a58fc0239205a6e4742bfb12b500f7bdcf269258ee2b763be9c2"
+    },
+    {
+      "path": "05_Testing/XacMinhDuLieuTuyenSinh.json",
+      "bytes": 218,
+      "sha256": "df0e5afc6baf465a23994fb3c8d79ff402589b5fccac59f2c90c13b0d9e5edf4"
+    },
+    {
+      "path": "05_Testing/load/admissions.k6.js",
+      "bytes": 740,
+      "sha256": "2b55474d4f5d32b1df5d7b93408e4ff2d441849e9f76aba0c6c1129305e38bbd"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1177,
+      "sha256": "dce243a5573f43c3848f3e9fd6d03ff84ffc23ee9159988ae79b1c82c5be6f27"
+    },
+    {
+      "path": "chay.cmd",
+      "bytes": 416,
+      "sha256": "931e6315f704cf1d810ca33cd874f1d7648c1f99aa96d8d0f089a0f7cf22c2f9"
+    },
+    {
+      "path": "scripts/snapshot-project.cjs",
+      "bytes": 1968,
+      "sha256": "b42e506f9db90e66abe578917969b0c167b7f39b8950a3020c3eb81e81d0175b"
+    },
+    {
+      "path": "scripts/start-local.cjs",
+      "bytes": 14730,
+      "sha256": "28407130856013f738084eeb262c9d1de669443564e58d124a3b6bb626470590"
+    },
+    {
+      "path": "scripts/start-local.test.cjs",
+      "bytes": 3252,
+      "sha256": "04980b7602f3a008e7af07722406259b01e20229c254fa7127d615b323545e47"
+    }
+  ]
+}

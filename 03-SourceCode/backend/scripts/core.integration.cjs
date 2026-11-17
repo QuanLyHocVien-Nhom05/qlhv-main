@@ -52,6 +52,7 @@ async function main(){
  await require('./university-checks.cjs')({pool,call,browser,base,token,ok});
  await require('./agu-supplement-checks.cjs')({pool,call,browser,ok});
  await require('./agu-public-checks.cjs')({pool,call,ok});
+ await require('./session-checks.cjs')({pool,call,browser,password,base,ok});
  console.log('ALL '+count+' CORE CHECKS PASSED');
 }
 main().catch(error=>{console.error(error.stack);console.error(logs.slice(-5).join(''));process.exitCode=1;}).finally(async()=>{await browser?.close();await smtp?.close();stop(web);stop(server);await pool?.close();if(created&&/^QLCTDT_Test_[a-f0-9]{12}$/.test(name))await master.request().query(`ALTER DATABASE [${name}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;DROP DATABASE [${name}]`);await master?.close();});

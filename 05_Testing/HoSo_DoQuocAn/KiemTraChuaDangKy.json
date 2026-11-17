@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-17T20:03:52.550Z",
+  "scope": "Database cục bộ trên máy chuẩn bị tệp; không kiểm tra database máy khác",
+  "email": "doquocan@student.agu.edu.vn",
+  "counts": {
+    "Emails": 0,
+    "Usernames": 0,
+    "Identities": 0,
+    "Applications": 0,
+    "Names": 0
+  },
+  "unregistered": true,
+  "profileValidationPassed": true,
+  "databaseChanged": false
+}

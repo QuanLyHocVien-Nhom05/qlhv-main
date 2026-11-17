@@ -1,0 +1,6 @@
+.session-status{max-width:640px;margin:80px auto;padding:28px;line-height:1.8}
+.session-status h1{font-size:24px}
+.public-nav .public-nav-logout{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 14px;border:1px solid #b6c9bb;border-radius:8px;background:#f2f7f2;color:#24523a;font:inherit;font-size:12px;white-space:nowrap}
+.public-nav .public-nav-logout:hover{background:#e4efe6}
+.account .account-logout{display:inline-flex;align-items:center;gap:6px;font-size:12px}
+@media(max-width:700px){.session-status{margin:36px 16px}.public-nav .public-nav-logout{margin-top:10px;width:100%}.account-logout-label{display:none}}

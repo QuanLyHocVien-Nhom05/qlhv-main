@@ -6,6 +6,7 @@ import './public.css';
 import './studies.css';
 import './accounts.css';
 import './visual-refresh.css';
+import './session.css';
 const beVietnamPro = localFont({
   src: [
     { path: './fonts/BeVietnamPro-Regular.ttf', weight: '400', style: 'normal' },

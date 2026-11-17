@@ -1,17 +1,17 @@
 {
   "scope": "admissions-specification",
-  "startedAt": "2026-11-16T23:32:24.283Z",
+  "startedAt": "2026-11-17T21:39:23.075Z",
   "passed": true,
   "steps": [
     {
       "name": "TypeScript frontend",
       "exitCode": 0,
-      "durationMs": 1327
+      "durationMs": 1325
     },
     {
       "name": "TypeScript backend",
       "exitCode": 0,
-      "durationMs": 1911
+      "durationMs": 2178
     },
     {
       "name": "Unit frontend",
@@ -21,18 +21,18 @@
     {
       "name": "Unit backend",
       "exitCode": 0,
-      "durationMs": 3998
+      "durationMs": 4169
     },
     {
       "name": "Build backend",
       "exitCode": 0,
-      "durationMs": 4852
+      "durationMs": 5119
     },
     {
       "name": "Core SQL/API/Chrome",
       "exitCode": 0,
-      "durationMs": 283495
+      "durationMs": 180988
     }
   ],
-  "finishedAt": "2026-11-16T23:37:20.023Z"
+  "finishedAt": "2026-11-17T21:42:37.009Z"
 }
