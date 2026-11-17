@@ -10,6 +10,7 @@
     "test": "vitest run",
     "setup:local": "node scripts/setup-local.cjs",
     "test:integration": "node scripts/core.integration.cjs",
+    "test:score-publication": "npm run build && node scripts/test-score-publication.cjs",
     "test:acceptance": "node scripts/acceptance.cjs",
     "check:smtp": "npm run build && node scripts/check-smtp.cjs",
     "data:preview": "node scripts/import-university.cjs",

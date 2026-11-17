@@ -48,6 +48,7 @@ async function main(){
  await require('./exam-organization-checks.cjs')({call,pool,browser,password,token,base,ok});
  await require('./single-approval-checks.cjs')({call,pool,browser,password,token,base,ok});
  await require('./load-checks.cjs')({call,pool,password,base,ok});
+ await require('./score-publication-checks.cjs')({call,pool,password,base,ok});
  await require('./university-checks.cjs')({pool,call,browser,base,token,ok});
  await require('./agu-supplement-checks.cjs')({pool,call,browser,ok});
  await require('./agu-public-checks.cjs')({pool,call,ok});
