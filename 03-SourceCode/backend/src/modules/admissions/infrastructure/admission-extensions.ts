@@ -1,6 +1,6 @@
 import {Resource,text,ref,choice} from '../../management/domain/resource';
 
-const planFields=[ref('MaPhienBan','Phiên bản CTĐT đã duyệt','versions'),ref('MaLopQuanLy','Lớp quản lý','cohorts',false),ref('MaGVHD','Người hướng dẫn','staff',false),text('LopHocPhan','Lớp học phần tự xếp',2000),{key:'TuDong',label:'Tự động bàn giao sau hoàn tất phí',type:'boolean' as const,required:true}];
+const planFields=[ref('MaPhienBan','Phiên bản CTĐT đã duyệt','versions'),ref('MaLopQuanLy','Lớp quản lý','cohorts'),ref('MaGVHD','Người hướng dẫn','staff'),text('LopHocPhan','Lớp học phần tự xếp',2000),{key:'TuDong',label:'Tự động bàn giao sau hoàn tất phí',type:'boolean' as const,required:true}];
 const planChecks=`
  IF NOT EXISTS(SELECT 1 FROM tuyen_sinh.ChiTieu q JOIN hoc_thuat.ChuongTrinh c ON c.MaNganh=q.MaNganh AND c.TrinhDo=q.TrinhDo JOIN hoc_thuat.PhienBanChuongTrinh p ON p.MaChuongTrinh=c.MaChuongTrinh WHERE q.MaChiTieu=@MaChiTieu AND p.MaPhienBan=@MaPhienBan AND p.TrangThai='DA_DUYET') THROW 51091,N'CTĐT phải đã duyệt và đúng ngành/trình độ.',1;
  IF NOT EXISTS(SELECT 1 FROM tuyen_sinh.ChiTieu q JOIN danh_muc.Nganh n ON n.MaNganh=q.MaNganh WHERE q.MaChiTieu=@MaChiTieu AND (EXISTS(SELECT 1 FROM he_thong.TaiKhoanDangNhap WHERE MaNguoi=@Nguoi AND VaiTro='ADMIN') OR n.MaDonVi IN(SELECT MaDonVi FROM nhan_su.fn_PhamViDonVi(@Nguoi)))) THROW 51203,N'Chỉ tiêu ngoài phạm vi đơn vị.',1;
@@ -11,7 +11,6 @@ const planChecks=`
  IF EXISTS(SELECT 1 FROM tuyen_sinh.HoSo h JOIN tuyen_sinh.BanGiao b ON b.MaHoSo=h.MaHoSo WHERE h.MaChiTieu=@MaChiTieu) THROW 51091,N'Đã có bàn giao theo chỉ tiêu; không sửa kế hoạch.',1;
 `;
 export function addAdmissionExtensions(resources:Resource[]){
- const transfers=resources.find(r=>r.key==='admission-transfers')!;transfers.actions=[{key:'retry',label:'Thử đồng bộ ERP/LMS lại',fields:[],sql:"UPDATE tuyen_sinh.BanGiao SET TrangThaiErp='CHO_CAU_HINH',SoLanThu=0,NgayThuCuoi=NULL WHERE MaBanGiao=@Id AND TrangThaiErp IN('LOI','CHO_CAU_HINH');IF @@ROWCOUNT<>1 THROW 51091,N'Bàn giao đã gửi hoặc đang xử lý.',1;"}];
  const exams=resources.find(r=>r.key==='admission-exams')!;
  exams.fields.push({...choice('ThanhPhan','Bài thi',['TONG_HOP','CO_SO','CHUYEN_NGANH']),required:false});
  exams.columns.push('ThanhPhan');

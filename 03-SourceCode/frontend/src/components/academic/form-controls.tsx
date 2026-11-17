@@ -29,6 +29,7 @@ const labels:Record<string,string>={applications:'Danh sách hồ sơ',accepted:
 const activityLabels:Record<string,string>={grade:'Chốt điểm',adjust:'Điều chỉnh điểm',status:'Đổi trạng thái'};
 export const columnLabels:Record<string,string>={ThanhPhan:'Bài thi',MaLyDo:'Mã lý do',TenLyDo:'Lý do',NoiDungMau:'Hướng dẫn bổ sung',DangSuDung:'Đang sử dụng',TuDong:'Tự động bàn giao',MaGVHD:'Người hướng dẫn',SoVanBan:'Văn bản nguồn',NguonMauUrl:'Nguồn biểu mẫu',Loai:'Loại báo cáo',TieuDe:'Tiêu đề',KyHieu:'Mã',TenDonVi:'Đơn vị',TenNganh:'Ngành',TenHocPhan:'Học phần',HoTen:'Họ tên',HocVi:'Học vị',DangHoatDong:'Hoạt động',MaSoHocVien:'Mã học viên',TenChuongTrinh:'Chương trình',KhoaTuyenSinh:'Khóa',TrangThai:'Trạng thái',HanDaoTao:'Hạn đào tạo',NamHoc:'Năm học',HocKy:'Học kỳ',SiSoToiDa:'Sĩ số tối đa',LopHocPhan:'Lớp',DiemTongKet:'Điểm'};
 export function statusLabel(value:string){return labels[value]??activityLabels[value]??value;}
+Object.assign(columnLabels,{TuDongTheoLich:'Tự mở/đóng theo lịch',MaNganhCha:'Ngành cha',TenNganhCha:'Ngành cha'});
 export function display(value:unknown,column='') {
   if(value===null||value===undefined||value==='')return '—';
   if(typeof value==='boolean')return value?'Có':'Chưa';

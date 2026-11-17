@@ -39,6 +39,15 @@ export class SqlManagementRepository implements ManagementRepository {
       {...values,CanBo:actor.MaCanBo,Nguoi:actor.MaNguoi,Id:id,GroupName:resource.group,ResourceName:key,ActionName:action??'TAO_MOI',Detail:JSON.stringify(values)});
     return {ok:true};
   }
-  async overview(){const result=await this.db.query(`SELECT (SELECT COUNT(*) FROM hoc_thuat.ChuongTrinh) AS ChuongTrinh,(SELECT COUNT(*) FROM hoc_thuat.HocVien) AS HocVien,(SELECT COUNT(*) FROM hoc_thuat.LopHocPhan) AS LopHocPhan,(SELECT COUNT(*) FROM hoc_thuat.PhienBanChuongTrinh WHERE TrangThai='DA_DUYET') AS PhienBanDaDuyet;
-SELECT TOP(6) a.MaNhatKy,a.HanhDong,a.TenDoiTuong,n.HoTen,a.ThoiDiem FROM he_thong.NhatKyThayDoi a JOIN danh_muc.Nguoi n ON n.MaNguoi=a.MaNguoiThucHien WHERE a.PhanHe IN('HOC_THUAT','HE_THONG','programs','studies','students','catalogs') ORDER BY a.MaNhatKy DESC;`);const sets=result.recordsets as unknown as Record<string,unknown>[][];return {summary:sets[0][0],activity:sets[1]};}
+  async overview(actor:{sub:string;roles:string[]}){const result=await this.db.query(`
+SELECT (SELECT COUNT(*) FROM tuyen_sinh.DotTuyen) AS DotTuyen,COUNT(*) AS HoSo,
+ COALESCE(SUM(CASE WHEN h.TrangThai IN('DA_NOP','CAN_BO_SUNG') THEN 1 ELSE 0 END),0) AS ChoThamDinh,
+ COALESCE(SUM(CASE WHEN h.TrangThai='DA_BAN_GIAO' THEN 1 ELSE 0 END),0) AS DaBanGiao
+ FROM tuyen_sinh.HoSo h JOIN tuyen_sinh.ChiTieu q ON q.MaChiTieu=h.MaChiTieu
+ JOIN danh_muc.Nganh n ON n.MaNganh=q.MaNganh
+ WHERE @Admin=1 OR n.MaDonVi IN(SELECT MaDonVi FROM nhan_su.fn_PhamViDonVi(@Subject));
+SELECT TOP(6) a.MaNhatKy,a.HanhDong,a.TenDoiTuong,n.HoTen,a.ThoiDiem
+ FROM he_thong.NhatKyThayDoi a JOIN danh_muc.Nguoi n ON n.MaNguoi=a.MaNguoiThucHien
+ WHERE a.PhanHe IN('TUYEN_SINH','admissions') AND (@Admin=1 OR a.MaNguoiThucHien=@Subject)
+ ORDER BY a.MaNhatKy DESC;`,{Admin:actor.roles.includes('ACADEMIC_ADMIN'),Subject:actor.sub});const sets=result.recordsets as unknown as Record<string,unknown>[][];return {summary:sets[0][0],activity:sets[1]};}
 }

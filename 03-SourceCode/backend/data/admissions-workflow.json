@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "key": "TUYEN_SINH_CNTT_2026",
+  "majorCode": "8480201",
+  "programCode": "CHCNTT2026",
+  "staff": [
+    {"name":"Nguyễn Văn Hùng","email":"nguyenvanhung@student.agu.edu.vn","role":"ADMIN"},
+    {"name":"Trần Thị Lan","email":"tranthilan@student.agu.edu.vn","role":"CAN_BO"},
+    {"name":"Lê Văn Minh","email":"levanminh@student.agu.edu.vn","role":"CAN_BO"},
+    {"name":"Phạm Quốc Bảo","email":"phamquocbao@student.agu.edu.vn","role":"GIANG_VIEN"},
+    {"name":"Võ Thị Hạnh","email":"vothihanh@student.agu.edu.vn","role":"GIANG_VIEN"}
+  ],
+  "applicants": [
+    {"name":"Nguyễn Minh Anh","email":"nguyenminhanh@student.agu.edu.vn","gpa":8.6},
+    {"name":"Trần Quốc Huy","email":"tranquochuy@student.agu.edu.vn","gpa":8.2},
+    {"name":"Lê Thị Ngọc","email":"lethingoc@student.agu.edu.vn","gpa":7.9},
+    {"name":"Phạm Hoàng Nam","email":"phamhoangnam@student.agu.edu.vn","gpa":6.8},
+    {"name":"Võ Thanh Tùng","email":"vothanhtung@student.agu.edu.vn","gpa":7.5},
+    {"name":"Nguyễn Thị Mai","email":"nguyenthimai@student.agu.edu.vn","gpa":8.0},
+    {"name":"Trần Gia Bảo","email":"trangiabao@student.agu.edu.vn","gpa":7.8},
+    {"name":"Lê Hoàng Phúc","email":"lehoangphuc@student.agu.edu.vn","gpa":7.6},
+    {"name":"Phạm Thùy Linh","email":"phamthuylinh@student.agu.edu.vn","gpa":8.4},
+    {"name":"Đặng Đức Anh","email":"dangducanh@student.agu.edu.vn","gpa":8.1}
+  ],
+  "courses": [
+    ["Triết học",3],["Tiếng Anh học thuật",3],["Phương pháp nghiên cứu khoa học",3],
+    ["Phân tích và thiết kế thuật toán",3],["Trí tuệ nhân tạo",3],["Cơ sở dữ liệu nâng cao",3],
+    ["Mạng máy tính nâng cao",3],["An toàn thông tin",3],["Công nghệ phần mềm nâng cao",3],
+    ["Điện toán đám mây",3],["Học máy",3],["Quản lý dự án công nghệ thông tin",3],
+    ["Khai phá dữ liệu",3],["Xử lý ngôn ngữ tự nhiên",3],["Hệ thống phân tán",3],
+    ["Thị giác máy tính",3],["Luận văn thạc sĩ",12]
+  ]
+}

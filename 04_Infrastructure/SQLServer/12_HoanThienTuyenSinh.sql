@@ -56,7 +56,7 @@ DECLARE @check nvarchar(max)=N'';
 SELECT @check+=N'ALTER TABLE tuyen_sinh.GiaoDich DROP CONSTRAINT '+QUOTENAME(name)+N';' FROM sys.check_constraints
  WHERE parent_object_id=OBJECT_ID('tuyen_sinh.GiaoDich') AND definition LIKE '%Kenh%';
 IF @check<>N'' EXEC(@check);
-ALTER TABLE tuyen_sinh.GiaoDich ADD CONSTRAINT CK_GiaoDich_Kenh CHECK(Kenh IN('VNPAY','MOMO','NGAN_HANG'));
+ALTER TABLE tuyen_sinh.GiaoDich ADD CONSTRAINT CK_GiaoDich_Kenh CHECK(Kenh IN('VNPAY','MOMO','NGAN_HANG','MO_PHONG'));
 IF COL_LENGTH('tuyen_sinh.BanGiao','SoLanThu') IS NULL ALTER TABLE tuyen_sinh.BanGiao ADD SoLanThu int NOT NULL DEFAULT 0;
 IF COL_LENGTH('tuyen_sinh.BanGiao','NgayThuCuoi') IS NULL ALTER TABLE tuyen_sinh.BanGiao ADD NgayThuCuoi datetime2 NULL;
 IF COL_LENGTH('tuyen_sinh.HoSo','LoiBanGiao') IS NULL ALTER TABLE tuyen_sinh.HoSo ADD LoiBanGiao nvarchar(500) NULL,LanThuBanGiao datetime2 NULL;

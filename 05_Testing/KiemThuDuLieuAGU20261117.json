@@ -1,0 +1,13 @@
+{
+  "completedAt": "2026-11-17T00:11:57.870Z",
+  "passed": true,
+  "isolatedDatabase": true,
+  "sourceFilesSha256Verified": 15,
+  "conflictRollback": true,
+  "idempotent": true,
+  "existingRowsPreserved": true,
+  "closedHistoricalIntakes": 2,
+  "quotas": 14,
+  "noInventedScoreConversion": true,
+  "apiAndHttpDownloadsVerified": true
+}

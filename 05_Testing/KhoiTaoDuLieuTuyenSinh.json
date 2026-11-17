@@ -1,0 +1,180 @@
+{
+  "key": "TUYEN_SINH_CNTT_2026",
+  "completedAt": "2026-11-17T00:34:08.668Z",
+  "accounts": [
+    {
+      "name": "Nguyễn Văn Hùng",
+      "email": "nguyenvanhung@student.agu.edu.vn",
+      "role": "ADMIN"
+    },
+    {
+      "name": "Trần Thị Lan",
+      "email": "tranthilan@student.agu.edu.vn",
+      "role": "CAN_BO"
+    },
+    {
+      "name": "Lê Văn Minh",
+      "email": "levanminh@student.agu.edu.vn",
+      "role": "CAN_BO"
+    },
+    {
+      "name": "Phạm Quốc Bảo",
+      "email": "phamquocbao@student.agu.edu.vn",
+      "role": "GIANG_VIEN"
+    },
+    {
+      "name": "Võ Thị Hạnh",
+      "email": "vothihanh@student.agu.edu.vn",
+      "role": "GIANG_VIEN"
+    },
+    {
+      "name": "Nguyễn Minh Anh",
+      "email": "nguyenminhanh@student.agu.edu.vn",
+      "role": "HOC_VIEN"
+    },
+    {
+      "name": "Trần Quốc Huy",
+      "email": "tranquochuy@student.agu.edu.vn",
+      "role": "HOC_VIEN"
+    },
+    {
+      "name": "Lê Thị Ngọc",
+      "email": "lethingoc@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Phạm Hoàng Nam",
+      "email": "phamhoangnam@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Võ Thanh Tùng",
+      "email": "vothanhtung@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Nguyễn Thị Mai",
+      "email": "nguyenthimai@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Trần Gia Bảo",
+      "email": "trangiabao@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Lê Hoàng Phúc",
+      "email": "lehoangphuc@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Phạm Thùy Linh",
+      "email": "phamthuylinh@student.agu.edu.vn",
+      "role": "THI_SINH"
+    },
+    {
+      "name": "Đặng Đức Anh",
+      "email": "dangducanh@student.agu.edu.vn",
+      "role": "THI_SINH"
+    }
+  ],
+  "program": {
+    "code": "CHCNTT2026",
+    "credits": 60,
+    "version": 2
+  },
+  "courses": 17,
+  "cohorts": 2,
+  "classes": 2,
+  "batches": [
+    {
+      "code": "TS_CNTT_2026_03",
+      "id": 5
+    },
+    {
+      "code": "TS_CNTT_2026_04",
+      "id": 6
+    }
+  ],
+  "councils": 2,
+  "exams": 2,
+  "files": 70,
+  "applications": [
+    {
+      "MaHoSo": "1",
+      "SoHoSo": "HS-30BACE565BBB4872857F",
+      "TrangThai": "DA_BAN_GIAO",
+      "HoTen": "Nguyễn Minh Anh",
+      "ThuDienTu": "nguyenminhanh@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "2",
+      "SoHoSo": "HS-444464B4B3124CAAA3C8",
+      "TrangThai": "DA_BAN_GIAO",
+      "HoTen": "Trần Quốc Huy",
+      "ThuDienTu": "tranquochuy@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "3",
+      "SoHoSo": "HS-6AF55321500146829AD1",
+      "TrangThai": "XAC_NHAN_NHAP_HOC",
+      "HoTen": "Lê Thị Ngọc",
+      "ThuDienTu": "lethingoc@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "4",
+      "SoHoSo": "HS-76081FB48F5B4C2093CB",
+      "TrangThai": "KHONG_TRUNG_TUYEN",
+      "HoTen": "Phạm Hoàng Nam",
+      "ThuDienTu": "phamhoangnam@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "5",
+      "SoHoSo": "HS-7D912F0FEC4B4F8AAEFF",
+      "TrangThai": "NHAP",
+      "HoTen": "Võ Thanh Tùng",
+      "ThuDienTu": "vothanhtung@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "6",
+      "SoHoSo": "HS-925AD02BBE084E7382BE",
+      "TrangThai": "CHO_THANH_TOAN",
+      "HoTen": "Nguyễn Thị Mai",
+      "ThuDienTu": "nguyenthimai@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "7",
+      "SoHoSo": "HS-001411BADB8849B79635",
+      "TrangThai": "DA_NOP",
+      "HoTen": "Trần Gia Bảo",
+      "ThuDienTu": "trangiabao@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "8",
+      "SoHoSo": "HS-5855D148432F4E00A359",
+      "TrangThai": "CAN_BO_SUNG",
+      "HoTen": "Lê Hoàng Phúc",
+      "ThuDienTu": "lehoangphuc@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "9",
+      "SoHoSo": "HS-07A85E4274C9432D9186",
+      "TrangThai": "DU_DIEU_KIEN",
+      "HoTen": "Phạm Thùy Linh",
+      "ThuDienTu": "phamthuylinh@student.agu.edu.vn"
+    },
+    {
+      "MaHoSo": "10",
+      "SoHoSo": "HS-F447C3198CAD480DB7C0",
+      "TrangThai": "DU_DIEU_KIEN",
+      "HoTen": "Đặng Đức Anh",
+      "ThuDienTu": "dangducanh@student.agu.edu.vn"
+    }
+  ],
+  "preservedExistingRows": true,
+  "allAccountsLoginVerified": true,
+  "passed": true,
+  "idempotent": true,
+  "isolatedDatabase": false,
+  "backupVerified": true
+}

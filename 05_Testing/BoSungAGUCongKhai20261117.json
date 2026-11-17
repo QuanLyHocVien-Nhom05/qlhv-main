@@ -1,0 +1,33 @@
+{
+  "completedAt": "2026-11-17T00:08:33.287Z",
+  "mode": "APPEND_ONLY",
+  "backupVerified": true,
+  "unitsAdded": 10,
+  "majorsAdded": 3,
+  "programsAdded": 3,
+  "documentsAdded": 15,
+  "intakesAdded": 2,
+  "quotasAdded": 14,
+  "certificateThresholdsAdded": 2,
+  "inputMajorRulesAdded": 8,
+  "idempotent": true,
+  "existingRowsPreserved": true,
+  "manifestSha256": "eac95b17f281b462077d6fbbddda3f66231cba0fb198e00f23bf86ab1e8676ea",
+  "sourceUrls": [
+    "https://tuyensinh.agu.edu.vn/uploads/a80bca79d715861847bc66e935252743.pdf",
+    "https://tuyensinh.agu.edu.vn/uploads/0ead712291de7fad427b657b6d7988be.pdf",
+    "https://tuyensinh.agu.edu.vn/uploads/39101a37c7e2a910c1f836c821ef5bf54b.pdf",
+    "https://tuyensinh.agu.edu.vn/uploads/a3ace3308e3348209bb8ab72df2d83e9.jpg",
+    "https://tuyensinh.agu.edu.vn/uploads/8c10348c975f49cfa35c8e4b96e28b80b.jpg",
+    "https://tuyensinh.agu.edu.vn/uploads/43a2afd71b968a1edcb1092ab69c78293.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/db4b1a25ff810e24239fb07bccfc2e110.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/c105f32c7c92d5d4d4689dde827dbaec10.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/9f5c139e9378a140ea3a613bcdc374ce.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/6abe7df745de9d1afe9c5afef668c8bf.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/679840db2b2152fa23f60a861b5ac246.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/8361b4411422ed11f4de63b80c6d7e105.docx",
+    "https://tuyensinh.agu.edu.vn/uploads/f4985311bceed65ef63649638cf27a5a.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/585c96561e574395611ae954568a9f06.doc",
+    "https://tuyensinh.agu.edu.vn/uploads/cef1d278b0893dbc628f16e971848e37.doc"
+  ]
+}

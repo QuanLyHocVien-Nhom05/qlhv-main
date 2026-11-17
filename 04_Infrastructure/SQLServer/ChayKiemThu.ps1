@@ -12,14 +12,14 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Khong tao duoc CSDL kiem thu moi.' }
     $DaTao = $true
     Write-Host "CSDL kiem thu: $TenCoSoDuLieu"
-    $DanhSachTep = @('01_CauTruc.sql','02_KhungChuongTrinh.sql','03_TaiKhoan.sql','04_TuongThichDuLieu.sql','05_DuLieuKhoiTao.sql','06_KhoiPhucMatKhau.sql','08_NangCapDaoTao.sql','09_TuyenSinhTheoDacTa.sql','10_DuLieuCongKhai.sql','11_DonDepThuocTinhCu.sql')
+    $DanhSachTep = @('01_CauTruc.sql','02_KhungChuongTrinh.sql','03_TaiKhoan.sql','04_TuongThichDuLieu.sql','05_DuLieuKhoiTao.sql','06_KhoiPhucMatKhau.sql','08_NangCapDaoTao.sql','09_TuyenSinhTheoDacTa.sql','10_DuLieuCongKhai.sql','11_DonDepThuocTinhCu.sql','12_HoanThienTuyenSinh.sql','13_NguonDuLieuAGU.sql','14_PhamViVaLichTuyenSinh.sql','15_ThanhToanMoPhong.sql','16_SoYeuLyLichAGU.sql','17_ToChucThiVaHoiDong.sql','18_PheDuyetMotCap.sql')
     foreach ($TenTep in $DanhSachTep) {
         $DuongDanTep = Join-Path $PSScriptRoot $TenTep
         Write-Host "Dang chay $TenTep"
         & sqlcmd @ThamSoChung -d $TenCoSoDuLieu -i $DuongDanTep
         if ($LASTEXITCODE -ne 0) { throw "Kiem thu that bai tai $TenTep" }
     }
-    & sqlcmd @ThamSoChung -d $TenCoSoDuLieu -Q "SET NOCOUNT ON; IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>45 THROW 51999,N'Can dung 45 bang loi.',1; SELECT (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0) AS SoBang,(SELECT COUNT(*) FROM sys.procedures WHERE is_ms_shipped=0) AS SoThuTuc,(SELECT COUNT(*) FROM sys.views WHERE is_ms_shipped=0) AS SoKhungNhin;"
+    & sqlcmd @ThamSoChung -d $TenCoSoDuLieu -Q "SET NOCOUNT ON; IF (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0)<>52 THROW 51999,N'Can dung 52 bang loi.',1; SELECT (SELECT COUNT(*) FROM sys.tables WHERE is_ms_shipped=0) AS SoBang,(SELECT COUNT(*) FROM sys.procedures WHERE is_ms_shipped=0) AS SoThuTuc,(SELECT COUNT(*) FROM sys.views WHERE is_ms_shipped=0) AS SoKhungNhin;"
     if ($LASTEXITCODE -ne 0) { throw 'Khong doc duoc thong ke kiem thu.' }
     Write-Host 'DA DAT TOAN BO KIEM THU.'
 }

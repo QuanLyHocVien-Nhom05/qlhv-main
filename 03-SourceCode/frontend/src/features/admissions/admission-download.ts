@@ -1,0 +1,2 @@
+import {apiBase} from '@/lib/api-client';
+export async function admissionDownload(path:string,token:string,name:string){const r=await fetch(apiBase()+path,{headers:{Authorization:'Bearer '+token},cache:'no-store'});if(!r.ok){const data=await r.json().catch(()=>null);throw Error(data?.message??'Không tải được tài liệu.');}const url=URL.createObjectURL(await r.blob()),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

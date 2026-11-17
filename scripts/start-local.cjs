@@ -87,6 +87,7 @@ async function main(){
  if(await probePorts())return;
  const newEnvironment=!fs.existsSync(backendEnv);const server=windowsPrerequisites(newEnvironment);
  await ensureDependencies();
+ try{await require(path.join(backend,'scripts/setup-ocr.cjs')).setup();}catch(error){console.warn('OCR chưa sẵn sàng: '+error.message+'. Tài liệu vẫn có thể đối chiếu thủ công; chạy lại npm run ocr:setup -w backend khi có mạng.');}
  const content=newEnvironment?createEnvironment(fs.readFileSync(path.join(backend,'.env.example'),'utf8'),server):fs.readFileSync(backendEnv,'utf8');
  const prepared=await prepareDatabase(content,newEnvironment),env=childEnvironment(prepared.config);
  const children=[];let closing=false;
@@ -95,7 +96,7 @@ async function main(){
  const interrupt=()=>void stop(0);process.on('SIGINT',interrupt);process.on('SIGTERM',interrupt);
  try{
   console.log('\nĐang khởi động backend...');const api=start('@nestjs/cli/bin/nest.js',['start','--watch'],backend);await waitUntilReady('http://127.0.0.1:3001/api/docs-json',api);
-  if(prepared.empty){console.log('\nDatabase ban đầu trống: đang nhập dữ liệu AGU công khai...');await run(process.execPath,['scripts/import-university.cjs','--replace'],{cwd:backend,env});await run(process.execPath,['scripts/augment-agu.cjs','--apply'],{cwd:backend,env});}
+  if(prepared.empty){console.log('\nDatabase ban đầu trống: đang nhập dữ liệu AGU công khai...');await run(process.execPath,['scripts/import-university.cjs','--replace'],{cwd:backend,env});await run(process.execPath,['scripts/augment-agu.cjs','--apply'],{cwd:backend,env});await run(process.execPath,['scripts/append-agu-public.cjs','--apply'],{cwd:backend,env});}
   console.log('\nĐang khởi động frontend...');const web=start('next/dist/bin/next',['dev','--webpack','--port','3000','--hostname','127.0.0.1'],frontend);await waitUntilReady('http://localhost:3000',web);
   console.log('\nSẴN SÀNG: http://localhost:3000\nQuản trị: http://localhost:3000/quan-tri\nNhấn Ctrl+C trong terminal này để dừng cả hai dịch vụ.');
   if(prepared.showNewPassword)console.log(`\nAdmin mới: ${prepared.config.DEV_ADMIN_USERNAME}\nMật khẩu riêng cho lần cài này: ${prepared.config.DEV_ADMIN_PASSWORD}\nMật khẩu được lưu trong backend/.env trên máy này.`);else console.log('Đăng nhập bằng tài khoản/mật khẩu hiện có.');
