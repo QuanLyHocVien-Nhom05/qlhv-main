@@ -1,0 +1,33 @@
+[
+  {
+    "type": "BANG_DAI_HOC",
+    "expected": {
+      "HoTen": "Nguyễn Văn An",
+      "NgaySinh": "2000-03-02",
+      "SoVanBang": "DEMO-2026-001",
+      "NgayCap": "2024-06-01",
+      "TruongCap": "Đại học Mẫu",
+      "XepLoai": "Giỏi"
+    }
+  },
+  {
+    "type": "BANG_DIEM",
+    "expected": {
+      "HoTen": "Nguyễn Văn An",
+      "NgaySinh": "2000-03-02",
+      "TruongCap": "Đại học Mẫu",
+      "Diem": 3.5,
+      "XepLoai": "Giỏi"
+    }
+  },
+  {
+    "type": "CHUNG_CHI_NGOAI_NGU",
+    "expected": {
+      "HoTen": "Nguyen Van An",
+      "NgaySinh": "2000-03-02",
+      "SoVanBang": "DEMO-IELTS-001",
+      "NgayCap": "2026-10-01",
+      "Diem": 6.5
+    }
+  }
+]

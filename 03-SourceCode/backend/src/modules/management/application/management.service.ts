@@ -8,7 +8,7 @@ export interface ManagementRepository {
   list(key: string, page: number, limit: number, search: string,status?:string,actor?:{sub:string;roles:string[]},unit?:number): Promise<any>;
   options(key: string): Promise<unknown>;
   write(key: string, action: string | null, id: number | null, values: Record<string,unknown>, actorId: string): Promise<unknown>;
-  overview(): Promise<unknown>;
+  overview(actor:{sub:string;roles:string[]}): Promise<unknown>;
 }
 @Injectable()
 export class ManagementService {
@@ -28,6 +28,6 @@ export class ManagementService {
     const validated=validateFields(fields,values);if(key==='admission-report-templates'&&!action)reportColumns(String(validated.CauHinhCot));
     return this.repository.write(key,action,id,validated,actor);
   }
-  overview() {return this.repository.overview();}
+  overview(actor:{sub:string;roles:string[]}) {return this.repository.overview(actor);}
 
 }

@@ -19,7 +19,7 @@ async function replaceData(pool,data,origin='http://localhost:3000'){
   const fingerprint=rows=>rows.map(a=>crypto.createHash('sha256').update(JSON.stringify([a.MaTaiKhoan,a.MaNguoi,a.TenDangNhap,a.MatKhauBam,a.VaiTro,a.PhienBanMatKhau,a.DangHoatDong,a.DaXoa])).digest('hex'));
   const previous=fingerprint(preserved),ids=preserved.map(a=>String(a.MaNguoi));for(const id of ids)assert.match(id,/^\d+$/);
   const staff=(await query('SELECT MaCanBo,MaDonVi FROM nhan_su.CanBo WHERE MaNguoi=@Id',{Id:String(admin.MaNguoi)})).recordset[0];assert.ok(staff,'Administrator staff profile required');
-  const tables=(await query("SELECT s.name AS S,t.name AS T,t.object_id AS Id FROM sys.tables t JOIN sys.schemas s ON s.schema_id=t.schema_id WHERE t.is_ms_shipped=0")).recordset;assert.equal(tables.length,50,'Unexpected schema: refuse cleanup');
+  const tables=(await query("SELECT s.name AS S,t.name AS T,t.object_id AS Id FROM sys.tables t JOIN sys.schemas s ON s.schema_id=t.schema_id WHERE t.is_ms_shipped=0")).recordset;assert.equal(tables.length,52,'Unexpected schema: refuse cleanup');
   const keep=new Set(['danh_muc.DonVi','danh_muc.Nguoi','nhan_su.CanBo','he_thong.TaiKhoanDangNhap','he_thong.ThamSoDaoTao','tuyen_sinh.MauLyDo']);
   const clear=tables.filter(t=>!keep.has(t.S+'.'+t.T));assert.ok(clear.every(t=>['danh_muc','he_thong','nhan_su','hoc_thuat','tuyen_sinh'].includes(t.S)));
   const edges=(await query('SELECT parent_object_id AS Child,referenced_object_id AS Parent FROM sys.foreign_keys WHERE parent_object_id<>referenced_object_id')).recordset;

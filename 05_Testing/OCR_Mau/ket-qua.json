@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "finishedAt": "2026-11-16T22:13:59.693Z",
+  "scope": "Synthetic clear documents only; not a real-world accuracy benchmark",
+  "checks": [
+    {
+      "file": "BANG_DAI_HOC.png",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-2026-001",
+        "NgayCap": "2024-06-01",
+        "TruongCap": "Đại học Mẫu",
+        "XepLoai": "Giỏi"
+      },
+      "actual": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-2026-001",
+        "NgayCap": "2024-06-01",
+        "TruongCap": "Đại học Mẫu",
+        "XepLoai": "Giỏi"
+      }
+    },
+    {
+      "file": "BANG_DAI_HOC.pdf",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-2026-001",
+        "NgayCap": "2024-06-01",
+        "TruongCap": "Đại học Mẫu",
+        "XepLoai": "Giỏi"
+      },
+      "actual": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-2026-001",
+        "NgayCap": "2024-06-01",
+        "TruongCap": "Đại học Mẫu",
+        "XepLoai": "Giỏi"
+      }
+    },
+    {
+      "file": "BANG_DIEM.png",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "TruongCap": "Đại học Mẫu",
+        "Diem": 3.5,
+        "XepLoai": "Giỏi"
+      },
+      "actual": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "TruongCap": "Đại học Mẫu",
+        "Diem": 3.5,
+        "XepLoai": "Giỏi"
+      }
+    },
+    {
+      "file": "BANG_DIEM.pdf",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "TruongCap": "Đại học Mẫu",
+        "Diem": 3.5,
+        "XepLoai": "Giỏi"
+      },
+      "actual": {
+        "HoTen": "Nguyễn Văn An",
+        "NgaySinh": "2000-03-02",
+        "TruongCap": "Đại học Mẫu",
+        "Diem": 3.5,
+        "XepLoai": "Giỏi"
+      }
+    },
+    {
+      "file": "CHUNG_CHI_NGOAI_NGU.png",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyen Van An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-IELTS-001",
+        "NgayCap": "2026-10-01",
+        "Diem": 6.5
+      },
+      "actual": {
+        "HoTen": "Nguyen Van An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-IELTS-001",
+        "NgayCap": "2026-10-01",
+        "Diem": 6.5
+      }
+    },
+    {
+      "file": "CHUNG_CHI_NGOAI_NGU.pdf",
+      "passed": true,
+      "expected": {
+        "HoTen": "Nguyen Van An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-IELTS-001",
+        "NgayCap": "2026-10-01",
+        "Diem": 6.5
+      },
+      "actual": {
+        "HoTen": "Nguyen Van An",
+        "NgaySinh": "2000-03-02",
+        "SoVanBang": "DEMO-IELTS-001",
+        "NgayCap": "2026-10-01",
+        "Diem": 6.5
+      }
+    }
+  ]
+}

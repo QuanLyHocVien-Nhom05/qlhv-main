@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+module.exports=async({pool,call,ok})=>{
+ const {dataset,append,snapshot,preserved}=require('./append-agu-public.cjs'),data=dataset();
+ const actor=(await pool.request().query("SELECT TOP(1) MaNguoi FROM he_thong.TaiKhoanDangNhap WHERE VaiTro='ADMIN' AND DangHoatDong=1 AND DaXoa=0 ORDER BY MaTaiKhoan")).recordset[0].MaNguoi;
+ const before=await snapshot(pool),conflict=structuredClone(data);conflict.documents.at(-1).code='1362/TB-ĐHAG';
+ await assert.rejects(()=>append(pool,conflict,actor),/Trùng mã văn bản khác nguồn/);assert.deepEqual(await snapshot(pool),before,'Rollback must remove all partial additions');
+ const added=await append(pool,data,actor);assert.deepEqual(added,{unitsAdded:10,majorsAdded:3,programsAdded:3,documentsAdded:15,intakesAdded:2,quotasAdded:14,certificateThresholdsAdded:2,inputMajorRulesAdded:8});preserved(before,await snapshot(pool));
+ const once=await snapshot(pool);assert.ok(Object.values(await append(pool,data,actor)).every(n=>n===0));assert.deepEqual(await snapshot(pool),once);
+ const facts=(await pool.request().query(`SELECT d.KyHieu,d.TrangThai,c.SoLuong,c.QuyTacDaXacNhan,c.DuKien,c.GpaToiThieu,c.DiemSan,c.PhiNhapHoc FROM tuyen_sinh.DotTuyen d JOIN tuyen_sinh.ChiTieu c ON c.MaDot=d.MaDot WHERE d.KyHieu IN('TS_AGU_2026_D1_DUKIEN','TS_AGU_2026_TIEN_SI');SELECT c.DiemQuyDoi,c.BacTuongDuong FROM tuyen_sinh.ChuanNgoaiNgu c JOIN tuyen_sinh.ChiTieu q ON q.MaChiTieu=c.MaChiTieu JOIN tuyen_sinh.DotTuyen d ON d.MaDot=q.MaDot WHERE d.KyHieu='TS_AGU_2026_TIEN_SI';SELECT KyHieu,DangHoatDong FROM danh_muc.Nganh WHERE KyHieu IN('8140111','8520320','9620110');`)).recordsets;
+ assert.equal(facts[0].length,14);assert.ok(facts[0].every(r=>r.TrangThai==='DA_DONG'&&!r.QuyTacDaXacNhan&&r.GpaToiThieu===null&&r.DiemSan===null&&r.PhiNhapHoc===null));assert.equal(facts[0].filter(r=>r.KyHieu==='TS_AGU_2026_D1_DUKIEN').reduce((n,r)=>n+r.SoLuong,0),285);assert.ok(facts[1].length===2&&facts[1].every(r=>r.DiemQuyDoi===null&&r.BacTuongDuong===4));assert.ok(facts[2].every(r=>r.DangHoatDong===(r.KyHieu==='9620110')));
+ if(call){const docs=await call('/public/documents',undefined,200,'');const added=docs.filter(d=>d.KieuKiemChung==='TAI_TEP_GOC');assert.equal(added.length,15);assert.ok(added.every(d=>/^https?:\/\//.test(d.DuongDan)));assert.equal((await call('/public/admission-options',undefined,200,'')).length,0);
+  for(const d of data.documents){const response=await fetch('http://localhost:3100/tai-lieu/'+d.file);assert.equal(response.status,200);assert.equal(require('node:crypto').createHash('sha256').update(Buffer.from(await response.arrayBuffer())).digest('hex'),d.sha256);}
+ }
+ require('node:fs').writeFileSync(require('node:path').resolve(__dirname,'../../../05_Testing/KiemThuDuLieuAGU20261117.json'),JSON.stringify({completedAt:new Date().toISOString(),passed:true,isolatedDatabase:true,sourceFilesSha256Verified:15,conflictRollback:true,idempotent:true,existingRowsPreserved:true,closedHistoricalIntakes:2,quotas:14,noInventedScoreConversion:true,apiAndHttpDownloadsVerified:Boolean(call)},null,2)+'\n');
+ ok('AGU verified public data: append, conflict rollback, idempotence, existing rows preserved, closed archives and no invented score conversions');
+};

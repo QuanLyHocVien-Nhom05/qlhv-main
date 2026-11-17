@@ -7,7 +7,7 @@ module.exports=async({call,pool,browser,password,version,token,base,ok})=>{
  const iso=days=>new Date(Date.now()+days*86400000).toISOString();
  await create('admission-batches',{KyHieu:'TS_TEST',TenDot:'Internal admissions test',MoHoSo:iso(-2),DongHoSo:iso(2),HanThamDinh:iso(4),HanBoSung:iso(4),NgayThi:iso(5),NgayCongBo:iso(6),HanPhucKhao:iso(7),HanNhapHoc:iso(10)});
  const dot=Number((await one('admission-batches','KyHieu','TS_TEST')).MaDot);
- const docs=['BANG_DAI_HOC','BANG_DIEM','CHUNG_CHI_NGOAI_NGU','LY_LICH_KHOA_HOC','GIAY_KHAM_SUC_KHOE','DONG_Y_CO_QUAN'];
+ const docs=['BANG_DAI_HOC','BANG_DIEM','CHUNG_CHI_NGOAI_NGU','LY_LICH_KHOA_HOC','GIAY_KHAM_SUC_KHOE','DONG_Y_CO_QUAN','SO_YEU_LY_LICH'];
  await create('admission-quotas',{MaDot:dot,MaNganh:Number(major.Id),TrinhDo:'THAC_SI',PhuongThuc:'XET_TUYEN',SoLuong:1,LePhi:0,PhiNhapHoc:0,GpaToiThieu:5,HeSoCoSo:1,HeSoChuyenNganh:1,HeSoNgoaiNgu:1,HeSoUuTien:1,DiemSan:15,TieuChiPhu:'GPA',TaiLieuBatBuoc:JSON.stringify(docs)});
  const quota=Number((await one('admission-quotas','MaDot',dot)).MaChiTieu);
  await create('admission-certificates',{MaChiTieu:quota,TenChungChi:'IELTS',DiemToiThieu:6,DiemQuyDoi:8});
@@ -20,6 +20,7 @@ module.exports=async({call,pool,browser,password,version,token,base,ok})=>{
  const login=await call('/auth/login',{username:register.Email,password},201,''),candidate=login.accessToken;
  assert.deepEqual(login.user.roles,['APPLICANT']);await call('/management/metadata',undefined,403,candidate);
  const profile={HoTen:register.HoTen,NgaySinh:'2000-01-01',SoGiayTo:register.SoGiayTo,DienThoai:'0901234567',TruongCapBang:'University',NganhTotNghiep:'IT',XepLoai:'GIOI',Gpa:3.5,ThangGpa:4,NoiCongTac:'',DoiTuongUuTien:'',TenChungChi:'IELTS',DiemNgoaiNgu:6.5,NgayCapChungChi:new Date().toISOString().slice(0,10),TenDeCuong:''};
+ profile.SoYeuLyLich=require('./agu-biography-fixture.cjs')();
  let h=await call('/my/admissions',{MaChiTieu:quota,profile},201,candidate);const id=Number(h.MaHoSo),original=h.Version;
  await pool.request().query('UPDATE tuyen_sinh.DotTuyen SET DongHoSo=DATEADD(day,-1,SYSUTCDATETIME()) WHERE MaDot='+dot);
  await call('/my/admissions/'+id,{MaChiTieu:quota,profile,Version:h.Version},409,candidate,'PUT');
@@ -60,6 +61,7 @@ module.exports=async({call,pool,browser,password,version,token,base,ok})=>{
  const teacher=(await call('/admin/accounts?search=qa.reviewer')).data[0];
  await create('admission-examiners',{MaCa:ca,MaCanBo:Number(staff.Id),VaiTro:'COI_THI'});await create('admission-examiners',{MaCa:ca,MaCanBo:Number(teacher.MaCanBo),VaiTro:'CHAM_THI'});
  await call(`/admin/admissions/exams/${ca}/allocate`,{},201);await call(`/admin/admissions/exams/${ca}/allocate`,{},201);assert.equal((await call(`/admin/admissions/exams/${ca}/roster`)).length,1);
+ await require('./exam-council-fixture.cjs')({call,pool,ca});
  await call(`/admin/admissions/exams/${ca}/publish`,{},201);
  const teacherToken=(await call('/auth/login',{username:'qa.reviewer',password},201,'')).accessToken;
  const blind=await call(`/admin/admissions/exams/${ca}/blind`,undefined,200,teacherToken);assert.deepEqual(Object.keys(blind[0]),['MaPhach']);await call(`/admin/admissions/exams/${ca}/roster`,undefined,403,teacherToken);
@@ -78,21 +80,26 @@ module.exports=async({call,pool,browser,password,version,token,base,ok})=>{
  await call(`/admin/admissions/batches/${dot}/rank`,{},201);
  const preview=await call('/admin/admissions/batches/'+dot+'/selection');assert.equal(preview.candidates.length,1);assert.equal(preview.candidates[0].XepHang,1);assert.equal(preview.candidates[0].DuKienTrungTuyen,true);assert.equal(preview.candidates[0].scores.Tong,24);assert.ok(!('DiemMaHoa' in preview.candidates[0]));
  await call('/my/admissions/'+id+'/appeal',{LyDo:'Attempt to appeal a frozen selection'},409,candidate);
- const leaders=[];for(let level=1;level<=3;level++){const name='approval.'+level;await call('/admin/accounts',{TenDangNhap:name,HoTen:'Approval '+level,ThuDienTu:name+'@example.invalid',VaiTro:'LANH_DAO',MatKhau:password,XacNhanMatKhau:password,MaDonVi:Number((await call('/management/options/units'))[0].Id),HocVi:'TIEN_SI'},201);const account=(await call('/admin/accounts?search='+name)).data[0];await create('admission-approval-rights',{MaNguoi:Number(account.MaNguoi),CapDuyet:level});leaders.push((await call('/auth/login',{username:name,password},201,'')).accessToken);}
- await call(`/admin/admissions/batches/${dot}/approve`,{CapDuyet:3,GhiChu:'Final approval'},409,leaders[2]);
- for(let level=1;level<=3;level++)await call(`/admin/admissions/batches/${dot}/approve`,{CapDuyet:level,GhiChu:'Approved at assigned stage'},201,leaders[level-1]);
+ const name='approval.1';await call('/admin/accounts',{TenDangNhap:name,HoTen:'Single Approver',ThuDienTu:name+'@example.invalid',VaiTro:'CAN_BO',MatKhau:password,XacNhanMatKhau:password,MaDonVi:Number((await call('/management/options/units'))[0].Id),HocVi:'TIEN_SI'},201);const account=(await call('/admin/accounts?search='+name)).data[0];const approver=(await call('/auth/login',{username:name,password},201,'')).accessToken;
+ await call(`/admin/admissions/batches/${dot}/approve`,{GhiChu:'No permission yet'},403,approver);
+ await create('admission-approval-rights',{MaNguoi:Number(account.MaNguoi)});
+ await call(`/admin/admissions/batches/${dot}/approve`,{CapDuyet:3,GhiChu:'Legacy bypass attempt'},400,approver);
+ await call(`/admin/admissions/batches/${dot}/approve`,{GhiChu:'Approved and published in one step'},201,approver);
+ await call(`/admin/admissions/batches/${dot}/approve`,{GhiChu:'Repeated publication attempt'},409,approver);
  h=await call('/my/admissions/'+id,undefined,200,candidate);assert.equal(h.TrangThai,'TRUNG_TUYEN');
- assert.equal((await call('/admin/admissions/batches/'+dot+'/selection',undefined,200,leaders[2])).approvals.length,3);
+ const approved=await call('/admin/admissions/batches/'+dot+'/selection',undefined,200,approver);assert.equal(approved.approvals.length,1);assert.equal(approved.approvals[0].CapDuyet,0);
  await call(`/my/admissions/${id}/confirm-enrollment`,{},201,candidate);
  const previous=(await pool.request().query('SELECT HanNhapHoc FROM tuyen_sinh.DotTuyen WHERE MaDot='+dot)).recordset[0].HanNhapHoc;
  await pool.request().query('UPDATE tuyen_sinh.DotTuyen SET HanNhapHoc=DATEADD(hour,-1,SYSUTCDATETIME()) WHERE MaDot='+dot);
  await call('/my/admissions/'+id+'/pay',{LoaiPhi:'NHAP_HOC'},400,candidate);
  await pool.request().input('Deadline',previous).query('UPDATE tuyen_sinh.DotTuyen SET HanNhapHoc=@Deadline WHERE MaDot='+dot);
  await call(`/my/admissions/${id}/pay`,{LoaiPhi:'NHAP_HOC'},201,candidate);
- await call(`/admin/admissions/applications/${id}/enroll`,{MaPhienBan:Number(version)},201);await call('/auth/me',undefined,401,candidate);
+ await call(`/admin/admissions/applications/${id}/enroll`,{MaPhienBan:Number(version)},409);
+ await create('cohorts',{KyHieu:'INTERNAL_HANDOVER',TenLop:'Internal handover class',MaPhienBan:Number(version),MaDonVi:Number((await call('/management/options/units'))[0].Id),KhoaNhapHoc:'2026'});const localCohort=Number((await one('cohorts','KyHieu','INTERNAL_HANDOVER')).MaLopQuanLy);
+ await call(`/admin/admissions/applications/${id}/enroll`,{MaPhienBan:Number(version),MaLopQuanLy:localCohort,MaGVHD:Number(staff.Id)},201);await call('/auth/me',undefined,401,candidate);
  const admitted=await call('/auth/login',{username:register.Email,password},201,'');assert.deepEqual(admitted.user.roles,['STUDENT']);
- assert.equal((await pool.request().query('SELECT TrangThaiErp FROM tuyen_sinh.BanGiao WHERE MaHoSo='+id)).recordset[0].TrangThaiErp,'CHO_CAU_HINH');
- ok('Room capacity, blind scoring, provisional publication, appeals, deadline locks and three distinct sequential approvals lead to an admitted student with revoked old sessions');
+ const handover=(await call('/management/admission-transfers?limit=100')).data.find(r=>Number(r.MaHoSo)===Number(id));assert.equal(handover.TrangThaiBanGiao,'Hoàn tất nội bộ');assert.ok(!('TrangThaiErp' in handover));await call('/admin/admissions/transfers/'+handover.MaBanGiao+'/sync',{},404);
+ ok('Room capacity, blind scoring, provisional publication, appeals, deadline locks and an explicitly authorized single approval lead to an admitted student with revoked old sessions');
  for(const format of ['xlsx','pdf','docx']){const r=await fetch(base+`/admin/admissions/reports?kind=accepted&format=${format}&dot=${dot}`,{headers:{Authorization:'Bearer '+token}});assert.equal(r.status,200);const bytes=Buffer.from(await r.arrayBuffer());assert.equal(bytes.subarray(0,format==='pdf'?5:2).toString(),format==='pdf'?'%PDF-':'PK');}
  const key=crypto.randomBytes(32).toString('hex'),{ConfigService}=require('@nestjs/config'),{DataProtection}=require('../dist/shared/security/data-protection'),{PaymentGateway,paymentSignature}=require('../dist/modules/admissions/infrastructure/payment.gateway');
  const db={query:async(text,params={})=>{const r=pool.request();for(const[k,v]of Object.entries(params))r.input(k,v);return r.query(text);}};
@@ -109,9 +116,9 @@ module.exports=async({call,pool,browser,password,version,token,base,ok})=>{
  const staffPage=await browser.newPage();await staffPage.goto('http://localhost:3100/dang-nhap');await staffPage.getByLabel('Tên đăng nhập',{exact:true}).fill('demo.test.admin');await staffPage.getByLabel('Mật khẩu',{exact:true}).fill(password);await staffPage.getByRole('button',{name:'Đăng nhập',exact:true}).click();
  await staffPage.getByRole('navigation',{name:'Chức năng chính'}).getByRole('button',{name:'Tuyển sinh',exact:true}).click();await staffPage.getByRole('button',{name:'Xét tuyển và phê duyệt',exact:true}).click();
  await staffPage.getByLabel('Đợt tuyển sinh',{exact:false}).selectOption(String(dot));
- const selectionView=staffPage.getByRole('region',{name:'Danh sách trình duyệt'});await require('@playwright/test').expect(selectionView.getByRole('cell',{name:'Trúng tuyển',exact:true})).toBeVisible();await require('@playwright/test').expect(selectionView).toContainText('Approval 3');
+ const selectionView=staffPage.getByRole('region',{name:'Danh sách trình duyệt'});await require('@playwright/test').expect(selectionView.getByRole('cell',{name:'Trúng tuyển',exact:true})).toBeVisible();await require('@playwright/test').expect(selectionView).toContainText('Single Approver');
  await staffPage.setViewportSize({width:390,height:844});await require('@playwright/test').expect(staffPage.locator('.sidebar')).not.toBeInViewport();assert.equal(await staffPage.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await staffPage.screenshot({path:path.resolve(__dirname,'../../../05_Testing/Frontend/danh-sach-trinh-duyet-mobile.png'),fullPage:true});await staffPage.close();
- ok('The staff selection screen displays ranked candidates and all three approvals at mobile width');
+ ok('The staff selection screen displays ranked candidates and the single approval at mobile width');
  const p=await browser.newPage();await p.goto('http://localhost:3100/tuyen-sinh');await p.getByRole('heading').first().waitFor();await p.setViewportSize({width:390,height:844});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await p.screenshot({path:path.resolve(__dirname,'../../../05_Testing/Frontend/tuyen-sinh-mobile.png'),fullPage:true});await p.close();
  ok('The public admissions page renders in Chrome at mobile width');
  // File deletion is restricted to keys read from this isolated fixture database.

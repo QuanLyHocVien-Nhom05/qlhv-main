@@ -1,0 +1,25 @@
+{
+  "id": "AGU_2026",
+  "title": "Sơ yếu lý lịch trong bộ hồ sơ dự tuyển thạc sĩ AGU 2026",
+  "noticeDate": "2026-08-26",
+  "checkedOn": "2026-11-17",
+  "verification": "TAI_TEP_GOC",
+  "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-thac-si-dot-2-nam-2026",
+  "sourceUrl": "https://tuyensinh.agu.edu.vn/uploads/cef1d278b0893dbc628f16e971848e37.doc",
+  "localFile": "03-SourceCode/frontend/public/tai-lieu/ho-so-du-tuyen-thac-si-agu-2026.doc",
+  "sha256": "ea23be5f0257dc38ba7f48ac1dd21e4cc585cfd0861a6ba29d7ecfe5ed1027fd",
+  "sizeBytes": 2710016,
+  "sections": [
+    {"source": "I. BẢN THÂN", "existingProfileFields": ["HoTen", "NgaySinh", "DienThoai", "TruongCapBang", "NganhTotNghiep", "NoiCongTac"], "biographyFields": ["GioiTinh", "NoiSinh", "QueQuan", "DanToc", "TonGiao", "HoKhauThuongTru", "TrinhDoVanHoa", "TrinhDoNgoaiNgu", "TrinhDoTinHoc", "HinhThucDaoTao", "NamTotNghiep", "NgheNghiep", "SoNamCongTac", "NgayVaoDoan", "NoiVaoDoan", "NgayVaoDang", "NoiVaoDang", "DiaChiLienHe"]},
+    {"source": "Quá trình hoạt động của bản thân", "biographyFields": ["QuaTrinhHoatDong.TuThang", "QuaTrinhHoatDong.DenThang", "QuaTrinhHoatDong.CongViec", "QuaTrinhHoatDong.DonViCongTac", "QuaTrinhHoatDong.ChucVu"]},
+    {"source": "Khen thưởng và kỷ luật", "biographyFields": ["KhenThuong", "KyLuat"]},
+    {"source": "II. GIA ĐÌNH", "relations": ["CHA", "ME", "ANH_CHI_EM", "VO_CHONG", "CON"], "biographyFields": ["GiaDinh.QuanHe", "GiaDinh.HoTen", "GiaDinh.NamSinh", "GiaDinh.Tuoi", "GiaDinh.NgheNghiep", "GiaDinh.NoiLamViec", "GiaDinh.NoiOHienNay"]},
+    {"source": "LỜI CAM ĐOAN", "biographyFields": ["CamDoan"], "note": "Xác nhận điện tử là cam đoan tự khai, không phải chữ ký/xác nhận của cơ quan."},
+    {"source": "Đơn đăng ký dự tuyển và bìa hồ sơ trong cùng tệp", "biographyFields": ["NgayBatDauCongTac", "ChucVu", "DiaChiCoQuan"]}
+  ],
+  "notes": [
+    "Bản gốc có phần ảnh 3x4 và xác nhận của cơ quan hoặc địa phương. Phần này được đối chiếu từ tệp SO_YEU_LY_LICH, không tự xác nhận bằng checkbox.",
+    "GiaDinhDaKhaiBao, GhiChuGiaDinh và PhienBan là trường hỗ trợ kê khai điện tử; không phải quy định mới của AGU.",
+    "Nguồn là bộ hồ sơ thạc sĩ năm 2026, không chứng nhận đã đối chiếu một biểu mẫu tuyển sinh tiến sĩ riêng. Các thông tin nhân thân chung được dùng cho biểu mẫu điện tử của đồ án."
+  ]
+}

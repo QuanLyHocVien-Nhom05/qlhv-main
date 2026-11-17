@@ -15,9 +15,19 @@
     "data:preview": "node scripts/import-university.cjs",
     "data:replace": "node scripts/import-university.cjs --replace",
     "data:agu:preview": "node scripts/augment-agu.cjs",
-    "data:agu:append": "node scripts/augment-agu.cjs --apply"
+    "data:agu:append": "node scripts/augment-agu.cjs --apply",
+    "data:agu:public:preview": "node scripts/append-agu-public.cjs",
+    "data:agu:public:append": "node scripts/append-agu-public.cjs --apply",
+    "test:agu:public": "node scripts/test-agu-public.cjs",
+    "data:admissions:preview": "node scripts/create-admissions-workflow.cjs",
+    "data:admissions:create": "npm run build && node scripts/create-admissions-workflow.cjs --apply",
+    "test:admissions:data": "npm run build && node scripts/create-admissions-workflow.cjs --test",
+    "ocr:setup": "node scripts/setup-ocr.cjs",
+    "ocr:check": "npm run build && node scripts/check-ocr.cjs",
+    "test:load": "npm run build && node scripts/load-test.cjs"
   },
   "dependencies": {
+    "@napi-rs/canvas": "1.1.0",
     "@nestjs/common": "^11.1.0",
     "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.1.0",

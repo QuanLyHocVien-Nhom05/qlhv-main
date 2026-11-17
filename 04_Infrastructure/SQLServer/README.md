@@ -1,6 +1,6 @@
 # SQL Server — tuyển sinh sau đại học và bàn giao đào tạo
 
-Bộ cài hiện hành có **50 bảng**, các thủ tục/view và hàm phạm vi đơn vị trong 5 schema: danh_muc, nhan_su, hoc_thuat, he_thong, tuyen_sinh. Hướng dẫn cài trên máy mới: [HUONG_DAN_CHAY.md](../../HUONG_DAN_CHAY.md).
+Bộ cài hiện hành có **52 bảng**, các thủ tục/view và hàm phạm vi đơn vị trong 5 schema: danh_muc, nhan_su, hoc_thuat, he_thong, tuyen_sinh. Hướng dẫn cài trên máy mới: [HUONG_DAN_CHAY.md](../../HUONG_DAN_CHAY.md).
 
 | File | Vai trò |
 |---|---|
@@ -17,6 +17,11 @@ Bộ cài hiện hành có **50 bảng**, các thủ tục/view và hàm phạm 
 | 11_DonDepThuocTinhCu.sql | Loại thuộc tính cũ, gồm thuộc tính TOTP đã bỏ |
 | 12_HoanThienTuyenSinh.sql | Mẫu lý do/báo cáo, nhiều bài thi, kế hoạch nhập học và hướng dẫn |
 | 13_NguonDuLieuAGU.sql | Ghi chú nguồn, ngày và cách kiểm chứng dữ liệu AGU |
+| 14_PhamViVaLichTuyenSinh.sql | Cây ngành/chuyên ngành; lịch mở/đóng đợt và tài khoản cấu hình; không xóa bảng cũ |
+| 15_ThanhToanMoPhong.sql | QR đồ án: kênh/cờ mô phỏng, thời hạn/kết quả và một QR chờ cho mỗi khoản phí; không tính vào doanh thu thật |
+| 18_PheDuyetMotCap.sql | Quyền/phiếu duyệt một cấp, IP và quyết định hòa điểm; bảo toàn lịch sử ba cấp |
+| 17_ToChucThiVaHoiDong.sql | Hội đồng tuyển sinh, thành viên, liên kết ca/chỉ tiêu và cấu hình SBD; giữ nguyên lịch cũ |
+| 16_SoYeuLyLichAGU.sql | Bổ sung minh chứng sơ yếu lý lịch có xác nhận; nội dung tự khai lưu trong hồ sơ AES, không viết lại dữ liệu cũ |
 
 Trên máy mới, chạy file 00 bằng SSMS trước để tạo database. Sau đó chạy `npm.cmd run setup:local` tại `03-SourceCode` để tự chọn cài mới/nâng cấp và áp dụng các migration hiện hành. Không chạy 01 trên database đang dùng. `ChayKiemThu.ps1` thử bộ cài trong database tạm.
 

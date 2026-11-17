@@ -3,15 +3,21 @@ import {ConfigService} from '@nestjs/config';
 import {createHmac,timingSafeEqual,randomUUID} from 'node:crypto';
 import {AdmissionsService,AdmissionActor} from '../application/admissions.service';
 import {MomoGateway} from './momo.gateway';
+import {DemoPaymentGateway,DemoOutcome,demoPaymentsEnabled} from './demo-payment.gateway';
 export function paymentSignature(values:Record<string,string>,secret:string){const params=new URLSearchParams();for(const key of Object.keys(values).sort())if(key!=='vnp_SecureHash'&&key!=='vnp_SecureHashType')params.append(key,values[key]);return createHmac('sha512',secret).update(params.toString()).digest('hex');}
 @Injectable()
 export class PaymentGateway{
  constructor(private readonly service:AdmissionsService,private readonly config:ConfigService){}
- async initiate(id:number,type:string,actor:AdmissionActor,channel='VNPAY'){const h=await this.service.get(id,actor);if(String(h.MaNguoi)!==actor.sub||!['XET_TUYEN','NHAP_HOC'].includes(type)||!(type==='XET_TUYEN'&&h.TrangThai==='CHO_THANH_TOAN'||type==='NHAP_HOC'&&h.TrangThai==='XAC_NHAN_NHAP_HOC'))throw new BadRequestException('Không thể thanh toán ở trạng thái hiện tại.');
+ options(){return {demoEnabled:demoPaymentsEnabled(this.config)};}
+ demoStatus(id:number,code:string,actor:AdmissionActor){return new DemoPaymentGateway(this.service,this.config).status(id,code,actor);}
+ demoResult(id:number,code:string,outcome:DemoOutcome,actor:AdmissionActor){return new DemoPaymentGateway(this.service,this.config).finish(id,code,outcome,actor);}
+ async initiate(id:number,type:string,actor:AdmissionActor,channel?:string){channel??=type==='NHAP_HOC'?'MO_PHONG':'VNPAY';const h=await this.service.get(id,actor);if(String(h.MaNguoi)!==actor.sub||!['XET_TUYEN','NHAP_HOC'].includes(type)||!(type==='XET_TUYEN'&&h.TrangThai==='CHO_THANH_TOAN'||type==='NHAP_HOC'&&h.TrangThai==='XAC_NHAN_NHAP_HOC'))throw new BadRequestException('Không thể thanh toán ở trạng thái hiện tại.');
   if(type==='NHAP_HOC'&&(!h.HanNhapHoc||Date.now()>new Date(h.HanNhapHoc).getTime()))throw new BadRequestException('Đã hết thời hạn thanh toán phí nhập học.');
-  if(!['VNPAY','MOMO','NGAN_HANG'].includes(channel))throw new BadRequestException('Kênh thanh toán không hợp lệ.');
+  if(!['VNPAY','MOMO','NGAN_HANG','MO_PHONG'].includes(channel))throw new BadRequestException('Kênh thanh toán không hợp lệ.');
+  if(type==='NHAP_HOC'&&channel!=='MO_PHONG')throw new BadRequestException('Phí nhập học của đồ án chỉ dùng QR mô phỏng, không chuyển tiền thật.');
   const amount=Number(type==='XET_TUYEN'?h.LePhi:h.PhiNhapHoc),code='GD-'+randomUUID().replace(/-/g,'');
   if(amount===0){await this.service.db.query(`SET XACT_ABORT ON;BEGIN TRY BEGIN TRANSACTION;INSERT tuyen_sinh.GiaoDich(MaGiaoDich,MaHoSo,LoaiPhi,SoTien,Kenh,TrangThai,MaBienLai,NgayThanhToan) VALUES(@Code,@Id,@Type,0,'NGAN_HANG','DA_TT',@Receipt,SYSUTCDATETIME());IF @Type='XET_TUYEN' UPDATE tuyen_sinh.HoSo SET TrangThai='DA_NOP' WHERE MaHoSo=@Id AND TrangThai='CHO_THANH_TOAN';COMMIT;END TRY BEGIN CATCH IF XACT_STATE()<>0 ROLLBACK;THROW;END CATCH;`,{Code:code,Id:id,Type:type,Receipt:'MIEN-PHI-'+code});await this.service.audit(actor,'MIEN_LE_PHI_CAU_HINH',id,{LoaiPhi:type});return {message:'Khoản phí bằng 0 theo cấu hình, đã ghi nhận miễn phí.'};}
+  if(channel==='MO_PHONG')return new DemoPaymentGateway(this.service,this.config).create(id,type,actor);
   if(channel==='MOMO')return new MomoGateway(this.service,this.config).create(id,type,amount,code,actor);
   const merchant=this.config.get<string>('VNPAY_TMN_CODE'),secret=this.config.get<string>('VNPAY_HASH_SECRET'),returnUrl=this.config.get<string>('VNPAY_RETURN_URL'),gateway=this.config.get<string>('VNPAY_URL')||'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html';if(!merchant||!secret||!returnUrl)throw new ServiceUnavailableException('Cổng thanh toán đang chờ cấu hình sandbox. Chưa ghi nhận đã thanh toán.');
   let target:URL,back:URL;try{target=new URL(gateway);back=new URL(returnUrl);}catch{throw new ServiceUnavailableException('Cấu hình cổng thanh toán không hợp lệ.');}if(target.protocol!=='https:'||back.protocol!=='https:'&&!['localhost','127.0.0.1'].includes(back.hostname))throw new ServiceUnavailableException('Cổng thanh toán yêu cầu HTTPS.');

@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "checkedOn": "2026-11-17",
+  "verification": "TAI_TEP_GOC",
+  "mode": "APPEND_ONLY",
+  "units": [
+    {
+      "website": "http://agri.agu.edu.vn/",
+      "name": "Khoa Nông nghiệp - Tài nguyên thiên nhiên",
+      "code": "AGU_KHOA_NN_TNTN",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://tech.agu.edu.vn/",
+      "name": "Khoa Kỹ thuật - Công nghệ - Môi trường",
+      "code": "AGU_KHOA_KT_CN_MT",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://fit.agu.edu.vn/",
+      "name": "Khoa Công nghệ thông tin",
+      "code": "AGU_KHOA_CNTT",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://peda.agu.edu.vn/",
+      "name": "Khoa Sư phạm",
+      "code": "AGU_KHOA_SU_PHAM",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://feba.agu.edu.vn/",
+      "name": "Khoa Kinh tế - Quản trị kinh doanh",
+      "code": "AGU_KHOA_KT_QTKD",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://fpe.agu.edu.vn/",
+      "name": "Khoa Luật và Khoa học chính trị",
+      "code": "AGU_KHOA_LUAT_KHCT",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://ffl.agu.edu.vn/",
+      "name": "Khoa Ngoại ngữ",
+      "code": "AGU_KHOA_NGOAI_NGU",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://fac.agu.edu.vn/",
+      "name": "Khoa Du lịch và Văn hóa - Nghệ thuật",
+      "code": "AGU_KHOA_DL_VHNT",
+      "type": "KHOA",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://pe.agu.edu.vn/",
+      "name": "Bộ môn Giáo dục thể chất",
+      "code": "AGU_BM_GDTC",
+      "type": "BO_MON",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    },
+    {
+      "website": "http://nde.agu.edu.vn/",
+      "name": "Bộ môn Giáo dục quốc phòng",
+      "code": "AGU_BM_GDQP",
+      "type": "BO_MON",
+      "sourceUrl": "https://www.agu.edu.vn/vi/",
+      "internalCode": true
+    }
+  ],
+  "majors": [
+    {
+      "code": "8140111",
+      "name": "Lý luận và phương pháp dạy học môn tiếng Anh",
+      "proposed": true,
+      "degree": "THAC_SI",
+      "months": 24,
+      "sourceFile": "thong-bao-thac-si-dot-1-agu-2026.pdf",
+      "note": "Ngành dự kiến trong thông báo 395/TB-ĐHAG; chưa có khung áp dụng để tạo phiên bản đã duyệt."
+    },
+    {
+      "code": "8520320",
+      "name": "Kỹ thuật môi trường",
+      "proposed": true,
+      "degree": "THAC_SI",
+      "months": 24,
+      "sourceFile": "thong-bao-thac-si-dot-1-agu-2026.pdf",
+      "note": "Mã in trong thông báo đợt 1 là 8520320; dữ liệu đợt 2 đang dùng 8440301. Giữ nguồn riêng, không tự gộp hoặc sửa mã cũ; cần trường xác nhận trước vận hành."
+    },
+    {
+      "code": "9620110",
+      "name": "Khoa học cây trồng",
+      "proposed": false,
+      "degree": "TIEN_SI",
+      "months": 36,
+      "sourceFile": "thong-bao-tien-si-agu-2026.pdf",
+      "note": "Trình độ tiến sĩ, không gộp mã thạc sĩ 8620110; thời gian chuẩn 3 năm, chưa xác nhận thời gian tối đa hoặc khung đào tạo."
+    }
+  ],
+  "intakes": [
+    {
+      "code": "TS_AGU_2026_D1_DUKIEN",
+      "title": "Tuyển sinh thạc sĩ đợt 1 năm 2026 (dự kiến)",
+      "degree": "THAC_SI",
+      "sourceFile": "thong-bao-thac-si-dot-1-agu-2026.pdf",
+      "documentCode": "395/TB-ĐHAG",
+      "issuedOn": "2026-03-20",
+      "closedUtc": "2026-04-24T16:59:59",
+      "expectedEnrollment": "Tháng 8/2026 (dự kiến)",
+      "registrationFee": 100000,
+      "selectionFee": 500000,
+      "proposed": true,
+      "quotas": [
+        {
+          "code": "8140114",
+          "name": "Quản lý giáo dục",
+          "quantity": 35,
+          "proposed": false
+        },
+        {
+          "code": "8850101",
+          "name": "Quản lý tài nguyên và môi trường",
+          "quantity": 15,
+          "proposed": false
+        },
+        {
+          "code": "8620105",
+          "name": "Chăn nuôi",
+          "quantity": 15,
+          "proposed": false
+        },
+        {
+          "code": "8620110",
+          "name": "Khoa học cây trồng",
+          "quantity": 20,
+          "proposed": false
+        },
+        {
+          "code": "8420201",
+          "name": "Công nghệ sinh học",
+          "quantity": 20,
+          "proposed": false
+        },
+        {
+          "code": "8540101",
+          "name": "Công nghệ thực phẩm",
+          "quantity": 20,
+          "proposed": false
+        },
+        {
+          "code": "8480201",
+          "name": "Công nghệ thông tin",
+          "quantity": 25,
+          "proposed": false
+        },
+        {
+          "code": "8440103",
+          "name": "Vật lý lý thuyết và Vật lý toán",
+          "quantity": 20,
+          "proposed": false
+        },
+        {
+          "code": "8140110",
+          "name": "Lý luận và Phương pháp dạy học",
+          "quantity": 35,
+          "proposed": true
+        },
+        {
+          "code": "8140111",
+          "name": "Lý luận và phương pháp dạy học môn tiếng Anh",
+          "quantity": 30,
+          "proposed": true
+        },
+        {
+          "code": "8229001",
+          "name": "Triết học",
+          "quantity": 15,
+          "proposed": true
+        },
+        {
+          "code": "8520320",
+          "name": "Kỹ thuật môi trường",
+          "quantity": 20,
+          "proposed": true
+        },
+        {
+          "code": "8620301",
+          "name": "Nuôi trồng thủy sản",
+          "quantity": 15,
+          "proposed": true
+        }
+      ],
+      "certificates": [],
+      "majorRules": [],
+      "note": "13 chỉ tiêu dự kiến cộng 285. Nguồn chỉ ghi ngày hết hạn 24/4; lưu cuối ngày theo giờ Việt Nam. Công bố dự kiến tháng 7, không tự tạo ngày cụ thể. Phương thức có xét thẳng/xét hồ sơ nhưng chỉ tiêu không chia theo phương thức."
+    },
+    {
+      "code": "TS_AGU_2026_TIEN_SI",
+      "title": "Tuyển sinh tiến sĩ năm 2026",
+      "degree": "TIEN_SI",
+      "sourceFile": "thong-bao-tien-si-agu-2026.pdf",
+      "documentCode": "1363/TB-ĐHAG",
+      "issuedOn": "2026-08-26",
+      "closedUtc": "2026-09-24T16:59:59",
+      "expectedEnrollment": null,
+      "registrationFee": 150000,
+      "selectionFee": 1000000,
+      "proposed": false,
+      "quotas": [
+        {
+          "code": "9620110",
+          "name": "Khoa học cây trồng",
+          "quantity": 6,
+          "proposed": false
+        }
+      ],
+      "certificates": [
+        {
+          "name": "IELTS",
+          "minimum": 5.5,
+          "level": 4
+        },
+        {
+          "name": "TOEFL iBT",
+          "minimum": 46,
+          "level": 4
+        }
+      ],
+      "majorRules": [
+        "Khoa học cây trồng",
+        "Khoa học đất",
+        "Bảo vệ thực vật",
+        "Nông học",
+        "Nông nghiệp",
+        "Trồng trọt",
+        "Di truyền chọn giống cây trồng",
+        "Công nghệ rau hoa quả và cảnh quan"
+      ],
+      "note": "Chỉ tiêu 6 cho tiến sĩ Khoa học cây trồng. Tổng dự tuyển 1.150.000 là tổng phí đăng ký và xét tuyển; không suy ra phí nhập học. Chỉ lưu ngưỡng ngoại ngữ tương đương bậc 4, không tự quy đổi điểm xét tuyển. Ngành phù hợp trong danh sách không cần bổ sung kiến thức; trường hợp khác do hội đồng xem xét, không tự kết luận không phù hợp."
+    }
+  ],
+  "documents": [
+    {
+      "file": "thong-bao-thac-si-dot-1-agu-2026.pdf",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/a80bca79d715861847bc66e935252743.pdf",
+      "code": "395/TB-ĐHAG",
+      "title": "Tuyển sinh thạc sĩ đợt 1 năm 2026 (dự kiến)",
+      "issuedOn": "2026-03-20",
+      "category": "TUYEN_SINH",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-thac-si-dot-1-nam-2026-du-kien",
+      "note": "PDF ghi ngày 20/03/2026, trang đăng ghi 18/03/2026. Chỉ tiêu dự kiến, đợt lịch sử; không dùng để mở tuyển mới.",
+      "internalCode": false,
+      "sha256": "4a3d69236371eed8ffff2493c9968a2afde675cf5f1f3bb02087719b6c0f34c3"
+    },
+    {
+      "file": "thong-bao-tien-si-agu-2026.pdf",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/0ead712291de7fad427b657b6d7988be.pdf",
+      "code": "1363/TB-ĐHAG",
+      "title": "Tuyển sinh tiến sĩ năm 2026",
+      "issuedOn": "2026-08-26",
+      "category": "TUYEN_SINH",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Nguồn xác nhận Khoa học cây trồng 9620110, chỉ tiêu 6, thời gian chuẩn 3 năm.",
+      "internalCode": false,
+      "sha256": "f139be145d88603da9f2c19ea2852c1b1cedbb31d351b2787dc2be4adc68f53e"
+    },
+    {
+      "file": "thong-tin-tuyen-sinh-agu-2026.pdf",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/39101a37c7e2a910c1f836c821ef5bf54b.pdf",
+      "code": "861/QĐ-ĐHAG",
+      "title": "Thông tin tuyển sinh trình độ thạc sĩ, tiến sĩ năm 2026",
+      "issuedOn": "2026-04-06",
+      "category": "QUY_DINH",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/quyet-dinh-ve-viec-ban-hanh-thong-tin-tuyen-sinh-trinh-do-thac-si-tien-si-nam-2026",
+      "note": "Bản scan 58 trang; số/ngày đọc trực tiếp trang 1. Ngày PDF 06/04/2026 khác ngày đăng trang 11/06/2026; lưu riêng, không suy diễn hiệu lực.",
+      "internalCode": false,
+      "sha256": "df263f03574eebda2414e147c9b1b347cb8d1b407d13bb9a1976fe747e755269"
+    },
+    {
+      "file": "quyet-dinh-mo-nganh-vat-ly-agu-2026-trang-1.jpg",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/a3ace3308e3348209bb8ab72df2d83e9.jpg",
+      "code": "705/QĐ-ĐHAG",
+      "title": "Quyết định mở ngành Vật lý lý thuyết và Vật lý toán (trang 1)",
+      "issuedOn": "2026-03-18",
+      "category": "QUY_DINH",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/quyet-dinh-ve-viec-mo-nganh-dao-tao-vat-ly-ly-thuyet-va-vat-ly-toan-trinh-do-thac-si-tai-truong-dai-hoc-an-giang-dhqg-hcm",
+      "note": "Mã ngành 8440103; số/ngày đọc trực tiếp trên ảnh gốc.",
+      "internalCode": false,
+      "sha256": "f2ea5f33d39e1cb2b6199802d421b6e02943d48698a5862f22c8e3f4acca4d55"
+    },
+    {
+      "file": "quyet-dinh-mo-nganh-vat-ly-agu-2026-trang-2.jpg",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/8c10348c975f49cfa35c8e4b96e28b80b.jpg",
+      "code": "AGU-705-2026-P2",
+      "title": "Quyết định mở ngành Vật lý lý thuyết và Vật lý toán (trang 2)",
+      "issuedOn": "2026-03-18",
+      "category": "QUY_DINH",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/quyet-dinh-ve-viec-mo-nganh-dao-tao-vat-ly-ly-thuyet-va-vat-ly-toan-trinh-do-thac-si-tai-truong-dai-hoc-an-giang-dhqg-hcm",
+      "note": "Mã nội bộ để phân biệt trang 2 của quyết định 705/QĐ-ĐHAG.",
+      "internalCode": true,
+      "sha256": "22b10472a3f15732a9997ac90b08be2eeb321a23855035f5c488ea7076e25cc8"
+    },
+    {
+      "file": "bien-nhan-ho-so-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/43a2afd71b968a1edcb1092ab69c78293.doc",
+      "title": "BIÊN NHẬN HỒ SƠ XÉT TUYỂN NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-01",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "cfbf8057884422495e171e48fef7768f49ddf309b2631ebaf1be57792a4c0f1a"
+    },
+    {
+      "file": "giay-dong-y-huong-dan-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/db4b1a25ff810e24239fb07bccfc2e110.doc",
+      "title": "GIẤY ĐỒNG Ý HƯỚNG DẪN NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-02",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "add2119f728eda7672abeb95b27c3bdc0b47015f9dfcec11d7c199712bed1434"
+    },
+    {
+      "file": "giay-gioi-thieu-co-quan-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/c105f32c7c92d5d4d4689dde827dbaec10.doc",
+      "title": "GIẤY GIỚI THIỆU CỦA CƠ QUAN — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-03",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "0c080a19478f60a34cfe677f8a5d5ddb9d0c346c3b40f50cc729ce1c9ba33b2a"
+    },
+    {
+      "file": "ly-lich-khoa-hoc-nguoi-huong-dan-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/9f5c139e9378a140ea3a613bcdc374ce.doc",
+      "title": "LÝ LỊCH KHOA HỌC CÁN BỘ HƯỚNG DẪN — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-04",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "ae0202a70dc3df9a76a0ae0d89af5309db258f93783aeb0af60caa8ca3ffdc60"
+    },
+    {
+      "file": "ly-lich-khoa-hoc-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/6abe7df745de9d1afe9c5afef668c8bf.doc",
+      "title": "LÝ LỊCH KHOA HỌC NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-05",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "65fc78c3f89b382c978283300304c96b9e6ae87eb60a67a285ad5ad6024338e3"
+    },
+    {
+      "file": "mau-dan-anh-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/679840db2b2152fa23f60a861b5ac246.doc",
+      "title": "MẪU DÁN ẢNH NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-06",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "06b8dc81d955766aa402bdde3b2c8198391e35ce809014e0a4e90c84ac3f0460"
+    },
+    {
+      "file": "yeu-cau-bai-luan-ncs-agu-2026.docx",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/8361b4411422ed11f4de63b80c6d7e105.docx",
+      "title": "MẪU YÊU CẦU VỀ BÀI LUẬN NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-07",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "0f670aabaad0f669d323e1004da060db3182bdf6e579c274ae1953d2b0fa316c"
+    },
+    {
+      "file": "phieu-dang-ky-xet-tuyen-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/f4985311bceed65ef63649638cf27a5a.doc",
+      "title": "PHIẾU ĐĂNG KÝ XÉT TUYỂN NCS — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-08",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "6cb8dda43976b653fe12e41715c88217429f235e98ba620bb61b9d4339818b53"
+    },
+    {
+      "file": "thu-gioi-thieu-ncs-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/585c96561e574395611ae954568a9f06.doc",
+      "title": "THƯ GIỚI THIỆU — mẫu AGU 2026",
+      "code": "AGU-NCS-2026-09",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-tien-si-nam-2026",
+      "note": "Biểu mẫu trắng được đính kèm trên trang tuyển sinh tiến sĩ 2026; không chứa dữ liệu hồ sơ đã nộp. Mã quản lý nội bộ.",
+      "internalCode": true,
+      "sha256": "32dbb0c56bd58a859de2fa1eec271b9ccc94c1cae782f06773885912f4a46785"
+    },
+    {
+      "file": "ho-so-du-tuyen-thac-si-agu-2026.doc",
+      "url": "https://tuyensinh.agu.edu.vn/uploads/cef1d278b0893dbc628f16e971848e37.doc",
+      "code": "AGU-HS-THS-2026",
+      "title": "Bộ hồ sơ dự tuyển thạc sĩ AGU 2026",
+      "issuedOn": null,
+      "category": "HUONG_DAN",
+      "pageUrl": "https://tuyensinh.agu.edu.vn/tin-tuc/thong-bao-ve-viec-tuyen-sinh-dao-tao-trinh-do-thac-si-dot-2-nam-2026",
+      "note": "Tệp nguồn biểu mẫu đã xác minh trong chức năng sơ yếu lý lịch. Mã quản lý nội bộ, không phải số văn bản.",
+      "internalCode": true,
+      "sha256": "ea23be5f0257dc38ba7f48ac1dd21e4cc585cfd0861a6ba29d7ecfe5ed1027fd"
+    }
+  ],
+  "unavailable": [
+    "Danh sách thí sinh và minh chứng cá nhân",
+    "Tài khoản, mật khẩu, quyền duyệt",
+    "Phòng thi và sức chứa thực tế",
+    "Hội đồng, phân công và lịch thi nội bộ của đợt trình diễn",
+    "Điểm thi, phúc khảo, giao dịch và biên lai",
+    "Lớp nhập học, người hướng dẫn và kế hoạch bàn giao theo khóa",
+    "Công thức quy đổi bậc ngoại ngữ thành điểm thang 10 cho đợt mới",
+    "CTĐT áp dụng đã duyệt và toàn bộ học phần cho các ngành chưa có khung xác minh",
+    "Xác nhận mã ngành Kỹ thuật môi trường giữa các nguồn",
+    "Trang pgd.agu.edu.vn trả 403 khi truy cập trực tiếp; chưa đồng bộ toàn bộ danh mục trên cổng này"
+  ]
+}
